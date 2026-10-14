@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-10-13T00:50:48.070944+00:00",
+  "initialization": "from scratch; no five-body pretrained weights loaded",
+  "environments": [
+    "npole10"
+  ],
+  "model_config": {
+    "latent_dim": 64,
+    "hidden_dim": 128,
+    "ema_decay": 0.99,
+    "variance_weight": 1.0,
+    "covariance_weight": 0.01
+  },
+  "physics_device": "cpu",
+  "collection_seconds": 25.429416596976807,
+  "total_seconds": 33.58084143497399,
+  "training_device": "cuda",
+  "gpu": "NVIDIA GB10",
+  "compute_capability": [
+    12,
+    1
+  ],
+  "peak_allocated_mib": 72.85546875,
+  "peak_reserved_mib": 96.0,
+  "original_checkpoint_sha256_before": "ff85c51fab658b76514e9ae656c8c2ed920baf60f45de7f5884a81cb1785d30a",
+  "original_checkpoint_sha256_after": "ff85c51fab658b76514e9ae656c8c2ed920baf60f45de7f5884a81cb1785d30a",
+  "checkpoint_sha256": "ae387e7eebbf28097bb62cc7c8e664a27a0c1c23a4255ef56cea033e96bc5c6a",
+  "source_hashes": {
+    "scripts/train_extended_jepa.py": "b5bc0b65f0893b12560b31dc0cf180e7fdc590ad5025a4f3986d76cef808b7e9",
+    "src/rage_mill/jepa.py": "8bcf114fc5300cff69a2de165b0db40caf031032ec9a12dce1f11d2a0241c250",
+    "src/rage_mill/jepa_data.py": "089386e956dc86f9ce407a2185ea3de3eda953cbd54fba15d76a89851b2e5874",
+    "src/rage_mill/jepa_train.py": "aea248b6b8134369715f2db0556d91680d388f134016426b474865ffd599c3e5",
+    "src/rage_mill/npole.py": "7d806a48fadaeb5653eb2652dfbf072daa5104e7ce13be42ae120500ae8461a2"
+  },
+  "service_health_before": {
+    "url": "[local-service]",
+    "http_status": 200
+  },
+  "service_health_after": {
+    "url": "[local-service]",
+    "http_status": 200
+  },
+  "control_evaluation": "Separate task; no control success follows from prediction metrics",
+  "identified": false
+}

@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-13T01:12:11.460887+00:00",
+  "partition": "classical_development",
+  "n": 10,
+  "plan": "artifacts/npole10/verified/npole10-rk44-18s-feasible.npz",
+  "plan_sha256": "cb0caa888ebaeb63ce27606453b54b02116b770314de666b92e37b026e2e6e2e",
+  "plan_metadata": {
+    "dynamically_feasible": true,
+    "optimizer_error": "swing trajectory failed: Maximum_CpuTime_Exceeded; dynamics defect 1.17e-08, endpoint error 1.22e-13",
+    "control_success_claim": false,
+    "candidate_source": "artifacts/npole10/nominal-rk44-arc18-quasi/npole10-18s-rk44-s3-a0.9-attempt2-failed-iterate.npz",
+    "candidate_source_sha256": "58c5a734b701b12f1fdff7a74da04871e4af7eefe9021b03379b65c1f4cb08f7",
+    "source_optimizer_metadata": {
+      "dynamically_feasible": false,
+      "optimizer_error": "swing trajectory failed: Maximum_CpuTime_Exceeded; dynamics defect 1.17e-08, endpoint error 1.22e-13",
+      "control_success_claim": false
+    },
+    "solver_status_unchanged": true,
+    "objective_optimality_verified": false,
+    "dynamics_and_endpoint_constraints_rechecked": true,
+    "max_dynamics_defect": 1.1743724215307338e-08,
+    "max_endpoint_error": 1.2217456511392926e-13,
+    "planning_rail_limit_m": 2.0,
+    "force_limit_N": 10.0,
+    "planning_force_limit_N": 9.0,
+    "peak_cart_m": 1.9997156229260507,
+    "peak_force_N": 8.999999947126252,
+    "duration_s": 18.0,
+    "maneuver_duration_s": 18.0,
+    "stationary_tracking_extension_s": 0.0,
+    "identified": false,
+    "method": "verified_feasible_candidate_with_optional_exact_terminal_extension"
+  },
+  "engine": "euler",
+  "physics_hz": 640000,
+  "mujoco_native_damping": false,
+  "control_hz": 50,
+  "delay_steps": 1,
+  "tracking_r": 20.0,
+  "balance_r": 1000.0,
+  "seeds": [
+    1130504
+  ],
+  "source_hashes": {
+    "scripts/validate_classical_pole_candidate.py": "85828b6858d86269db257a61fecb68ae41f98f29ceef89b6ec58564bd1c44e07",
+    "src/rage_mill/pole_control.py": "c85ac107044f566561c07bfa7743c3790b54bf24f466b97e38e8b0ccf5d6f93d",
+    "src/rage_mill/swing_trajectory.py": "4583d2569a03495a3bf7379d5e1f581026a8dd8f48f8daa844046d5c1e19978a",
+    "src/rage_mill/npole.py": "7d806a48fadaeb5653eb2652dfbf072daa5104e7ce13be42ae120500ae8461a2"
+  },
+  "controller": "full-state TVLQR with delayed command prediction and LQR balance",
+  "physics_device": "cpu",
+  "identified": false,
+  "horizon_ticks": 1000,
+  "required_final_hold_ticks": 250,
+  "angle_limit_rad": 0.22,
+  "angular_velocity_limit_rad_s": 1.0,
+  "rail_limit_m": 2.4,
+  "force_limit_N": 10.0
+}

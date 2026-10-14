@@ -1,0 +1,17 @@
+Rage JEPA — Marc / Rage Industries, 2026
+
+The code, released model weights, authored simulation recordings and
+documentation in this repository are provided under the MIT license.
+
+This is an independent state-vector implementation inspired by I-JEPA,
+action-conditioned V-JEPA 2 and VICReg. No upstream pretrained weights,
+image/video datasets or implementation code are redistributed.
+
+References:
+I-JEPA: https://arxiv.org/abs/2301.08243
+V-JEPA 2: https://arxiv.org/abs/2506.09985
+VICReg: https://arxiv.org/abs/2105.04906
+
+PyTorch, NumPy, MuJoCo and CasADi are separately installed dependencies.
+Their licenses remain their own. No third-party robot CAD, meshes or actuator
+tables are included.

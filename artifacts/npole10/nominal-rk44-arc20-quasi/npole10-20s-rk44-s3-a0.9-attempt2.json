@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-13T00:53:52.695832+00:00",
+  "n": 10,
+  "duration_s": 20.0,
+  "engine": "rk4",
+  "substeps": 4,
+  "seed": 3,
+  "action_limit": 0.9,
+  "force_limit_N": 10.0,
+  "planning_force_limit_N": 9.0,
+  "planning_rail_limit_m": 2.0,
+  "control_hz": 50.0,
+  "cpu_budget_s": 180.0,
+  "physics_device": "cpu",
+  "control_validation": "not performed by this optimizer",
+  "control_success_claim": false,
+  "identified": false,
+  "warm_start_path": "artifacts/npole10/nominal-rk44-arc20-quasi/npole10-retry2-initialization.npz",
+  "warm_start_sha256": "e783cec960e8c6c9a2a1bd54722861c5e9988b72027e69e26e01f1637b9376ca",
+  "source_hashes": {
+    "scripts/search_extended_poles.py": "19e0246b0396fd463adfdc7ca74fe64d38b443cc62ceda5d1ae191482e4ee2b6",
+    "src/rage_mill/swing_trajectory.py": "4583d2569a03495a3bf7379d5e1f581026a8dd8f48f8daa844046d5c1e19978a"
+  },
+  "failed_solver_iterations": 21,
+  "nominal_feasible": false,
+  "error": "swing trajectory failed: Maximum_CpuTime_Exceeded; dynamics defect 6.32e-06, endpoint error 1.29e-21",
+  "failed_archive_path": "artifacts/npole10/nominal-rk44-arc20-quasi/npole10-20s-rk44-s3-a0.9-attempt2-failed-iterate.npz",
+  "failed_archive_sha256": "34a8bdef8bc38296bc955e8fe5a6a961d76d8e9a9819db2c8f47fbd833fe30a6",
+  "solver_result_available": true,
+  "elapsed_seconds": 189.52724061498884
+}

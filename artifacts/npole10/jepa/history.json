@@ -1,0 +1,2402 @@
+[
+  {
+    "epoch": 1,
+    "environments": {
+      "npole10": {
+        "total": 0.9832821786403656,
+        "prediction": 0.05014162790030241,
+        "variance": 0.9331380128860474,
+        "covariance": 0.0002516426420697826,
+        "latent_std": 0.06606785207986832
+      }
+    }
+  },
+  {
+    "epoch": 2,
+    "environments": {
+      "npole10": {
+        "total": 0.903758704662323,
+        "prediction": 0.01784346252679825,
+        "variance": 0.8858584612607956,
+        "covariance": 0.005678046552930027,
+        "latent_std": 0.11366536654531956
+      }
+    }
+  },
+  {
+    "epoch": 3,
+    "environments": {
+      "npole10": {
+        "total": 0.8446795642375946,
+        "prediction": 0.02718239463865757,
+        "variance": 0.8169396370649338,
+        "covariance": 0.05575517192482948,
+        "latent_std": 0.18275664746761322
+      }
+    }
+  },
+  {
+    "epoch": 4,
+    "environments": {
+      "npole10": {
+        "total": 0.7546681612730026,
+        "prediction": 0.052258643321692944,
+        "variance": 0.6965309232473373,
+        "covariance": 0.5878589488565922,
+        "latent_std": 0.3032799959182739
+      }
+    }
+  },
+  {
+    "epoch": 5,
+    "environments": {
+      "npole10": {
+        "total": 0.6243381798267365,
+        "prediction": 0.0797513909637928,
+        "variance": 0.5028541460633278,
+        "covariance": 4.173263788223267,
+        "latent_std": 0.4970315992832184
+      }
+    }
+  },
+  {
+    "epoch": 6,
+    "environments": {
+      "npole10": {
+        "total": 0.5328077524900436,
+        "prediction": 0.06636106036603451,
+        "variance": 0.27533839270472527,
+        "covariance": 19.110831022262573,
+        "latent_std": 0.7280892878770828
+      }
+    }
+  },
+  {
+    "epoch": 7,
+    "environments": {
+      "npole10": {
+        "total": 0.4808139130473137,
+        "prediction": 0.031188526190817356,
+        "variance": 0.2605217695236206,
+        "covariance": 18.910362720489502,
+        "latent_std": 0.7401318401098251
+      }
+    }
+  },
+  {
+    "epoch": 8,
+    "environments": {
+      "npole10": {
+        "total": 0.47026122361421585,
+        "prediction": 0.027743984013795853,
+        "variance": 0.31554728001356125,
+        "covariance": 12.696996450424194,
+        "latent_std": 0.684377446770668
+      }
+    }
+  },
+  {
+    "epoch": 9,
+    "environments": {
+      "npole10": {
+        "total": 0.46557221561670303,
+        "prediction": 0.030889402609318495,
+        "variance": 0.2909732088446617,
+        "covariance": 14.370960712432861,
+        "latent_std": 0.7089551389217377
+      }
+    }
+  },
+  {
+    "epoch": 10,
+    "environments": {
+      "npole10": {
+        "total": 0.4677978456020355,
+        "prediction": 0.03706635581329465,
+        "variance": 0.19379640743136406,
+        "covariance": 23.693508625030518,
+        "latent_std": 0.8061409443616867
+      }
+    }
+  },
+  {
+    "epoch": 11,
+    "environments": {
+      "npole10": {
+        "total": 0.45693884044885635,
+        "prediction": 0.03250196762382984,
+        "variance": 0.2458510398864746,
+        "covariance": 17.85858392715454,
+        "latent_std": 0.7540821880102158
+      }
+    }
+  },
+  {
+    "epoch": 12,
+    "environments": {
+      "npole10": {
+        "total": 0.45316872745752335,
+        "prediction": 0.028387061320245266,
+        "variance": 0.3068248778581619,
+        "covariance": 11.795679330825806,
+        "latent_std": 0.693102553486824
+      }
+    }
+  },
+  {
+    "epoch": 13,
+    "environments": {
+      "npole10": {
+        "total": 0.4378471300005913,
+        "prediction": 0.0301756439730525,
+        "variance": 0.23663754016160965,
+        "covariance": 17.103394508361816,
+        "latent_std": 0.7634575814008713
+      }
+    }
+  },
+  {
+    "epoch": 14,
+    "environments": {
+      "npole10": {
+        "total": 0.4353821873664856,
+        "prediction": 0.03735295310616493,
+        "variance": 0.16486060060560703,
+        "covariance": 23.316864013671875,
+        "latent_std": 0.8362940847873688
+      }
+    }
+  },
+  {
+    "epoch": 15,
+    "environments": {
+      "npole10": {
+        "total": 0.4004233852028847,
+        "prediction": 0.034426393918693066,
+        "variance": 0.24218222871422768,
+        "covariance": 12.381476640701294,
+        "latent_std": 0.7620637118816376
+      }
+    }
+  },
+  {
+    "epoch": 16,
+    "environments": {
+      "npole10": {
+        "total": 0.37136387825012207,
+        "prediction": 0.03560937475413084,
+        "variance": 0.17940160632133484,
+        "covariance": 15.635289669036865,
+        "latent_std": 0.8274965584278107
+      }
+    }
+  },
+  {
+    "epoch": 17,
+    "environments": {
+      "npole10": {
+        "total": 0.3581981211900711,
+        "prediction": 0.03487352002412081,
+        "variance": 0.12797529995441437,
+        "covariance": 19.534928798675537,
+        "latent_std": 0.8870910853147507
+      }
+    }
+  },
+  {
+    "epoch": 18,
+    "environments": {
+      "npole10": {
+        "total": 0.3471634238958359,
+        "prediction": 0.03278878889977932,
+        "variance": 0.13179637119174004,
+        "covariance": 18.257827758789062,
+        "latent_std": 0.8718251436948776
+      }
+    }
+  },
+  {
+    "epoch": 19,
+    "environments": {
+      "npole10": {
+        "total": 0.3400702625513077,
+        "prediction": 0.033573190215975046,
+        "variance": 0.091516999527812,
+        "covariance": 21.498008251190186,
+        "latent_std": 0.9143811166286469
+      }
+    }
+  },
+  {
+    "epoch": 20,
+    "environments": {
+      "npole10": {
+        "total": 0.32966195046901703,
+        "prediction": 0.031345952302217484,
+        "variance": 0.11123906448483467,
+        "covariance": 18.70769429206848,
+        "latent_std": 0.8893214911222458
+      }
+    }
+  },
+  {
+    "epoch": 21,
+    "environments": {
+      "npole10": {
+        "total": 0.3307119309902191,
+        "prediction": 0.02997129177674651,
+        "variance": 0.11614283546805382,
+        "covariance": 18.45978093147278,
+        "latent_std": 0.8846343606710434
+      }
+    }
+  },
+  {
+    "epoch": 22,
+    "environments": {
+      "npole10": {
+        "total": 0.328727088868618,
+        "prediction": 0.032851769123226404,
+        "variance": 0.08061547204852104,
+        "covariance": 21.52598524093628,
+        "latent_std": 0.9233887642621994
+      }
+    }
+  },
+  {
+    "epoch": 23,
+    "environments": {
+      "npole10": {
+        "total": 0.321400910615921,
+        "prediction": 0.03213223489001393,
+        "variance": 0.10369534976780415,
+        "covariance": 18.557333946228027,
+        "latent_std": 0.8970834910869598
+      }
+    }
+  },
+  {
+    "epoch": 24,
+    "environments": {
+      "npole10": {
+        "total": 0.31932052224874496,
+        "prediction": 0.030298569705337286,
+        "variance": 0.1194700375199318,
+        "covariance": 16.95519256591797,
+        "latent_std": 0.8807846009731293
+      }
+    }
+  },
+  {
+    "epoch": 25,
+    "environments": {
+      "npole10": {
+        "total": 0.3293096274137497,
+        "prediction": 0.03489533858373761,
+        "variance": 0.07900319341570139,
+        "covariance": 21.541109323501587,
+        "latent_std": 0.9348652213811874
+      }
+    }
+  },
+  {
+    "epoch": 26,
+    "environments": {
+      "npole10": {
+        "total": 0.30947893112897873,
+        "prediction": 0.028003574814647436,
+        "variance": 0.13680768385529518,
+        "covariance": 14.466767072677612,
+        "latent_std": 0.8632736355066299
+      }
+    }
+  },
+  {
+    "epoch": 27,
+    "environments": {
+      "npole10": {
+        "total": 0.30600016564130783,
+        "prediction": 0.033242722041904926,
+        "variance": 0.11037713289260864,
+        "covariance": 16.238030672073364,
+        "latent_std": 0.896720826625824
+      }
+    }
+  },
+  {
+    "epoch": 28,
+    "environments": {
+      "npole10": {
+        "total": 0.2794685661792755,
+        "prediction": 0.03550186846405268,
+        "variance": 0.06860903650522232,
+        "covariance": 17.535767078399658,
+        "latent_std": 0.9425244331359863
+      }
+    }
+  },
+  {
+    "epoch": 29,
+    "environments": {
+      "npole10": {
+        "total": 0.27482641488313675,
+        "prediction": 0.03271086188033223,
+        "variance": 0.08050796948373318,
+        "covariance": 16.16075849533081,
+        "latent_std": 0.9276042133569717
+      }
+    }
+  },
+  {
+    "epoch": 30,
+    "environments": {
+      "npole10": {
+        "total": 0.307614304125309,
+        "prediction": 0.03501614881679416,
+        "variance": 0.04322708211839199,
+        "covariance": 22.9371075630188,
+        "latent_std": 1.0160586535930634
+      }
+    }
+  },
+  {
+    "epoch": 31,
+    "environments": {
+      "npole10": {
+        "total": 0.2787904590368271,
+        "prediction": 0.03573509678244591,
+        "variance": 0.06181511702015996,
+        "covariance": 18.124024629592896,
+        "latent_std": 0.9662666916847229
+      }
+    }
+  },
+  {
+    "epoch": 32,
+    "environments": {
+      "npole10": {
+        "total": 0.2762734144926071,
+        "prediction": 0.03958267066627741,
+        "variance": 0.10663357377052307,
+        "covariance": 13.005717277526855,
+        "latent_std": 0.9015517979860306
+      }
+    }
+  },
+  {
+    "epoch": 33,
+    "environments": {
+      "npole10": {
+        "total": 0.286839134991169,
+        "prediction": 0.04367280285805464,
+        "variance": 0.1306133233010769,
+        "covariance": 11.255300760269165,
+        "latent_std": 0.8725230842828751
+      }
+    }
+  },
+  {
+    "epoch": 34,
+    "environments": {
+      "npole10": {
+        "total": 0.27418286353349686,
+        "prediction": 0.04051160719245672,
+        "variance": 0.0820898786187172,
+        "covariance": 15.158138275146484,
+        "latent_std": 0.9356086999177933
+      }
+    }
+  },
+  {
+    "epoch": 35,
+    "environments": {
+      "npole10": {
+        "total": 0.2689449153840542,
+        "prediction": 0.04680480621755123,
+        "variance": 0.051347112050279975,
+        "covariance": 17.079299211502075,
+        "latent_std": 0.9750784337520599
+      }
+    }
+  },
+  {
+    "epoch": 36,
+    "environments": {
+      "npole10": {
+        "total": 0.2643292136490345,
+        "prediction": 0.05493973009288311,
+        "variance": 0.045860921032726765,
+        "covariance": 16.35285711288452,
+        "latent_std": 0.9762984663248062
+      }
+    }
+  },
+  {
+    "epoch": 37,
+    "environments": {
+      "npole10": {
+        "total": 0.2838779538869858,
+        "prediction": 0.05063853971660137,
+        "variance": 0.05243075336329639,
+        "covariance": 18.080865621566772,
+        "latent_std": 0.9824727922677994
+      }
+    }
+  },
+  {
+    "epoch": 38,
+    "environments": {
+      "npole10": {
+        "total": 0.2524361126124859,
+        "prediction": 0.05753896199166775,
+        "variance": 0.050120557425543666,
+        "covariance": 14.477659940719604,
+        "latent_std": 0.9636434763669968
+      }
+    }
+  },
+  {
+    "epoch": 39,
+    "environments": {
+      "npole10": {
+        "total": 0.2580987215042114,
+        "prediction": 0.058690755628049374,
+        "variance": 0.05759370792657137,
+        "covariance": 14.18142557144165,
+        "latent_std": 0.9596211761236191
+      }
+    }
+  },
+  {
+    "epoch": 40,
+    "environments": {
+      "npole10": {
+        "total": 0.2644539959728718,
+        "prediction": 0.05719699151813984,
+        "variance": 0.0665236993227154,
+        "covariance": 14.073331832885742,
+        "latent_std": 0.9540508538484573
+      }
+    }
+  },
+  {
+    "epoch": 41,
+    "environments": {
+      "npole10": {
+        "total": 0.2538304775953293,
+        "prediction": 0.06454399414360523,
+        "variance": 0.032548410817980766,
+        "covariance": 15.673807144165039,
+        "latent_std": 0.9937587678432465
+      }
+    }
+  },
+  {
+    "epoch": 42,
+    "environments": {
+      "npole10": {
+        "total": 0.2680370882153511,
+        "prediction": 0.06661740690469742,
+        "variance": 0.06770274741575122,
+        "covariance": 13.371692895889282,
+        "latent_std": 0.9523016214370728
+      }
+    }
+  },
+  {
+    "epoch": 43,
+    "environments": {
+      "npole10": {
+        "total": 0.26228534430265427,
+        "prediction": 0.07314861565828323,
+        "variance": 0.05742389941588044,
+        "covariance": 13.17128324508667,
+        "latent_std": 0.9610263556241989
+      }
+    }
+  },
+  {
+    "epoch": 44,
+    "environments": {
+      "npole10": {
+        "total": 0.25856938585639,
+        "prediction": 0.07121632434427738,
+        "variance": 0.04304179735481739,
+        "covariance": 14.431126594543457,
+        "latent_std": 0.9833889901638031
+      }
+    }
+  },
+  {
+    "epoch": 45,
+    "environments": {
+      "npole10": {
+        "total": 0.2533551938831806,
+        "prediction": 0.061362458392977715,
+        "variance": 0.06304226559586823,
+        "covariance": 12.895047664642334,
+        "latent_std": 0.9541975408792496
+      }
+    }
+  },
+  {
+    "epoch": 46,
+    "environments": {
+      "npole10": {
+        "total": 0.2598302289843559,
+        "prediction": 0.06660001166164875,
+        "variance": 0.060111542930826545,
+        "covariance": 13.311866998672485,
+        "latent_std": 0.9603605717420578
+      }
+    }
+  },
+  {
+    "epoch": 47,
+    "environments": {
+      "npole10": {
+        "total": 0.2986328676342964,
+        "prediction": 0.07728116493672132,
+        "variance": 0.0389880642760545,
+        "covariance": 18.236365795135498,
+        "latent_std": 1.028198316693306
+      }
+    }
+  },
+  {
+    "epoch": 48,
+    "environments": {
+      "npole10": {
+        "total": 0.252253208309412,
+        "prediction": 0.07329445891082287,
+        "variance": 0.0445333537645638,
+        "covariance": 13.442539691925049,
+        "latent_std": 0.9721281826496124
+      }
+    }
+  },
+  {
+    "epoch": 49,
+    "environments": {
+      "npole10": {
+        "total": 0.2757604792714119,
+        "prediction": 0.06873301602900028,
+        "variance": 0.10325262136757374,
+        "covariance": 10.377484440803528,
+        "latent_std": 0.9035746306180954
+      }
+    }
+  },
+  {
+    "epoch": 50,
+    "environments": {
+      "npole10": {
+        "total": 0.2611490897834301,
+        "prediction": 0.06998710706830025,
+        "variance": 0.08052171487361193,
+        "covariance": 11.064027309417725,
+        "latent_std": 0.9264626801013947
+      }
+    }
+  },
+  {
+    "epoch": 51,
+    "environments": {
+      "npole10": {
+        "total": 0.24858161807060242,
+        "prediction": 0.07347756251692772,
+        "variance": 0.03177205100655556,
+        "covariance": 14.333201885223389,
+        "latent_std": 0.9885442107915878
+      }
+    }
+  },
+  {
+    "epoch": 52,
+    "environments": {
+      "npole10": {
+        "total": 0.26822296530008316,
+        "prediction": 0.0815269760787487,
+        "variance": 0.020279404474422336,
+        "covariance": 16.641658306121826,
+        "latent_std": 1.0299882739782333
+      }
+    }
+  },
+  {
+    "epoch": 53,
+    "environments": {
+      "npole10": {
+        "total": 0.2612334005534649,
+        "prediction": 0.07960808463394642,
+        "variance": 0.04112787451595068,
+        "covariance": 14.049744129180908,
+        "latent_std": 0.9822345525026321
+      }
+    }
+  },
+  {
+    "epoch": 54,
+    "environments": {
+      "npole10": {
+        "total": 0.24988478794693947,
+        "prediction": 0.07966365665197372,
+        "variance": 0.044515364803373814,
+        "covariance": 12.570577621459961,
+        "latent_std": 0.9668571352958679
+      }
+    }
+  },
+  {
+    "epoch": 55,
+    "environments": {
+      "npole10": {
+        "total": 0.28057530522346497,
+        "prediction": 0.08427492156624794,
+        "variance": 0.06815295573323965,
+        "covariance": 12.81474232673645,
+        "latent_std": 0.954743504524231
+      }
+    }
+  },
+  {
+    "epoch": 56,
+    "environments": {
+      "npole10": {
+        "total": 0.260648924857378,
+        "prediction": 0.0725213997066021,
+        "variance": 0.07346608582884073,
+        "covariance": 11.466144561767578,
+        "latent_std": 0.9366969168186188
+      }
+    }
+  },
+  {
+    "epoch": 57,
+    "environments": {
+      "npole10": {
+        "total": 0.2565748989582062,
+        "prediction": 0.083058787509799,
+        "variance": 0.023698605131357908,
+        "covariance": 14.98175048828125,
+        "latent_std": 1.0080901235342026
+      }
+    }
+  },
+  {
+    "epoch": 58,
+    "environments": {
+      "npole10": {
+        "total": 0.2566362954676151,
+        "prediction": 0.07725630700588226,
+        "variance": 0.05779294832609594,
+        "covariance": 12.15870451927185,
+        "latent_std": 0.9593548625707626
+      }
+    }
+  },
+  {
+    "epoch": 59,
+    "environments": {
+      "npole10": {
+        "total": 0.27813513576984406,
+        "prediction": 0.09673264250159264,
+        "variance": 0.01412693876773119,
+        "covariance": 16.72755527496338,
+        "latent_std": 1.0465115308761597
+      }
+    }
+  },
+  {
+    "epoch": 60,
+    "environments": {
+      "npole10": {
+        "total": 0.2560761645436287,
+        "prediction": 0.09058591350913048,
+        "variance": 0.041185133159160614,
+        "covariance": 12.43051266670227,
+        "latent_std": 0.9808225333690643
+      }
+    }
+  },
+  {
+    "epoch": 61,
+    "environments": {
+      "npole10": {
+        "total": 0.26283709332346916,
+        "prediction": 0.09535564295947552,
+        "variance": 0.05617253668606281,
+        "covariance": 11.130891799926758,
+        "latent_std": 0.9522111713886261
+      }
+    }
+  },
+  {
+    "epoch": 62,
+    "environments": {
+      "npole10": {
+        "total": 0.26845768094062805,
+        "prediction": 0.099557776004076,
+        "variance": 0.05934706050902605,
+        "covariance": 10.955285787582397,
+        "latent_std": 0.9502243101596832
+      }
+    }
+  },
+  {
+    "epoch": 63,
+    "environments": {
+      "npole10": {
+        "total": 0.27303408086299896,
+        "prediction": 0.11147907935082912,
+        "variance": 0.020937589462846518,
+        "covariance": 14.061741828918457,
+        "latent_std": 1.0182833075523376
+      }
+    }
+  },
+  {
+    "epoch": 64,
+    "environments": {
+      "npole10": {
+        "total": 0.2623032405972481,
+        "prediction": 0.10073334351181984,
+        "variance": 0.040178583236411214,
+        "covariance": 12.139131307601929,
+        "latent_std": 0.9847007542848587
+      }
+    }
+  },
+  {
+    "epoch": 65,
+    "environments": {
+      "npole10": {
+        "total": 0.26147036999464035,
+        "prediction": 0.10672668926417828,
+        "variance": 0.021081962855532765,
+        "covariance": 13.366171598434448,
+        "latent_std": 1.0126620531082153
+      }
+    }
+  },
+  {
+    "epoch": 66,
+    "environments": {
+      "npole10": {
+        "total": 0.2698517143726349,
+        "prediction": 0.11399590969085693,
+        "variance": 0.04725575540214777,
+        "covariance": 10.860004901885986,
+        "latent_std": 0.9664357602596283
+      }
+    }
+  },
+  {
+    "epoch": 67,
+    "environments": {
+      "npole10": {
+        "total": 0.2594737261533737,
+        "prediction": 0.09937953762710094,
+        "variance": 0.05184173211455345,
+        "covariance": 10.825245380401611,
+        "latent_std": 0.9656004458665848
+      }
+    }
+  },
+  {
+    "epoch": 68,
+    "environments": {
+      "npole10": {
+        "total": 0.23666224628686905,
+        "prediction": 0.0878523737192154,
+        "variance": 0.0240951431915164,
+        "covariance": 12.471472978591919,
+        "latent_std": 1.0009059607982635
+      }
+    }
+  },
+  {
+    "epoch": 69,
+    "environments": {
+      "npole10": {
+        "total": 0.25575970858335495,
+        "prediction": 0.10911140032112598,
+        "variance": 0.01834400068037212,
+        "covariance": 12.830431699752808,
+        "latent_std": 1.0170696675777435
+      }
+    }
+  },
+  {
+    "epoch": 70,
+    "environments": {
+      "npole10": {
+        "total": 0.25203224271535873,
+        "prediction": 0.10067162290215492,
+        "variance": 0.03707377309910953,
+        "covariance": 11.42868423461914,
+        "latent_std": 0.9886530339717865
+      }
+    }
+  },
+  {
+    "epoch": 71,
+    "environments": {
+      "npole10": {
+        "total": 0.26525698602199554,
+        "prediction": 0.10053380019962788,
+        "variance": 0.04558083415031433,
+        "covariance": 11.91423511505127,
+        "latent_std": 0.9902446269989014
+      }
+    }
+  },
+  {
+    "epoch": 72,
+    "environments": {
+      "npole10": {
+        "total": 0.2487756609916687,
+        "prediction": 0.10420462116599083,
+        "variance": 0.03474954888224602,
+        "covariance": 10.982149600982666,
+        "latent_std": 0.9819882661104202
+      }
+    }
+  },
+  {
+    "epoch": 73,
+    "environments": {
+      "npole10": {
+        "total": 0.2579302154481411,
+        "prediction": 0.10791369527578354,
+        "variance": 0.050447434186935425,
+        "covariance": 9.956908464431763,
+        "latent_std": 0.9598312526941299
+      }
+    }
+  },
+  {
+    "epoch": 74,
+    "environments": {
+      "npole10": {
+        "total": 0.2751453295350075,
+        "prediction": 0.11786343343555927,
+        "variance": 0.01661115186288953,
+        "covariance": 14.0670747756958,
+        "latent_std": 1.0419770926237106
+      }
+    }
+  },
+  {
+    "epoch": 75,
+    "environments": {
+      "npole10": {
+        "total": 0.2544643171131611,
+        "prediction": 0.09765090607106686,
+        "variance": 0.045804083812981844,
+        "covariance": 11.100932598114014,
+        "latent_std": 0.9840696603059769
+      }
+    }
+  },
+  {
+    "epoch": 76,
+    "environments": {
+      "npole10": {
+        "total": 0.24980275332927704,
+        "prediction": 0.09909741394221783,
+        "variance": 0.04380232631228864,
+        "covariance": 10.690301418304443,
+        "latent_std": 0.9807490110397339
+      }
+    }
+  },
+  {
+    "epoch": 77,
+    "environments": {
+      "npole10": {
+        "total": 0.2799890898168087,
+        "prediction": 0.13750360161066055,
+        "variance": 0.013384498655796051,
+        "covariance": 12.910099506378174,
+        "latent_std": 1.0369352400302887
+      }
+    }
+  },
+  {
+    "epoch": 78,
+    "environments": {
+      "npole10": {
+        "total": 0.2678758352994919,
+        "prediction": 0.1216872613877058,
+        "variance": 0.03046191786415875,
+        "covariance": 11.572665452957153,
+        "latent_std": 1.0054121315479279
+      }
+    }
+  },
+  {
+    "epoch": 79,
+    "environments": {
+      "npole10": {
+        "total": 0.2870977371931076,
+        "prediction": 0.13732333667576313,
+        "variance": 0.06235937587916851,
+        "covariance": 8.741503238677979,
+        "latent_std": 0.9447289407253265
+      }
+    }
+  },
+  {
+    "epoch": 80,
+    "environments": {
+      "npole10": {
+        "total": 0.2703266516327858,
+        "prediction": 0.13258186727762222,
+        "variance": 0.017706121085211635,
+        "covariance": 12.003866195678711,
+        "latent_std": 1.0224626660346985
+      }
+    }
+  },
+  {
+    "epoch": 81,
+    "environments": {
+      "npole10": {
+        "total": 0.266919270157814,
+        "prediction": 0.12684213928878307,
+        "variance": 0.026186997536569834,
+        "covariance": 11.389013528823853,
+        "latent_std": 1.0057947635650635
+      }
+    }
+  },
+  {
+    "epoch": 82,
+    "environments": {
+      "npole10": {
+        "total": 0.2557975947856903,
+        "prediction": 0.1156601831316948,
+        "variance": 0.03440858516842127,
+        "covariance": 10.572882652282715,
+        "latent_std": 0.9882925003767014
+      }
+    }
+  },
+  {
+    "epoch": 83,
+    "environments": {
+      "npole10": {
+        "total": 0.24135953187942505,
+        "prediction": 0.10686914063990116,
+        "variance": 0.027798002352938056,
+        "covariance": 10.669239521026611,
+        "latent_std": 0.9959224164485931
+      }
+    }
+  },
+  {
+    "epoch": 84,
+    "environments": {
+      "npole10": {
+        "total": 0.25348879396915436,
+        "prediction": 0.12069499865174294,
+        "variance": 0.022392265032976866,
+        "covariance": 11.04015302658081,
+        "latent_std": 1.012033849954605
+      }
+    }
+  },
+  {
+    "epoch": 85,
+    "environments": {
+      "npole10": {
+        "total": 0.2681233510375023,
+        "prediction": 0.13018973171710968,
+        "variance": 0.012269271304830909,
+        "covariance": 12.56643557548523,
+        "latent_std": 1.042407974600792
+      }
+    }
+  },
+  {
+    "epoch": 86,
+    "environments": {
+      "npole10": {
+        "total": 0.2841588705778122,
+        "prediction": 0.14611493423581123,
+        "variance": 0.031353245954960585,
+        "covariance": 10.669068932533264,
+        "latent_std": 1.0053472071886063
+      }
+    }
+  },
+  {
+    "epoch": 87,
+    "environments": {
+      "npole10": {
+        "total": 0.2669425457715988,
+        "prediction": 0.12804042361676693,
+        "variance": 0.04040880361571908,
+        "covariance": 9.849331378936768,
+        "latent_std": 0.9812478870153427
+      }
+    }
+  },
+  {
+    "epoch": 88,
+    "environments": {
+      "npole10": {
+        "total": 0.2680428549647331,
+        "prediction": 0.1294042468070984,
+        "variance": 0.04024250991642475,
+        "covariance": 9.839610576629639,
+        "latent_std": 0.9861721694469452
+      }
+    }
+  },
+  {
+    "epoch": 89,
+    "environments": {
+      "npole10": {
+        "total": 0.26160360872745514,
+        "prediction": 0.13228440657258034,
+        "variance": 0.031811324413865805,
+        "covariance": 9.750787734985352,
+        "latent_std": 0.9900857508182526
+      }
+    }
+  },
+  {
+    "epoch": 90,
+    "environments": {
+      "npole10": {
+        "total": 0.2502780482172966,
+        "prediction": 0.12056860327720642,
+        "variance": 0.029309711419045925,
+        "covariance": 10.039973735809326,
+        "latent_std": 0.9940789490938187
+      }
+    }
+  },
+  {
+    "epoch": 91,
+    "environments": {
+      "npole10": {
+        "total": 0.2432565689086914,
+        "prediction": 0.10066497512161732,
+        "variance": 0.028021157486364245,
+        "covariance": 11.457044005393982,
+        "latent_std": 1.0150459259748459
+      }
+    }
+  },
+  {
+    "epoch": 92,
+    "environments": {
+      "npole10": {
+        "total": 0.25116972625255585,
+        "prediction": 0.10517682135105133,
+        "variance": 0.040435321629047394,
+        "covariance": 10.555758714675903,
+        "latent_std": 0.9967607706785202
+      }
+    }
+  },
+  {
+    "epoch": 93,
+    "environments": {
+      "npole10": {
+        "total": 0.24136105179786682,
+        "prediction": 0.10071002505719662,
+        "variance": 0.03213680093176663,
+        "covariance": 10.851423025131226,
+        "latent_std": 1.011055052280426
+      }
+    }
+  },
+  {
+    "epoch": 94,
+    "environments": {
+      "npole10": {
+        "total": 0.275510810315609,
+        "prediction": 0.14092952758073807,
+        "variance": 0.009794567245990038,
+        "covariance": 12.47867202758789,
+        "latent_std": 1.0561113953590393
+      }
+    }
+  },
+  {
+    "epoch": 95,
+    "environments": {
+      "npole10": {
+        "total": 0.2505037374794483,
+        "prediction": 0.12914317101240158,
+        "variance": 0.0222722883336246,
+        "covariance": 9.908827781677246,
+        "latent_std": 1.0105341225862503
+      }
+    }
+  },
+  {
+    "epoch": 96,
+    "environments": {
+      "npole10": {
+        "total": 0.2621860094368458,
+        "prediction": 0.11663820222020149,
+        "variance": 0.056765501387417316,
+        "covariance": 8.878230571746826,
+        "latent_std": 0.9614326357841492
+      }
+    }
+  },
+  {
+    "epoch": 97,
+    "environments": {
+      "npole10": {
+        "total": 0.2758519649505615,
+        "prediction": 0.1473764032125473,
+        "variance": 0.012827300932258368,
+        "covariance": 11.564826250076294,
+        "latent_std": 1.0471508204936981
+      }
+    }
+  },
+  {
+    "epoch": 98,
+    "environments": {
+      "npole10": {
+        "total": 0.2366391271352768,
+        "prediction": 0.11721103452146053,
+        "variance": 0.029865986201912165,
+        "covariance": 8.956210017204285,
+        "latent_std": 0.9869568943977356
+      }
+    }
+  },
+  {
+    "epoch": 99,
+    "environments": {
+      "npole10": {
+        "total": 0.25361644849181175,
+        "prediction": 0.1286731045693159,
+        "variance": 0.021719181910157204,
+        "covariance": 10.322416067123413,
+        "latent_std": 1.0180788785219193
+      }
+    }
+  },
+  {
+    "epoch": 100,
+    "environments": {
+      "npole10": {
+        "total": 0.24953171238303185,
+        "prediction": 0.1263468600809574,
+        "variance": 0.02183862472884357,
+        "covariance": 10.13462233543396,
+        "latent_std": 1.0144425928592682
+      }
+    }
+  },
+  {
+    "epoch": 101,
+    "environments": {
+      "npole10": {
+        "total": 0.2564776800572872,
+        "prediction": 0.13366314582526684,
+        "variance": 0.019289153860881925,
+        "covariance": 10.35253894329071,
+        "latent_std": 1.0248573571443558
+      }
+    }
+  },
+  {
+    "epoch": 102,
+    "environments": {
+      "npole10": {
+        "total": 0.286666564643383,
+        "prediction": 0.14872444048523903,
+        "variance": 0.022876842878758907,
+        "covariance": 11.506528377532959,
+        "latent_std": 1.0499467551708221
+      }
+    }
+  },
+  {
+    "epoch": 103,
+    "environments": {
+      "npole10": {
+        "total": 0.2707536816596985,
+        "prediction": 0.14111570827662945,
+        "variance": 0.04046662780456245,
+        "covariance": 8.917134881019592,
+        "latent_std": 0.9867497384548187
+      }
+    }
+  },
+  {
+    "epoch": 104,
+    "environments": {
+      "npole10": {
+        "total": 0.2669745609164238,
+        "prediction": 0.12813866138458252,
+        "variance": 0.04976941994391382,
+        "covariance": 8.906647562980652,
+        "latent_std": 0.9742518961429596
+      }
+    }
+  },
+  {
+    "epoch": 105,
+    "environments": {
+      "npole10": {
+        "total": 0.2573241740465164,
+        "prediction": 0.1320592574775219,
+        "variance": 0.035375495441257954,
+        "covariance": 8.988942980766296,
+        "latent_std": 0.9918063580989838
+      }
+    }
+  },
+  {
+    "epoch": 106,
+    "environments": {
+      "npole10": {
+        "total": 0.27872413396835327,
+        "prediction": 0.1517515704035759,
+        "variance": 0.003857304574921727,
+        "covariance": 12.31152606010437,
+        "latent_std": 1.0769486129283905
+      }
+    }
+  },
+  {
+    "epoch": 107,
+    "environments": {
+      "npole10": {
+        "total": 0.24612115323543549,
+        "prediction": 0.12530029565095901,
+        "variance": 0.029681314481422305,
+        "covariance": 9.113954544067383,
+        "latent_std": 0.995978832244873
+      }
+    }
+  },
+  {
+    "epoch": 108,
+    "environments": {
+      "npole10": {
+        "total": 0.263384148478508,
+        "prediction": 0.13285408169031143,
+        "variance": 0.04982243711128831,
+        "covariance": 8.070763230323792,
+        "latent_std": 0.9654811322689056
+      }
+    }
+  },
+  {
+    "epoch": 109,
+    "environments": {
+      "npole10": {
+        "total": 0.24657734483480453,
+        "prediction": 0.1271806713193655,
+        "variance": 0.03328623063862324,
+        "covariance": 8.611045241355896,
+        "latent_std": 0.9868261516094208
+      }
+    }
+  },
+  {
+    "epoch": 110,
+    "environments": {
+      "npole10": {
+        "total": 0.23912201449275017,
+        "prediction": 0.12306925281882286,
+        "variance": 0.022526483051478863,
+        "covariance": 9.352627992630005,
+        "latent_std": 1.0092588663101196
+      }
+    }
+  },
+  {
+    "epoch": 111,
+    "environments": {
+      "npole10": {
+        "total": 0.2699870578944683,
+        "prediction": 0.14598055183887482,
+        "variance": 0.024038837058469653,
+        "covariance": 9.996767163276672,
+        "latent_std": 1.0239708125591278
+      }
+    }
+  },
+  {
+    "epoch": 112,
+    "environments": {
+      "npole10": {
+        "total": 0.2518501915037632,
+        "prediction": 0.13310231640934944,
+        "variance": 0.005223701009526849,
+        "covariance": 11.352417707443237,
+        "latent_std": 1.0630143284797668
+      }
+    }
+  },
+  {
+    "epoch": 113,
+    "environments": {
+      "npole10": {
+        "total": 0.24860306084156036,
+        "prediction": 0.13683641329407692,
+        "variance": 0.015892826952040195,
+        "covariance": 9.587381839752197,
+        "latent_std": 1.0207114517688751
+      }
+    }
+  },
+  {
+    "epoch": 114,
+    "environments": {
+      "npole10": {
+        "total": 0.24702749401330948,
+        "prediction": 0.13422382064163685,
+        "variance": 0.022945117903873324,
+        "covariance": 8.985856294631958,
+        "latent_std": 1.0100090950727463
+      }
+    }
+  },
+  {
+    "epoch": 115,
+    "environments": {
+      "npole10": {
+        "total": 0.2675195559859276,
+        "prediction": 0.14592734351754189,
+        "variance": 0.036476177629083395,
+        "covariance": 8.511602878570557,
+        "latent_std": 0.9900407642126083
+      }
+    }
+  },
+  {
+    "epoch": 116,
+    "environments": {
+      "npole10": {
+        "total": 0.25926145911216736,
+        "prediction": 0.13401494920253754,
+        "variance": 0.03570748632773757,
+        "covariance": 8.953902244567871,
+        "latent_std": 1.0024963021278381
+      }
+    }
+  },
+  {
+    "epoch": 117,
+    "environments": {
+      "npole10": {
+        "total": 0.24552596360445023,
+        "prediction": 0.13083332777023315,
+        "variance": 0.01599114155396819,
+        "covariance": 9.870149850845337,
+        "latent_std": 1.0305691063404083
+      }
+    }
+  },
+  {
+    "epoch": 118,
+    "environments": {
+      "npole10": {
+        "total": 0.2533270977437496,
+        "prediction": 0.12569364346563816,
+        "variance": 0.04977991385385394,
+        "covariance": 7.785353899002075,
+        "latent_std": 0.9661859273910522
+      }
+    }
+  },
+  {
+    "epoch": 119,
+    "environments": {
+      "npole10": {
+        "total": 0.25256243348121643,
+        "prediction": 0.13641030341386795,
+        "variance": 0.015399924712255597,
+        "covariance": 10.075220942497253,
+        "latent_std": 1.0404250621795654
+      }
+    }
+  },
+  {
+    "epoch": 120,
+    "environments": {
+      "npole10": {
+        "total": 0.26707522571086884,
+        "prediction": 0.13987848907709122,
+        "variance": 0.0034771133214235306,
+        "covariance": 12.371963024139404,
+        "latent_std": 1.0954615771770477
+      }
+    }
+  },
+  {
+    "epoch": 121,
+    "environments": {
+      "npole10": {
+        "total": 0.27247247099876404,
+        "prediction": 0.16039332933723927,
+        "variance": 0.016408576862886548,
+        "covariance": 9.567056894302368,
+        "latent_std": 1.0308264791965485
+      }
+    }
+  },
+  {
+    "epoch": 122,
+    "environments": {
+      "npole10": {
+        "total": 0.26161351054906845,
+        "prediction": 0.14260921254754066,
+        "variance": 0.036753779742866755,
+        "covariance": 8.225051403045654,
+        "latent_std": 0.9919487684965134
+      }
+    }
+  },
+  {
+    "epoch": 123,
+    "environments": {
+      "npole10": {
+        "total": 0.25531529635190964,
+        "prediction": 0.1311593223363161,
+        "variance": 0.04958799947053194,
+        "covariance": 7.456797242164612,
+        "latent_std": 0.9643221199512482
+      }
+    }
+  },
+  {
+    "epoch": 124,
+    "environments": {
+      "npole10": {
+        "total": 0.25482796877622604,
+        "prediction": 0.14236095547676086,
+        "variance": 0.012692115036770701,
+        "covariance": 9.977489948272705,
+        "latent_std": 1.042269229888916
+      }
+    }
+  },
+  {
+    "epoch": 125,
+    "environments": {
+      "npole10": {
+        "total": 0.24131716415286064,
+        "prediction": 0.12648107297718525,
+        "variance": 0.016850928077474236,
+        "covariance": 9.798517227172852,
+        "latent_std": 1.0314513742923737
+      }
+    }
+  },
+  {
+    "epoch": 126,
+    "environments": {
+      "npole10": {
+        "total": 0.2505813464522362,
+        "prediction": 0.13049435429275036,
+        "variance": 0.03540905751287937,
+        "covariance": 8.467793703079224,
+        "latent_std": 0.993694007396698
+      }
+    }
+  },
+  {
+    "epoch": 127,
+    "environments": {
+      "npole10": {
+        "total": 0.24840300902724266,
+        "prediction": 0.12922707945108414,
+        "variance": 0.026678593829274178,
+        "covariance": 9.249733686447144,
+        "latent_std": 1.019249364733696
+      }
+    }
+  },
+  {
+    "epoch": 128,
+    "environments": {
+      "npole10": {
+        "total": 0.24212592467665672,
+        "prediction": 0.13074130937457085,
+        "variance": 0.013437769841402769,
+        "covariance": 9.794684886932373,
+        "latent_std": 1.0351418554782867
+      }
+    }
+  },
+  {
+    "epoch": 129,
+    "environments": {
+      "npole10": {
+        "total": 0.2384103648364544,
+        "prediction": 0.12312103062868118,
+        "variance": 0.027616003528237343,
+        "covariance": 8.767333507537842,
+        "latent_std": 1.004096508026123
+      }
+    }
+  },
+  {
+    "epoch": 130,
+    "environments": {
+      "npole10": {
+        "total": 0.2661884240806103,
+        "prediction": 0.14553570747375488,
+        "variance": 0.01710894168354571,
+        "covariance": 10.354377508163452,
+        "latent_std": 1.049500584602356
+      }
+    }
+  },
+  {
+    "epoch": 131,
+    "environments": {
+      "npole10": {
+        "total": 0.24591345340013504,
+        "prediction": 0.1398393251001835,
+        "variance": 0.0180822832044214,
+        "covariance": 8.799185037612915,
+        "latent_std": 1.016992062330246
+      }
+    }
+  },
+  {
+    "epoch": 132,
+    "environments": {
+      "npole10": {
+        "total": 0.23772956430912018,
+        "prediction": 0.12878539972007275,
+        "variance": 0.016336436150595546,
+        "covariance": 9.260772466659546,
+        "latent_std": 1.028626337647438
+      }
+    }
+  },
+  {
+    "epoch": 133,
+    "environments": {
+      "npole10": {
+        "total": 0.2551295682787895,
+        "prediction": 0.1458429004997015,
+        "variance": 0.027837892062962055,
+        "covariance": 8.144876718521118,
+        "latent_std": 0.9952559024095535
+      }
+    }
+  },
+  {
+    "epoch": 134,
+    "environments": {
+      "npole10": {
+        "total": 0.2390756718814373,
+        "prediction": 0.12630803883075714,
+        "variance": 0.01798928575590253,
+        "covariance": 9.477835416793823,
+        "latent_std": 1.0321763753890991
+      }
+    }
+  },
+  {
+    "epoch": 135,
+    "environments": {
+      "npole10": {
+        "total": 0.2636141665279865,
+        "prediction": 0.1454442273825407,
+        "variance": 0.03187381010502577,
+        "covariance": 8.629613399505615,
+        "latent_std": 1.0062850713729858
+      }
+    }
+  },
+  {
+    "epoch": 136,
+    "environments": {
+      "npole10": {
+        "total": 0.25499362871050835,
+        "prediction": 0.14770162850618362,
+        "variance": 0.022505307802930474,
+        "covariance": 8.478669166564941,
+        "latent_std": 1.0100181251764297
+      }
+    }
+  },
+  {
+    "epoch": 137,
+    "environments": {
+      "npole10": {
+        "total": 0.21420513093471527,
+        "prediction": 0.11006269603967667,
+        "variance": 0.02581479912623763,
+        "covariance": 7.832763671875,
+        "latent_std": 0.9924550205469131
+      }
+    }
+  },
+  {
+    "epoch": 138,
+    "environments": {
+      "npole10": {
+        "total": 0.2319464050233364,
+        "prediction": 0.1231257114559412,
+        "variance": 0.012973562348634005,
+        "covariance": 9.584713220596313,
+        "latent_std": 1.0377178192138672
+      }
+    }
+  },
+  {
+    "epoch": 139,
+    "environments": {
+      "npole10": {
+        "total": 0.233555868268013,
+        "prediction": 0.11892993189394474,
+        "variance": 0.021268686978146434,
+        "covariance": 9.33572518825531,
+        "latent_std": 1.022246167063713
+      }
+    }
+  },
+  {
+    "epoch": 140,
+    "environments": {
+      "npole10": {
+        "total": 0.23502010107040405,
+        "prediction": 0.13318399712443352,
+        "variance": 0.00724520580843091,
+        "covariance": 9.459089756011963,
+        "latent_std": 1.0491231083869934
+      }
+    }
+  },
+  {
+    "epoch": 141,
+    "environments": {
+      "npole10": {
+        "total": 0.2651505842804909,
+        "prediction": 0.1528845839202404,
+        "variance": 0.02353816106915474,
+        "covariance": 8.872783303260803,
+        "latent_std": 1.0230222791433334
+      }
+    }
+  },
+  {
+    "epoch": 142,
+    "environments": {
+      "npole10": {
+        "total": 0.24874857813119888,
+        "prediction": 0.13865202106535435,
+        "variance": 0.0241941986605525,
+        "covariance": 8.590237021446228,
+        "latent_std": 1.0154796093702316
+      }
+    }
+  },
+  {
+    "epoch": 143,
+    "environments": {
+      "npole10": {
+        "total": 0.25335727632045746,
+        "prediction": 0.12384278699755669,
+        "variance": 0.06288317171856761,
+        "covariance": 6.663132190704346,
+        "latent_std": 0.9500063806772232
+      }
+    }
+  },
+  {
+    "epoch": 144,
+    "environments": {
+      "npole10": {
+        "total": 0.25378498435020447,
+        "prediction": 0.13330994173884392,
+        "variance": 0.028960178373381495,
+        "covariance": 9.151486158370972,
+        "latent_std": 1.0204687714576721
+      }
+    }
+  },
+  {
+    "epoch": 145,
+    "environments": {
+      "npole10": {
+        "total": 0.2291463166475296,
+        "prediction": 0.11346496641635895,
+        "variance": 0.027572139631956816,
+        "covariance": 8.810921311378479,
+        "latent_std": 1.0190170258283615
+      }
+    }
+  },
+  {
+    "epoch": 146,
+    "environments": {
+      "npole10": {
+        "total": 0.23545894399285316,
+        "prediction": 0.1260840017348528,
+        "variance": 0.01036520954221487,
+        "covariance": 9.900973558425903,
+        "latent_std": 1.0533107817173004
+      }
+    }
+  },
+  {
+    "epoch": 147,
+    "environments": {
+      "npole10": {
+        "total": 0.23265215754508972,
+        "prediction": 0.12689929641783237,
+        "variance": 0.013908292632550001,
+        "covariance": 9.184456825256348,
+        "latent_std": 1.0369971692562103
+      }
+    }
+  },
+  {
+    "epoch": 148,
+    "environments": {
+      "npole10": {
+        "total": 0.22950564697384834,
+        "prediction": 0.1235929150134325,
+        "variance": 0.023327189730480313,
+        "covariance": 8.258554220199585,
+        "latent_std": 1.006932109594345
+      }
+    }
+  },
+  {
+    "epoch": 149,
+    "environments": {
+      "npole10": {
+        "total": 0.2307928241789341,
+        "prediction": 0.12768004834651947,
+        "variance": 0.012721187435090542,
+        "covariance": 9.039159059524536,
+        "latent_std": 1.035692647099495
+      }
+    }
+  },
+  {
+    "epoch": 150,
+    "environments": {
+      "npole10": {
+        "total": 0.2250673696398735,
+        "prediction": 0.11884532496333122,
+        "variance": 0.026922443183138967,
+        "covariance": 7.929960489273071,
+        "latent_std": 0.9967898577451706
+      }
+    }
+  },
+  {
+    "epoch": 151,
+    "environments": {
+      "npole10": {
+        "total": 0.22978173196315765,
+        "prediction": 0.12881980277597904,
+        "variance": 0.015420347219333053,
+        "covariance": 8.554158568382263,
+        "latent_std": 1.0272907316684723
+      }
+    }
+  },
+  {
+    "epoch": 152,
+    "environments": {
+      "npole10": {
+        "total": 0.24198143184185028,
+        "prediction": 0.1332137044519186,
+        "variance": 0.0172390250954777,
+        "covariance": 9.152870178222656,
+        "latent_std": 1.039200782775879
+      }
+    }
+  },
+  {
+    "epoch": 153,
+    "environments": {
+      "npole10": {
+        "total": 0.23926325142383575,
+        "prediction": 0.13677317276597023,
+        "variance": 0.010795816546306014,
+        "covariance": 9.169426202774048,
+        "latent_std": 1.0445123612880707
+      }
+    }
+  },
+  {
+    "epoch": 154,
+    "environments": {
+      "npole10": {
+        "total": 0.23736350238323212,
+        "prediction": 0.13014915212988853,
+        "variance": 0.02961996803060174,
+        "covariance": 7.7594382762908936,
+        "latent_std": 0.9986919164657593
+      }
+    }
+  },
+  {
+    "epoch": 155,
+    "environments": {
+      "npole10": {
+        "total": 0.23410673066973686,
+        "prediction": 0.12742645666003227,
+        "variance": 0.008992374641820788,
+        "covariance": 9.768789768218994,
+        "latent_std": 1.0554929971694946
+      }
+    }
+  },
+  {
+    "epoch": 156,
+    "environments": {
+      "npole10": {
+        "total": 0.23704012483358383,
+        "prediction": 0.12662100791931152,
+        "variance": 0.03837862913496792,
+        "covariance": 7.204049229621887,
+        "latent_std": 0.9835616946220398
+      }
+    }
+  },
+  {
+    "epoch": 157,
+    "environments": {
+      "npole10": {
+        "total": 0.22434739395976067,
+        "prediction": 0.10497626103460789,
+        "variance": 0.051962805446237326,
+        "covariance": 6.740832805633545,
+        "latent_std": 0.9631337076425552
+      }
+    }
+  },
+  {
+    "epoch": 158,
+    "environments": {
+      "npole10": {
+        "total": 0.2461957223713398,
+        "prediction": 0.13236756063997746,
+        "variance": 0.018315976252779365,
+        "covariance": 9.551218748092651,
+        "latent_std": 1.0455884039402008
+      }
+    }
+  },
+  {
+    "epoch": 159,
+    "environments": {
+      "npole10": {
+        "total": 0.26710934191942215,
+        "prediction": 0.14238017797470093,
+        "variance": 0.0018189314287155867,
+        "covariance": 12.29102349281311,
+        "latent_std": 1.1217018365859985
+      }
+    }
+  },
+  {
+    "epoch": 160,
+    "environments": {
+      "npole10": {
+        "total": 0.23595285788178444,
+        "prediction": 0.12761324271559715,
+        "variance": 0.02833704836666584,
+        "covariance": 8.000257015228271,
+        "latent_std": 1.0089639276266098
+      }
+    }
+  },
+  {
+    "epoch": 161,
+    "environments": {
+      "npole10": {
+        "total": 0.2449570782482624,
+        "prediction": 0.14566948637366295,
+        "variance": 0.011727260425686836,
+        "covariance": 8.756033182144165,
+        "latent_std": 1.040762186050415
+      }
+    }
+  },
+  {
+    "epoch": 162,
+    "environments": {
+      "npole10": {
+        "total": 0.2286093346774578,
+        "prediction": 0.12435558252036572,
+        "variance": 0.016836429480463266,
+        "covariance": 8.741732239723206,
+        "latent_std": 1.0324925184249878
+      }
+    }
+  },
+  {
+    "epoch": 163,
+    "environments": {
+      "npole10": {
+        "total": 0.21439585089683533,
+        "prediction": 0.11079765856266022,
+        "variance": 0.027530290419235826,
+        "covariance": 7.60679030418396,
+        "latent_std": 0.9975090026855469
+      }
+    }
+  },
+  {
+    "epoch": 164,
+    "environments": {
+      "npole10": {
+        "total": 0.2295239195227623,
+        "prediction": 0.1201440691947937,
+        "variance": 0.026852075709030032,
+        "covariance": 8.252777576446533,
+        "latent_std": 1.0121406316757202
+      }
+    }
+  },
+  {
+    "epoch": 165,
+    "environments": {
+      "npole10": {
+        "total": 0.24984639883041382,
+        "prediction": 0.14430156722664833,
+        "variance": 0.0054083100985735655,
+        "covariance": 10.013652086257935,
+        "latent_std": 1.0731863379478455
+      }
+    }
+  },
+  {
+    "epoch": 166,
+    "environments": {
+      "npole10": {
+        "total": 0.24786508083343506,
+        "prediction": 0.14292284101247787,
+        "variance": 0.014028039062395692,
+        "covariance": 9.091420531272888,
+        "latent_std": 1.0525157749652863
+      }
+    }
+  },
+  {
+    "epoch": 167,
+    "environments": {
+      "npole10": {
+        "total": 0.2182619273662567,
+        "prediction": 0.1156194806098938,
+        "variance": 0.027235878398641944,
+        "covariance": 7.540657162666321,
+        "latent_std": 0.9995007365942001
+      }
+    }
+  },
+  {
+    "epoch": 168,
+    "environments": {
+      "npole10": {
+        "total": 0.22519417852163315,
+        "prediction": 0.11734768375754356,
+        "variance": 0.04191650729626417,
+        "covariance": 6.5929988622665405,
+        "latent_std": 0.9716351628303528
+      }
+    }
+  },
+  {
+    "epoch": 169,
+    "environments": {
+      "npole10": {
+        "total": 0.22825616225600243,
+        "prediction": 0.12031462974846363,
+        "variance": 0.027355949161574244,
+        "covariance": 8.058558344841003,
+        "latent_std": 1.0108626335859299
+      }
+    }
+  },
+  {
+    "epoch": 170,
+    "environments": {
+      "npole10": {
+        "total": 0.22613776475191116,
+        "prediction": 0.12160766310989857,
+        "variance": 0.012680397601798177,
+        "covariance": 9.184970617294312,
+        "latent_std": 1.050997644662857
+      }
+    }
+  },
+  {
+    "epoch": 171,
+    "environments": {
+      "npole10": {
+        "total": 0.22903767600655556,
+        "prediction": 0.12389636412262917,
+        "variance": 0.005235491320490837,
+        "covariance": 9.99058198928833,
+        "latent_std": 1.076519399881363
+      }
+    }
+  },
+  {
+    "epoch": 172,
+    "environments": {
+      "npole10": {
+        "total": 0.23576970398426056,
+        "prediction": 0.11894324235618114,
+        "variance": 0.03948966530151665,
+        "covariance": 7.733679533004761,
+        "latent_std": 1.0053175389766693
+      }
+    }
+  },
+  {
+    "epoch": 173,
+    "environments": {
+      "npole10": {
+        "total": 0.22081441804766655,
+        "prediction": 0.11566451005637646,
+        "variance": 0.03417277941480279,
+        "covariance": 7.0977126359939575,
+        "latent_std": 0.9897380471229553
+      }
+    }
+  },
+  {
+    "epoch": 174,
+    "environments": {
+      "npole10": {
+        "total": 0.23422545194625854,
+        "prediction": 0.13603368401527405,
+        "variance": 0.005411176942288876,
+        "covariance": 9.278059244155884,
+        "latent_std": 1.0664806067943573
+      }
+    }
+  },
+  {
+    "epoch": 175,
+    "environments": {
+      "npole10": {
+        "total": 0.21466107666492462,
+        "prediction": 0.12210696935653687,
+        "variance": 0.01419886271469295,
+        "covariance": 7.835525393486023,
+        "latent_std": 1.0261372178792953
+      }
+    }
+  },
+  {
+    "epoch": 176,
+    "environments": {
+      "npole10": {
+        "total": 0.2221500314772129,
+        "prediction": 0.1152234710752964,
+        "variance": 0.025878918590024114,
+        "covariance": 8.104764461517334,
+        "latent_std": 1.0232149362564087
+      }
+    }
+  },
+  {
+    "epoch": 177,
+    "environments": {
+      "npole10": {
+        "total": 0.21645180881023407,
+        "prediction": 0.12153559178113937,
+        "variance": 0.013797179562970996,
+        "covariance": 8.11190402507782,
+        "latent_std": 1.0340074747800827
+      }
+    }
+  },
+  {
+    "epoch": 178,
+    "environments": {
+      "npole10": {
+        "total": 0.2218816578388214,
+        "prediction": 0.11268427222967148,
+        "variance": 0.04315256513655186,
+        "covariance": 6.604481339454651,
+        "latent_std": 0.9714754521846771
+      }
+    }
+  },
+  {
+    "epoch": 179,
+    "environments": {
+      "npole10": {
+        "total": 0.21139144152402878,
+        "prediction": 0.10986055992543697,
+        "variance": 0.013822997221723199,
+        "covariance": 8.770788788795471,
+        "latent_std": 1.0427815616130829
+      }
+    }
+  },
+  {
+    "epoch": 180,
+    "environments": {
+      "npole10": {
+        "total": 0.21299868822097778,
+        "prediction": 0.11830907128751278,
+        "variance": 0.006373940035700798,
+        "covariance": 8.831567764282227,
+        "latent_std": 1.0564698576927185
+      }
+    }
+  },
+  {
+    "epoch": 181,
+    "environments": {
+      "npole10": {
+        "total": 0.21659117192029953,
+        "prediction": 0.11644240841269493,
+        "variance": 0.02203332050703466,
+        "covariance": 7.811543822288513,
+        "latent_std": 1.0284803807735443
+      }
+    }
+  },
+  {
+    "epoch": 182,
+    "environments": {
+      "npole10": {
+        "total": 0.22488616034388542,
+        "prediction": 0.128605205565691,
+        "variance": 0.013651276472955942,
+        "covariance": 8.262967586517334,
+        "latent_std": 1.0446317493915558
+      }
+    }
+  },
+  {
+    "epoch": 183,
+    "environments": {
+      "npole10": {
+        "total": 0.21955270692706108,
+        "prediction": 0.1171974241733551,
+        "variance": 0.02168697165325284,
+        "covariance": 8.06683099269867,
+        "latent_std": 1.0303051471710205
+      }
+    }
+  },
+  {
+    "epoch": 184,
+    "environments": {
+      "npole10": {
+        "total": 0.2086203247308731,
+        "prediction": 0.11628097482025623,
+        "variance": 0.016604671254754066,
+        "covariance": 7.573468327522278,
+        "latent_std": 1.0217263400554657
+      }
+    }
+  },
+  {
+    "epoch": 185,
+    "environments": {
+      "npole10": {
+        "total": 0.21370146051049232,
+        "prediction": 0.12153135798871517,
+        "variance": 0.014605327742174268,
+        "covariance": 7.75647759437561,
+        "latent_std": 1.0259570181369781
+      }
+    }
+  },
+  {
+    "epoch": 186,
+    "environments": {
+      "npole10": {
+        "total": 0.2220774032175541,
+        "prediction": 0.11353437043726444,
+        "variance": 0.03997684642672539,
+        "covariance": 6.856618881225586,
+        "latent_std": 0.9914103448390961
+      }
+    }
+  },
+  {
+    "epoch": 187,
+    "environments": {
+      "npole10": {
+        "total": 0.21478203311562538,
+        "prediction": 0.12092676386237144,
+        "variance": 0.006195208989083767,
+        "covariance": 8.766006231307983,
+        "latent_std": 1.0652393400669098
+      }
+    }
+  },
+  {
+    "epoch": 188,
+    "environments": {
+      "npole10": {
+        "total": 0.20080020651221275,
+        "prediction": 0.11084460839629173,
+        "variance": 0.014846463222056627,
+        "covariance": 7.510913610458374,
+        "latent_std": 1.0242498517036438
+      }
+    }
+  },
+  {
+    "epoch": 189,
+    "environments": {
+      "npole10": {
+        "total": 0.22228073701262474,
+        "prediction": 0.12561983428895473,
+        "variance": 0.012528104707598686,
+        "covariance": 8.413280010223389,
+        "latent_std": 1.0491675734519958
+      }
+    }
+  },
+  {
+    "epoch": 190,
+    "environments": {
+      "npole10": {
+        "total": 0.210769422352314,
+        "prediction": 0.12043261528015137,
+        "variance": 0.009388689883053303,
+        "covariance": 8.09481132030487,
+        "latent_std": 1.0487998127937317
+      }
+    }
+  },
+  {
+    "epoch": 191,
+    "environments": {
+      "npole10": {
+        "total": 0.20263772457838058,
+        "prediction": 0.10739178955554962,
+        "variance": 0.027251375373452902,
+        "covariance": 6.799456834793091,
+        "latent_std": 1.0024741291999817
+      }
+    }
+  },
+  {
+    "epoch": 192,
+    "environments": {
+      "npole10": {
+        "total": 0.2093988172709942,
+        "prediction": 0.11463824287056923,
+        "variance": 0.019955128664150834,
+        "covariance": 7.480544567108154,
+        "latent_std": 1.0259037911891937
+      }
+    }
+  },
+  {
+    "epoch": 193,
+    "environments": {
+      "npole10": {
+        "total": 0.20997308567166328,
+        "prediction": 0.11087418347597122,
+        "variance": 0.024587544379755855,
+        "covariance": 7.451135993003845,
+        "latent_std": 1.0256420820951462
+      }
+    }
+  },
+  {
+    "epoch": 194,
+    "environments": {
+      "npole10": {
+        "total": 0.20342778787016869,
+        "prediction": 0.10630462877452374,
+        "variance": 0.020920308772474527,
+        "covariance": 7.620285391807556,
+        "latent_std": 1.024024561047554
+      }
+    }
+  },
+  {
+    "epoch": 195,
+    "environments": {
+      "npole10": {
+        "total": 0.20022567734122276,
+        "prediction": 0.11085374467074871,
+        "variance": 0.008577462285757065,
+        "covariance": 8.079447507858276,
+        "latent_std": 1.0508804321289062
+      }
+    }
+  },
+  {
+    "epoch": 196,
+    "environments": {
+      "npole10": {
+        "total": 0.21599868685007095,
+        "prediction": 0.12119907326996326,
+        "variance": 0.0037065858487039804,
+        "covariance": 9.109302759170532,
+        "latent_std": 1.0882462859153748
+      }
+    }
+  },
+  {
+    "epoch": 197,
+    "environments": {
+      "npole10": {
+        "total": 0.2061132937669754,
+        "prediction": 0.11146391928195953,
+        "variance": 0.0247622721362859,
+        "covariance": 6.988710284233093,
+        "latent_std": 1.0119429230690002
+      }
+    }
+  },
+  {
+    "epoch": 198,
+    "environments": {
+      "npole10": {
+        "total": 0.20770665630698204,
+        "prediction": 0.10991605371236801,
+        "variance": 0.027053076773881912,
+        "covariance": 7.0737528800964355,
+        "latent_std": 1.0104837119579315
+      }
+    }
+  },
+  {
+    "epoch": 199,
+    "environments": {
+      "npole10": {
+        "total": 0.20785730704665184,
+        "prediction": 0.11734436079859734,
+        "variance": 0.008093429962173104,
+        "covariance": 8.241951942443848,
+        "latent_std": 1.061795711517334
+      }
+    }
+  },
+  {
+    "epoch": 200,
+    "environments": {
+      "npole10": {
+        "total": 0.20612594857811928,
+        "prediction": 0.11101943254470825,
+        "variance": 0.03207144420593977,
+        "covariance": 6.303507328033447,
+        "latent_std": 0.9901681542396545
+      }
+    }
+  }
+]

@@ -1,0 +1,395 @@
+{
+  "created_at": "2026-10-13T00:59:17.454886+00:00",
+  "checkpoint_sha256": "ae387e7eebbf28097bb62cc7c8e664a27a0c1c23a4255ef56cea033e96bc5c6a",
+  "source_hashes": {
+    "scripts/verify_extended_encoder.py": "2ce2265c679049b78861d4e650c2e7566c434d8098bf4f2a81e93296178fb3a6",
+    "src/rage_mill/jepa_state_control.py": "4be212b137865f0ed2ccc8ef268b15f1abb0c79b9071ab94c36fba0d58e57128"
+  },
+  "seed": 730010,
+  "calibration_distribution": "synthetic states within \u00b1.04 coordinate/angle and \u00b1.02 velocity of hanging, upright, mixed references",
+  "known_last_applied_action": 0.37,
+  "inverse_iterations": 20,
+  "inverse_latent_residual_tolerance": 1e-12,
+  "inference_dtype": "float64",
+  "control_success_claim": false,
+  "identified": false,
+  "environments": {
+    "npole10": {
+      "references": {
+        "hanging": {
+          "jacobian_shape": [
+            64,
+            22
+          ],
+          "rank": 22,
+          "physical_dimension": 22,
+          "minimum_singular_value": 0.0108473215423789,
+          "condition_number": 615.3992268823223,
+          "velocity_column_min_norm": 0.15192714674176103,
+          "max_reconstruction_error": 1.2427558981897846e-14,
+          "max_latent_residual": 2.533390069289221e-15,
+          "samples": 16,
+          "pass": true
+        },
+        "upright": {
+          "jacobian_shape": [
+            64,
+            22
+          ],
+          "rank": 22,
+          "physical_dimension": 22,
+          "minimum_singular_value": 0.014074377079736262,
+          "condition_number": 546.7345676659825,
+          "velocity_column_min_norm": 0.133211805288114,
+          "max_reconstruction_error": 2.734748191790537e-14,
+          "max_latent_residual": 2.947715308013556e-15,
+          "samples": 16,
+          "pass": true
+        },
+        "mixed": {
+          "jacobian_shape": [
+            64,
+            22
+          ],
+          "rank": 22,
+          "physical_dimension": 22,
+          "minimum_singular_value": 0.011923080364991305,
+          "condition_number": 562.3627846206966,
+          "velocity_column_min_norm": 0.14860687662738215,
+          "max_reconstruction_error": 1.7598769663784708e-14,
+          "max_latent_residual": 3.0075122582983188e-15,
+          "samples": 16,
+          "pass": true
+        }
+      },
+      "observation_std": [
+        0.43568140268325806,
+        0.5867146849632263,
+        0.35778501629829407,
+        0.6281105875968933,
+        0.5018767714500427,
+        0.3715745210647583,
+        0.5949360132217407,
+        0.580319344997406,
+        0.3516215980052948,
+        0.681172788143158,
+        0.5967949628829956,
+        0.3440801501274109,
+        0.717814564704895,
+        0.5852966904640198,
+        0.34792834520339966,
+        0.7378077507019043,
+        0.5880668759346008,
+        0.3432723879814148,
+        0.7892011404037476,
+        0.5560727715492249,
+        0.37640655040740967,
+        0.8165386319160461,
+        0.5713096261024475,
+        0.3463438153266907,
+        0.8451026082038879,
+        0.5600706934928894,
+        0.3567388355731964,
+        0.8862510323524475,
+        0.5274433493614197,
+        0.3668116629123688,
+        0.9110373258590698,
+        0.5680351257324219,
+        0.21116451919078827
+      ],
+      "max_velocity_normalization_std": 0.5967949628829956,
+      "pass": true
+    }
+  },
+  "plans": {
+    "artifacts/npole10/verified/npole10-rk44-18s-feasible.npz": {
+      "sha256": "cb0caa888ebaeb63ce27606453b54b02116b770314de666b92e37b026e2e6e2e",
+      "trajectory_dynamically_feasible": true,
+      "training_on_plan": false,
+      "control_success_claim": false,
+      "probes": [
+        {
+          "knot": 0,
+          "seconds": 0.0,
+          "rank": 22,
+          "condition_number": 605.8466836041931,
+          "minimum_singular_value": 0.010304876783952121,
+          "max_reconstruction_error": 7.78023478975598e-15,
+          "pass": true
+        },
+        {
+          "knot": 30,
+          "seconds": 0.6,
+          "rank": 22,
+          "condition_number": 629.6499405778948,
+          "minimum_singular_value": 0.013581825324365257,
+          "max_reconstruction_error": 1.5765166949677223e-14,
+          "pass": true
+        },
+        {
+          "knot": 60,
+          "seconds": 1.2,
+          "rank": 22,
+          "condition_number": 539.3645917291489,
+          "minimum_singular_value": 0.01569068447931195,
+          "max_reconstruction_error": 1.687538997430238e-14,
+          "pass": true
+        },
+        {
+          "knot": 90,
+          "seconds": 1.8,
+          "rank": 22,
+          "condition_number": 554.7835293017541,
+          "minimum_singular_value": 0.009810193129697232,
+          "max_reconstruction_error": 8.604228440844963e-15,
+          "pass": true
+        },
+        {
+          "knot": 120,
+          "seconds": 2.4,
+          "rank": 22,
+          "condition_number": 384.40418506900176,
+          "minimum_singular_value": 0.01447589804019175,
+          "max_reconstruction_error": 1.4654943925052066e-14,
+          "pass": true
+        },
+        {
+          "knot": 150,
+          "seconds": 3.0,
+          "rank": 22,
+          "condition_number": 410.5473246091995,
+          "minimum_singular_value": 0.015497440893595718,
+          "max_reconstruction_error": 2.220446049250313e-14,
+          "pass": true
+        },
+        {
+          "knot": 180,
+          "seconds": 3.6,
+          "rank": 22,
+          "condition_number": 343.01578809536466,
+          "minimum_singular_value": 0.015674202345131442,
+          "max_reconstruction_error": 3.552713678800501e-14,
+          "pass": true
+        },
+        {
+          "knot": 210,
+          "seconds": 4.2,
+          "rank": 22,
+          "condition_number": 367.00789067252833,
+          "minimum_singular_value": 0.013992426246263834,
+          "max_reconstruction_error": 1.6986412276764895e-14,
+          "pass": true
+        },
+        {
+          "knot": 240,
+          "seconds": 4.8,
+          "rank": 22,
+          "condition_number": 415.2809013091695,
+          "minimum_singular_value": 0.015706101159495844,
+          "max_reconstruction_error": 4.796163466380676e-14,
+          "pass": true
+        },
+        {
+          "knot": 270,
+          "seconds": 5.4,
+          "rank": 22,
+          "condition_number": 589.4836681382617,
+          "minimum_singular_value": 0.009769114904932544,
+          "max_reconstruction_error": 1.2212453270876722e-14,
+          "pass": true
+        },
+        {
+          "knot": 300,
+          "seconds": 6.0,
+          "rank": 22,
+          "condition_number": 194.57509419205047,
+          "minimum_singular_value": 0.02151176945699087,
+          "max_reconstruction_error": 2.369979212879514e-14,
+          "pass": true
+        },
+        {
+          "knot": 330,
+          "seconds": 6.6000000000000005,
+          "rank": 22,
+          "condition_number": 324.6800362144042,
+          "minimum_singular_value": 0.015285267089129972,
+          "max_reconstruction_error": 2.098321516541546e-14,
+          "pass": true
+        },
+        {
+          "knot": 360,
+          "seconds": 7.2,
+          "rank": 22,
+          "condition_number": 423.03594878441976,
+          "minimum_singular_value": 0.016493067735372176,
+          "max_reconstruction_error": 1.7763568394002505e-14,
+          "pass": true
+        },
+        {
+          "knot": 390,
+          "seconds": 7.8,
+          "rank": 22,
+          "condition_number": 387.7460544143938,
+          "minimum_singular_value": 0.014311804223723482,
+          "max_reconstruction_error": 4.085620730620576e-14,
+          "pass": true
+        },
+        {
+          "knot": 420,
+          "seconds": 8.4,
+          "rank": 22,
+          "condition_number": 337.46612428044097,
+          "minimum_singular_value": 0.01659676174365433,
+          "max_reconstruction_error": 1.9761969838327786e-14,
+          "pass": true
+        },
+        {
+          "knot": 450,
+          "seconds": 9.0,
+          "rank": 22,
+          "condition_number": 440.9251703051367,
+          "minimum_singular_value": 0.01479326866336376,
+          "max_reconstruction_error": 1.7680301667155618e-14,
+          "pass": true
+        },
+        {
+          "knot": 480,
+          "seconds": 9.6,
+          "rank": 22,
+          "condition_number": 320.5441629069289,
+          "minimum_singular_value": 0.0153348192112992,
+          "max_reconstruction_error": 3.019806626980426e-14,
+          "pass": true
+        },
+        {
+          "knot": 510,
+          "seconds": 10.200000000000001,
+          "rank": 22,
+          "condition_number": 376.4062567356179,
+          "minimum_singular_value": 0.013875898958740052,
+          "max_reconstruction_error": 1.554312234475219e-14,
+          "pass": true
+        },
+        {
+          "knot": 540,
+          "seconds": 10.8,
+          "rank": 22,
+          "condition_number": 470.12298405481516,
+          "minimum_singular_value": 0.013239315396409794,
+          "max_reconstruction_error": 2.6201263381153694e-14,
+          "pass": true
+        },
+        {
+          "knot": 570,
+          "seconds": 11.4,
+          "rank": 22,
+          "condition_number": 595.2768810395205,
+          "minimum_singular_value": 0.011678919546959272,
+          "max_reconstruction_error": 1.27675647831893e-14,
+          "pass": true
+        },
+        {
+          "knot": 600,
+          "seconds": 12.0,
+          "rank": 22,
+          "condition_number": 586.6048778773525,
+          "minimum_singular_value": 0.012619063679793876,
+          "max_reconstruction_error": 1.5432100042289676e-14,
+          "pass": true
+        },
+        {
+          "knot": 630,
+          "seconds": 12.6,
+          "rank": 22,
+          "condition_number": 573.8141529976087,
+          "minimum_singular_value": 0.013395546865975074,
+          "max_reconstruction_error": 7.716050021144838e-15,
+          "pass": true
+        },
+        {
+          "knot": 660,
+          "seconds": 13.200000000000001,
+          "rank": 22,
+          "condition_number": 570.2114005051216,
+          "minimum_singular_value": 0.013630257308446532,
+          "max_reconstruction_error": 1.0399341977829213e-14,
+          "pass": true
+        },
+        {
+          "knot": 690,
+          "seconds": 13.8,
+          "rank": 22,
+          "condition_number": 570.7196829193987,
+          "minimum_singular_value": 0.013540165814440052,
+          "max_reconstruction_error": 1.4203915821298096e-14,
+          "pass": true
+        },
+        {
+          "knot": 720,
+          "seconds": 14.4,
+          "rank": 22,
+          "condition_number": 572.597545300123,
+          "minimum_singular_value": 0.013369047768692691,
+          "max_reconstruction_error": 1.3303594337266134e-14,
+          "pass": true
+        },
+        {
+          "knot": 750,
+          "seconds": 15.0,
+          "rank": 22,
+          "condition_number": 573.8680116534707,
+          "minimum_singular_value": 0.013238546597229048,
+          "max_reconstruction_error": 1.682811875958201e-14,
+          "pass": true
+        },
+        {
+          "knot": 780,
+          "seconds": 15.6,
+          "rank": 22,
+          "condition_number": 573.7305572223846,
+          "minimum_singular_value": 0.013172301405073496,
+          "max_reconstruction_error": 1.3933298959045715e-14,
+          "pass": true
+        },
+        {
+          "knot": 810,
+          "seconds": 16.2,
+          "rank": 22,
+          "condition_number": 574.2496230537159,
+          "minimum_singular_value": 0.01313995727420167,
+          "max_reconstruction_error": 1.0642528525117712e-14,
+          "pass": true
+        },
+        {
+          "knot": 840,
+          "seconds": 16.8,
+          "rank": 22,
+          "condition_number": 574.9821880934561,
+          "minimum_singular_value": 0.013156128224164752,
+          "max_reconstruction_error": 1.2543785454788292e-14,
+          "pass": true
+        },
+        {
+          "knot": 870,
+          "seconds": 17.400000000000002,
+          "rank": 22,
+          "condition_number": 575.0186986166682,
+          "minimum_singular_value": 0.013148714791857741,
+          "max_reconstruction_error": 7.034303695085953e-15,
+          "pass": true
+        },
+        {
+          "knot": 900,
+          "seconds": 18.0,
+          "rank": 22,
+          "condition_number": 574.2621191118033,
+          "minimum_singular_value": 0.01317223014544827,
+          "max_reconstruction_error": 1.3328964668102294e-14,
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

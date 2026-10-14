@@ -1,0 +1,31 @@
+{
+  "path": "artifacts/npole10/verified/npole10-rk44-18s-feasible.npz",
+  "sha256": "cb0caa888ebaeb63ce27606453b54b02116b770314de666b92e37b026e2e6e2e",
+  "candidate_verification": {
+    "dynamically_feasible": true,
+    "optimizer_error": "swing trajectory failed: Maximum_CpuTime_Exceeded; dynamics defect 1.17e-08, endpoint error 1.22e-13",
+    "control_success_claim": false,
+    "candidate_source": "artifacts/npole10/nominal-rk44-arc18-quasi/npole10-18s-rk44-s3-a0.9-attempt2-failed-iterate.npz",
+    "candidate_source_sha256": "58c5a734b701b12f1fdff7a74da04871e4af7eefe9021b03379b65c1f4cb08f7",
+    "source_optimizer_metadata": {
+      "dynamically_feasible": false,
+      "optimizer_error": "swing trajectory failed: Maximum_CpuTime_Exceeded; dynamics defect 1.17e-08, endpoint error 1.22e-13",
+      "control_success_claim": false
+    },
+    "solver_status_unchanged": true,
+    "objective_optimality_verified": false,
+    "dynamics_and_endpoint_constraints_rechecked": true,
+    "max_dynamics_defect": 1.1743724215307338e-08,
+    "max_endpoint_error": 1.2217456511392926e-13,
+    "planning_rail_limit_m": 2.0,
+    "force_limit_N": 10.0,
+    "planning_force_limit_N": 9.0,
+    "peak_cart_m": 1.9997156229260507,
+    "peak_force_N": 8.999999947126252,
+    "duration_s": 18.0,
+    "maneuver_duration_s": 18.0,
+    "stationary_tracking_extension_s": 0.0,
+    "identified": false,
+    "method": "verified_feasible_candidate_with_optional_exact_terminal_extension"
+  }
+}

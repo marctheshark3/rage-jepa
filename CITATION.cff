@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software and identify the release/checkpoint used."
+title: "Rage JEPA: small state-vector learning and ten-pole hybrid control"
+type: software
+authors:
+  - name: "Rage Industries"
+version: 0.1.0
+date-released: 2026-10-14
+license: MIT
+repository-code: "https://github.com/marctheshark3/rage-jepa"

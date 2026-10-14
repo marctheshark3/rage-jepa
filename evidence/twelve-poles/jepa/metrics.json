@@ -1,0 +1,1101 @@
+{
+  "format_version": 1,
+  "model": "from-scratch state/action JEPA with shared predictor",
+  "created_at": "2026-10-13T23:35:52.055174+00:00",
+  "initialization": "random; no pretrained weights",
+  "device": "cuda",
+  "machine": "aarch64",
+  "torch_version": "2.14.1+cu130",
+  "gpu": "NVIDIA GB10",
+  "compute_capability": [
+    12,
+    1
+  ],
+  "physics_device": "cpu",
+  "parameter_count": 79552,
+  "model_config": {
+    "latent_dim": 64,
+    "hidden_dim": 128,
+    "ema_decay": 0.99,
+    "variance_weight": 1.0,
+    "covariance_weight": 0.01
+  },
+  "train_config": {
+    "epochs": 200,
+    "updates_per_epoch": 4,
+    "batch_size": 128,
+    "horizon": 8,
+    "learning_rate": 0.001,
+    "seed": 2026101412,
+    "eval_samples": 512
+  },
+  "elapsed_seconds": 25.679992244025925,
+  "checkpoint": "runs/poles-beyond10/npole12/jepa/model.pt",
+  "checkpoint_sha256": "5090ab853fb74eb96535233cef840caaf09a55c04fbaf4ebf841892f843ee45e",
+  "identified": false,
+  "hardware_deployment": false,
+  "evaluation_policy": "Final fixed model; no model selection on evaluation trajectories. Probes fit training episodes only.",
+  "criterion": "Within-body mean latent std >=0.05 and effective rank >=2; MSE <0.95x persistence; shuffled actions MSE >1.05x correct actions.",
+  "environments": {
+    "npole12": {
+      "evaluation_kind": "independent_engine",
+      "initial_evaluation": {
+        "episodes": 12,
+        "source_kind": "simulation",
+        "engine": "mujoco",
+        "horizon_steps": 8,
+        "horizon_seconds": 0.16,
+        "samples": 512,
+        "latent_mse": 0.05703839659690857,
+        "normalized_latent_mse": 13.721308581235185,
+        "persistence_mse": 0.003593830857425928,
+        "persistence_ratio": 15.871196742342562,
+        "shuffled_action_mse": 0.057034365832805634,
+        "zero_action_mse": 0.05691501870751381,
+        "shuffled_action_ratio": 0.9999293324436972,
+        "mean_latent_std": 0.06350180506706238,
+        "min_latent_std": 0.043291158974170685,
+        "effective_rank": 18.506797790527344,
+        "noncollapsed": true,
+        "per_horizon_mse": [
+          0.002631619106978178,
+          0.00996926985681057,
+          0.02148102968931198,
+          0.037163883447647095,
+          0.05671006068587303,
+          0.0803007185459137,
+          0.10804374516010284,
+          0.14000685513019562
+        ],
+        "per_horizon_persistence_mse": [
+          0.000540488981641829,
+          0.0015994745772331953,
+          0.002639609854668379,
+          0.0036525647155940533,
+          0.004376283846795559,
+          0.00494591798633337,
+          0.005379656329751015,
+          0.005616649053990841
+        ],
+        "predictive_pass": false,
+        "state_probe_r2": 0.8079139590263367,
+        "prediction_probe_r2": -21.34165382385254,
+        "observation_persistence_r2": 0.27594345808029175,
+        "prediction_probe_mse": 27.76531581252906,
+        "observation_persistence_mse": 1.0425729751586914,
+        "per_feature_probe_r2": {
+          "cart_x_m": {
+            "state": 0.6437737345695496,
+            "prediction": -51.23529052734375,
+            "persistence": 0.9780585765838623
+          },
+          "cart_velocity_m_s": {
+            "state": 0.6724152565002441,
+            "prediction": -6.059603691101074,
+            "persistence": 0.6021453738212585
+          },
+          "sin_theta_1": {
+            "state": 0.809248685836792,
+            "prediction": -58.58363342285156,
+            "persistence": 0.35997265577316284
+          },
+          "cos_theta_1": {
+            "state": 0.8716871738433838,
+            "prediction": -2.5629193782806396,
+            "persistence": 0.9180871248245239
+          },
+          "omega_1_rad_s_div8": {
+            "state": 0.8272483348846436,
+            "prediction": -0.4677656888961792,
+            "persistence": -0.29669153690338135
+          },
+          "sin_theta_2": {
+            "state": 0.7296122908592224,
+            "prediction": -3.634187698364258,
+            "persistence": 0.3472868800163269
+          },
+          "cos_theta_2": {
+            "state": 0.8874720335006714,
+            "prediction": -3.3452882766723633,
+            "persistence": 0.9361567497253418
+          },
+          "omega_2_rad_s_div8": {
+            "state": 0.810081958770752,
+            "prediction": -0.8319610357284546,
+            "persistence": -0.40452003479003906
+          },
+          "sin_theta_3": {
+            "state": 0.8179156184196472,
+            "prediction": -22.54665756225586,
+            "persistence": 0.4042394161224365
+          },
+          "cos_theta_3": {
+            "state": 0.8812469840049744,
+            "prediction": -56.98490524291992,
+            "persistence": 0.9157906770706177
+          },
+          "omega_3_rad_s_div8": {
+            "state": 0.7233110666275024,
+            "prediction": -2.0645439624786377,
+            "persistence": -0.7518117427825928
+          },
+          "sin_theta_4": {
+            "state": 0.8567834496498108,
+            "prediction": -0.8252941370010376,
+            "persistence": 0.40696990489959717
+          },
+          "cos_theta_4": {
+            "state": 0.8599221110343933,
+            "prediction": -20.73651123046875,
+            "persistence": 0.9172523617744446
+          },
+          "omega_4_rad_s_div8": {
+            "state": 0.8120383620262146,
+            "prediction": -9.26267147064209,
+            "persistence": -0.6081515550613403
+          },
+          "sin_theta_5": {
+            "state": 0.8649202585220337,
+            "prediction": -24.048433303833008,
+            "persistence": 0.2215551733970642
+          },
+          "cos_theta_5": {
+            "state": 0.8482503890991211,
+            "prediction": -44.12474822998047,
+            "persistence": 0.9200667142868042
+          },
+          "omega_5_rad_s_div8": {
+            "state": 0.8226052522659302,
+            "prediction": -87.75215148925781,
+            "persistence": -0.5293724536895752
+          },
+          "sin_theta_6": {
+            "state": 0.8373489379882812,
+            "prediction": -8.57029914855957,
+            "persistence": 0.0022662878036499023
+          },
+          "cos_theta_6": {
+            "state": 0.8962734937667847,
+            "prediction": -10.454261779785156,
+            "persistence": 0.9333917498588562
+          },
+          "omega_6_rad_s_div8": {
+            "state": 0.788190484046936,
+            "prediction": -11.803482055664062,
+            "persistence": -0.6168850660324097
+          },
+          "sin_theta_7": {
+            "state": 0.8379256725311279,
+            "prediction": -28.662010192871094,
+            "persistence": 0.16384726762771606
+          },
+          "cos_theta_7": {
+            "state": 0.9205815196037292,
+            "prediction": -0.8922555446624756,
+            "persistence": 0.9074009656906128
+          },
+          "omega_7_rad_s_div8": {
+            "state": 0.8265708684921265,
+            "prediction": -37.90414047241211,
+            "persistence": -0.606601357460022
+          },
+          "sin_theta_8": {
+            "state": 0.8057929873466492,
+            "prediction": -5.262832164764404,
+            "persistence": -0.03723776340484619
+          },
+          "cos_theta_8": {
+            "state": 0.8667637705802917,
+            "prediction": -26.822338104248047,
+            "persistence": 0.9015209078788757
+          },
+          "omega_8_rad_s_div8": {
+            "state": 0.7920299768447876,
+            "prediction": -4.634349822998047,
+            "persistence": -0.7104427814483643
+          },
+          "sin_theta_9": {
+            "state": 0.7565320730209351,
+            "prediction": -29.662857055664062,
+            "persistence": 0.2050805687904358
+          },
+          "cos_theta_9": {
+            "state": 0.8599997758865356,
+            "prediction": -33.6650390625,
+            "persistence": 0.9052184224128723
+          },
+          "omega_9_rad_s_div8": {
+            "state": 0.8712353110313416,
+            "prediction": -3.346212863922119,
+            "persistence": -0.33830559253692627
+          },
+          "sin_theta_10": {
+            "state": 0.7485466599464417,
+            "prediction": -15.495359420776367,
+            "persistence": 0.5538424253463745
+          },
+          "cos_theta_10": {
+            "state": 0.9019206166267395,
+            "prediction": 0.8130452036857605,
+            "persistence": 0.9221964478492737
+          },
+          "omega_10_rad_s_div8": {
+            "state": 0.7381294369697571,
+            "prediction": -1.342158555984497,
+            "persistence": -0.5868310928344727
+          },
+          "sin_theta_11": {
+            "state": 0.6362076997756958,
+            "prediction": -53.3295783996582,
+            "persistence": 0.3894191384315491
+          },
+          "cos_theta_11": {
+            "state": 0.7821153402328491,
+            "prediction": -6.782407283782959,
+            "persistence": 0.9148589372634888
+          },
+          "omega_11_rad_s_div8": {
+            "state": 0.7526558637619019,
+            "prediction": -18.64542579650879,
+            "persistence": 0.03402954339981079
+          },
+          "sin_theta_12": {
+            "state": 0.8127562999725342,
+            "prediction": -13.40858268737793,
+            "persistence": 0.5268549919128418
+          },
+          "cos_theta_12": {
+            "state": 0.8539919853210449,
+            "prediction": -3.1636152267456055,
+            "persistence": 0.9279508590698242
+          },
+          "omega_12_rad_s_div8": {
+            "state": 0.7351477146148682,
+            "prediction": -14.191643714904785,
+            "persistence": 0.3256836533546448
+          },
+          "last_cart_force_normalized": {
+            "state": 0.7493982315063477,
+            "prediction": -110.03184509277344,
+            "persistence": -0.29256749153137207
+          }
+        },
+        "physical_observation_keys": [
+          "cart_x_m",
+          "cart_velocity_m_s",
+          "sin_theta_1",
+          "cos_theta_1",
+          "omega_1_rad_s_div8",
+          "sin_theta_2",
+          "cos_theta_2",
+          "omega_2_rad_s_div8",
+          "sin_theta_3",
+          "cos_theta_3",
+          "omega_3_rad_s_div8",
+          "sin_theta_4",
+          "cos_theta_4",
+          "omega_4_rad_s_div8",
+          "sin_theta_5",
+          "cos_theta_5",
+          "omega_5_rad_s_div8",
+          "sin_theta_6",
+          "cos_theta_6",
+          "omega_6_rad_s_div8",
+          "sin_theta_7",
+          "cos_theta_7",
+          "omega_7_rad_s_div8",
+          "sin_theta_8",
+          "cos_theta_8",
+          "omega_8_rad_s_div8",
+          "sin_theta_9",
+          "cos_theta_9",
+          "omega_9_rad_s_div8",
+          "sin_theta_10",
+          "cos_theta_10",
+          "omega_10_rad_s_div8",
+          "sin_theta_11",
+          "cos_theta_11",
+          "omega_11_rad_s_div8",
+          "sin_theta_12",
+          "cos_theta_12",
+          "omega_12_rad_s_div8"
+        ],
+        "physical_state_probe_r2": 0.8094539046287537,
+        "physical_prediction_probe_r2": -19.0076961517334,
+        "physical_prediction_probe_mse": 25.251228762100894,
+        "physical_observation_persistence_mse": 1.0322356224060059,
+        "physical_forecast_pass": false
+      },
+      "validation": {
+        "episodes": 12,
+        "source_kind": "simulation",
+        "engine": "euler",
+        "horizon_steps": 8,
+        "horizon_seconds": 0.16,
+        "samples": 512,
+        "latent_mse": 0.5639539957046509,
+        "normalized_latent_mse": 0.40508196318444756,
+        "persistence_mse": 0.8936516642570496,
+        "persistence_ratio": 0.6310669114833488,
+        "shuffled_action_mse": 0.5702588558197021,
+        "zero_action_mse": 0.5660274028778076,
+        "shuffled_action_ratio": 1.01117974189929,
+        "mean_latent_std": 1.1744418144226074,
+        "min_latent_std": 0.9162747859954834,
+        "effective_rank": 9.730220794677734,
+        "noncollapsed": true,
+        "per_horizon_mse": [
+          0.12232071161270142,
+          0.2863704264163971,
+          0.4212948679924011,
+          0.5133625268936157,
+          0.6415090560913086,
+          0.7536411285400391,
+          0.8441835045814514,
+          0.9289500713348389
+        ],
+        "per_horizon_persistence_mse": [
+          0.12117644399404526,
+          0.36005377769470215,
+          0.5943303108215332,
+          0.8179659843444824,
+          1.089874267578125,
+          1.3001339435577393,
+          1.4101121425628662,
+          1.4555660486221313
+        ],
+        "predictive_pass": false,
+        "state_probe_r2": 0.7018871903419495,
+        "prediction_probe_r2": 0.1469448059797287,
+        "observation_persistence_r2": 0.29700401425361633,
+        "prediction_probe_mse": 1.4765097864413381,
+        "observation_persistence_mse": 1.274888277053833,
+        "per_feature_probe_r2": {
+          "cart_x_m": {
+            "state": 0.6246399879455566,
+            "prediction": 0.4227215647697449,
+            "persistence": 0.9812412858009338
+          },
+          "cart_velocity_m_s": {
+            "state": 0.6195882558822632,
+            "prediction": 0.20173752307891846,
+            "persistence": 0.39623188972473145
+          },
+          "sin_theta_1": {
+            "state": 0.8395786285400391,
+            "prediction": 0.34014683961868286,
+            "persistence": 0.2686653733253479
+          },
+          "cos_theta_1": {
+            "state": 0.7733120322227478,
+            "prediction": 0.6805041432380676,
+            "persistence": 0.8800299167633057
+          },
+          "omega_1_rad_s_div8": {
+            "state": 0.7841730117797852,
+            "prediction": 0.21584665775299072,
+            "persistence": -0.1943035125732422
+          },
+          "sin_theta_2": {
+            "state": 0.6819343566894531,
+            "prediction": 0.2680482268333435,
+            "persistence": 0.38100695610046387
+          },
+          "cos_theta_2": {
+            "state": 0.7566537857055664,
+            "prediction": 0.5632269978523254,
+            "persistence": 0.913861870765686
+          },
+          "omega_2_rad_s_div8": {
+            "state": 0.6529590487480164,
+            "prediction": -0.31040263175964355,
+            "persistence": -0.5432043075561523
+          },
+          "sin_theta_3": {
+            "state": 0.6197023391723633,
+            "prediction": 0.11354804039001465,
+            "persistence": 0.40063899755477905
+          },
+          "cos_theta_3": {
+            "state": 0.859970211982727,
+            "prediction": 0.8075767755508423,
+            "persistence": 0.8994976878166199
+          },
+          "omega_3_rad_s_div8": {
+            "state": 0.3683511018753052,
+            "prediction": -0.4836157560348511,
+            "persistence": -0.507972240447998
+          },
+          "sin_theta_4": {
+            "state": 0.8356596827507019,
+            "prediction": 0.4454461336135864,
+            "persistence": 0.48646408319473267
+          },
+          "cos_theta_4": {
+            "state": 0.9102076292037964,
+            "prediction": 0.8043700456619263,
+            "persistence": 0.9111166596412659
+          },
+          "omega_4_rad_s_div8": {
+            "state": 0.7441690564155579,
+            "prediction": -0.45875775814056396,
+            "persistence": -0.6926192045211792
+          },
+          "sin_theta_5": {
+            "state": 0.7807900905609131,
+            "prediction": 0.329597532749176,
+            "persistence": 0.4380204677581787
+          },
+          "cos_theta_5": {
+            "state": 0.8396492600440979,
+            "prediction": 0.7545893788337708,
+            "persistence": 0.9070941805839539
+          },
+          "omega_5_rad_s_div8": {
+            "state": 0.7074881792068481,
+            "prediction": -0.28257155418395996,
+            "persistence": -0.6588473320007324
+          },
+          "sin_theta_6": {
+            "state": 0.6565738916397095,
+            "prediction": -0.49562013149261475,
+            "persistence": 0.09457898139953613
+          },
+          "cos_theta_6": {
+            "state": 0.9050684571266174,
+            "prediction": 0.8608274459838867,
+            "persistence": 0.908039391040802
+          },
+          "omega_6_rad_s_div8": {
+            "state": 0.7051098346710205,
+            "prediction": -0.268119215965271,
+            "persistence": -0.48015594482421875
+          },
+          "sin_theta_7": {
+            "state": 0.748200535774231,
+            "prediction": -0.08733224868774414,
+            "persistence": 0.3831835389137268
+          },
+          "cos_theta_7": {
+            "state": 0.8747899532318115,
+            "prediction": 0.8179957866668701,
+            "persistence": 0.9090052843093872
+          },
+          "omega_7_rad_s_div8": {
+            "state": 0.6171444058418274,
+            "prediction": -0.3762087821960449,
+            "persistence": -0.42407047748565674
+          },
+          "sin_theta_8": {
+            "state": 0.7345466613769531,
+            "prediction": 0.010992705821990967,
+            "persistence": 0.1918392777442932
+          },
+          "cos_theta_8": {
+            "state": 0.8582004904747009,
+            "prediction": 0.8020324110984802,
+            "persistence": 0.8942743539810181
+          },
+          "omega_8_rad_s_div8": {
+            "state": 0.7426300048828125,
+            "prediction": -0.2667670249938965,
+            "persistence": -0.4824866056442261
+          },
+          "sin_theta_9": {
+            "state": 0.7392329573631287,
+            "prediction": -0.10469222068786621,
+            "persistence": 0.28814613819122314
+          },
+          "cos_theta_9": {
+            "state": 0.6943259239196777,
+            "prediction": 0.632442831993103,
+            "persistence": 0.8652617931365967
+          },
+          "omega_9_rad_s_div8": {
+            "state": 0.6401488780975342,
+            "prediction": -0.4514646530151367,
+            "persistence": -0.21685612201690674
+          },
+          "sin_theta_10": {
+            "state": 0.6987020969390869,
+            "prediction": 0.12116420269012451,
+            "persistence": 0.514650821685791
+          },
+          "cos_theta_10": {
+            "state": 0.8056912422180176,
+            "prediction": 0.6701648235321045,
+            "persistence": 0.8539699912071228
+          },
+          "omega_10_rad_s_div8": {
+            "state": 0.5963714122772217,
+            "prediction": -0.27605748176574707,
+            "persistence": -0.2993828058242798
+          },
+          "sin_theta_11": {
+            "state": 0.48734188079833984,
+            "prediction": 0.018585562705993652,
+            "persistence": 0.4017150402069092
+          },
+          "cos_theta_11": {
+            "state": 0.8111826777458191,
+            "prediction": 0.6409991979598999,
+            "persistence": 0.9112513065338135
+          },
+          "omega_11_rad_s_div8": {
+            "state": 0.43175166845321655,
+            "prediction": -0.6359436511993408,
+            "persistence": -0.2300710678100586
+          },
+          "sin_theta_12": {
+            "state": 0.7243257761001587,
+            "prediction": 0.3012199401855469,
+            "persistence": 0.3866073489189148
+          },
+          "cos_theta_12": {
+            "state": 0.7389377951622009,
+            "prediction": 0.5347973108291626,
+            "persistence": 0.8734833598136902
+          },
+          "omega_12_rad_s_div8": {
+            "state": 0.7940760254859924,
+            "prediction": 0.33895254135131836,
+            "persistence": 0.4482322335243225
+          },
+          "last_cart_force_normalized": {
+            "state": -0.029574990272521973,
+            "prediction": -1.4691286087036133,
+            "persistence": -0.47502756118774414
+          }
+        },
+        "physical_observation_keys": [
+          "cart_x_m",
+          "cart_velocity_m_s",
+          "sin_theta_1",
+          "cos_theta_1",
+          "omega_1_rad_s_div8",
+          "sin_theta_2",
+          "cos_theta_2",
+          "omega_2_rad_s_div8",
+          "sin_theta_3",
+          "cos_theta_3",
+          "omega_3_rad_s_div8",
+          "sin_theta_4",
+          "cos_theta_4",
+          "omega_4_rad_s_div8",
+          "sin_theta_5",
+          "cos_theta_5",
+          "omega_5_rad_s_div8",
+          "sin_theta_6",
+          "cos_theta_6",
+          "omega_6_rad_s_div8",
+          "sin_theta_7",
+          "cos_theta_7",
+          "omega_7_rad_s_div8",
+          "sin_theta_8",
+          "cos_theta_8",
+          "omega_8_rad_s_div8",
+          "sin_theta_9",
+          "cos_theta_9",
+          "omega_9_rad_s_div8",
+          "sin_theta_10",
+          "cos_theta_10",
+          "omega_10_rad_s_div8",
+          "sin_theta_11",
+          "cos_theta_11",
+          "omega_11_rad_s_div8",
+          "sin_theta_12",
+          "cos_theta_12",
+          "omega_12_rad_s_div8"
+        ],
+        "physical_state_probe_r2": 0.7211362719535828,
+        "physical_prediction_probe_r2": 0.1894731968641281,
+        "physical_prediction_probe_mse": 1.4517752824379437,
+        "physical_observation_persistence_mse": 1.2704501152038574,
+        "physical_forecast_pass": false
+      },
+      "evaluation": {
+        "episodes": 12,
+        "source_kind": "simulation",
+        "engine": "mujoco",
+        "horizon_steps": 8,
+        "horizon_seconds": 0.16,
+        "samples": 512,
+        "latent_mse": 0.40238556265830994,
+        "normalized_latent_mse": 0.3595356458461972,
+        "persistence_mse": 0.643528938293457,
+        "persistence_ratio": 0.6252796707563402,
+        "shuffled_action_mse": 0.41643980145454407,
+        "zero_action_mse": 0.40686872601509094,
+        "shuffled_action_ratio": 1.0349272938705518,
+        "mean_latent_std": 1.0549368858337402,
+        "min_latent_std": 0.8460221886634827,
+        "effective_rank": 9.624398231506348,
+        "noncollapsed": true,
+        "per_horizon_mse": [
+          0.07805989682674408,
+          0.19238924980163574,
+          0.2875154912471771,
+          0.3699425160884857,
+          0.45015498995780945,
+          0.5390176177024841,
+          0.6179121732711792,
+          0.6840924024581909
+        ],
+        "per_horizon_persistence_mse": [
+          0.08203300833702087,
+          0.24207158386707306,
+          0.39876052737236023,
+          0.5988970994949341,
+          0.7758873701095581,
+          0.9240918159484863,
+          1.0146657228469849,
+          1.1118237972259521
+        ],
+        "predictive_pass": false,
+        "state_probe_r2": 0.7124632000923157,
+        "prediction_probe_r2": 0.1503869742155075,
+        "observation_persistence_r2": 0.27594345808029175,
+        "prediction_probe_mse": 1.147764917669285,
+        "observation_persistence_mse": 1.0425729751586914,
+        "per_feature_probe_r2": {
+          "cart_x_m": {
+            "state": 0.6126435399055481,
+            "prediction": 0.35460084676742554,
+            "persistence": 0.9780585765838623
+          },
+          "cart_velocity_m_s": {
+            "state": 0.7237156629562378,
+            "prediction": 0.3870742917060852,
+            "persistence": 0.6021453738212585
+          },
+          "sin_theta_1": {
+            "state": 0.8338385820388794,
+            "prediction": 0.4646208882331848,
+            "persistence": 0.35997265577316284
+          },
+          "cos_theta_1": {
+            "state": 0.8360682725906372,
+            "prediction": 0.7251855134963989,
+            "persistence": 0.9180871248245239
+          },
+          "omega_1_rad_s_div8": {
+            "state": 0.7035801410675049,
+            "prediction": 0.31067943572998047,
+            "persistence": -0.29669153690338135
+          },
+          "sin_theta_2": {
+            "state": 0.5850812792778015,
+            "prediction": 0.15914684534072876,
+            "persistence": 0.3472868800163269
+          },
+          "cos_theta_2": {
+            "state": 0.825736403465271,
+            "prediction": 0.7286460995674133,
+            "persistence": 0.9361567497253418
+          },
+          "omega_2_rad_s_div8": {
+            "state": 0.606991171836853,
+            "prediction": -0.21786069869995117,
+            "persistence": -0.40452003479003906
+          },
+          "sin_theta_3": {
+            "state": 0.5904790163040161,
+            "prediction": 0.07061368227005005,
+            "persistence": 0.4042394161224365
+          },
+          "cos_theta_3": {
+            "state": 0.8513814806938171,
+            "prediction": 0.7487645149230957,
+            "persistence": 0.9157906770706177
+          },
+          "omega_3_rad_s_div8": {
+            "state": 0.4682807922363281,
+            "prediction": -0.8577752113342285,
+            "persistence": -0.7518117427825928
+          },
+          "sin_theta_4": {
+            "state": 0.8204653263092041,
+            "prediction": 0.4686993956565857,
+            "persistence": 0.40696990489959717
+          },
+          "cos_theta_4": {
+            "state": 0.881328821182251,
+            "prediction": 0.6613333225250244,
+            "persistence": 0.9172523617744446
+          },
+          "omega_4_rad_s_div8": {
+            "state": 0.7377206683158875,
+            "prediction": -0.4339944124221802,
+            "persistence": -0.6081515550613403
+          },
+          "sin_theta_5": {
+            "state": 0.7999979257583618,
+            "prediction": 0.1801629662513733,
+            "persistence": 0.2215551733970642
+          },
+          "cos_theta_5": {
+            "state": 0.8696495890617371,
+            "prediction": 0.8442122936248779,
+            "persistence": 0.9200667142868042
+          },
+          "omega_5_rad_s_div8": {
+            "state": 0.7193639874458313,
+            "prediction": -0.06346392631530762,
+            "persistence": -0.5293724536895752
+          },
+          "sin_theta_6": {
+            "state": 0.5293302536010742,
+            "prediction": -0.6125953197479248,
+            "persistence": 0.0022662878036499023
+          },
+          "cos_theta_6": {
+            "state": 0.8936817049980164,
+            "prediction": 0.8461011648178101,
+            "persistence": 0.9333917498588562
+          },
+          "omega_6_rad_s_div8": {
+            "state": 0.6733044981956482,
+            "prediction": -0.6114177703857422,
+            "persistence": -0.6168850660324097
+          },
+          "sin_theta_7": {
+            "state": 0.7491984963417053,
+            "prediction": -0.2718465328216553,
+            "persistence": 0.16384726762771606
+          },
+          "cos_theta_7": {
+            "state": 0.9295473098754883,
+            "prediction": 0.8521223664283752,
+            "persistence": 0.9074009656906128
+          },
+          "omega_7_rad_s_div8": {
+            "state": 0.7650679349899292,
+            "prediction": -0.1718813180923462,
+            "persistence": -0.606601357460022
+          },
+          "sin_theta_8": {
+            "state": 0.7212337255477905,
+            "prediction": -0.1626603603363037,
+            "persistence": -0.03723776340484619
+          },
+          "cos_theta_8": {
+            "state": 0.8531576991081238,
+            "prediction": 0.8370341062545776,
+            "persistence": 0.9015209078788757
+          },
+          "omega_8_rad_s_div8": {
+            "state": 0.7510743737220764,
+            "prediction": -0.34122180938720703,
+            "persistence": -0.7104427814483643
+          },
+          "sin_theta_9": {
+            "state": 0.7321038842201233,
+            "prediction": -0.176705002784729,
+            "persistence": 0.2050805687904358
+          },
+          "cos_theta_9": {
+            "state": 0.8793072700500488,
+            "prediction": 0.8659377694129944,
+            "persistence": 0.9052184224128723
+          },
+          "omega_9_rad_s_div8": {
+            "state": 0.7218772172927856,
+            "prediction": -0.2272888422012329,
+            "persistence": -0.33830559253692627
+          },
+          "sin_theta_10": {
+            "state": 0.742376446723938,
+            "prediction": 0.1206512451171875,
+            "persistence": 0.5538424253463745
+          },
+          "cos_theta_10": {
+            "state": 0.8995529413223267,
+            "prediction": 0.8567128777503967,
+            "persistence": 0.9221964478492737
+          },
+          "omega_10_rad_s_div8": {
+            "state": 0.5156615972518921,
+            "prediction": -0.5189208984375,
+            "persistence": -0.5868310928344727
+          },
+          "sin_theta_11": {
+            "state": 0.43990737199783325,
+            "prediction": -0.22638094425201416,
+            "persistence": 0.3894191384315491
+          },
+          "cos_theta_11": {
+            "state": 0.8187227249145508,
+            "prediction": 0.7362418174743652,
+            "persistence": 0.9148589372634888
+          },
+          "omega_11_rad_s_div8": {
+            "state": 0.36349910497665405,
+            "prediction": -0.1684558391571045,
+            "persistence": 0.03402954339981079
+          },
+          "sin_theta_12": {
+            "state": 0.7611778378486633,
+            "prediction": 0.11883658170700073,
+            "persistence": 0.5268549919128418
+          },
+          "cos_theta_12": {
+            "state": 0.8352744579315186,
+            "prediction": 0.6777215600013733,
+            "persistence": 0.9279508590698242
+          },
+          "omega_12_rad_s_div8": {
+            "state": 0.6004794836044312,
+            "prediction": -0.06114637851715088,
+            "persistence": 0.3256836533546448
+          },
+          "last_cart_force_normalized": {
+            "state": 0.1442112922668457,
+            "prediction": -1.026374340057373,
+            "persistence": -0.29256749153137207
+          }
+        },
+        "physical_observation_keys": [
+          "cart_x_m",
+          "cart_velocity_m_s",
+          "sin_theta_1",
+          "cos_theta_1",
+          "omega_1_rad_s_div8",
+          "sin_theta_2",
+          "cos_theta_2",
+          "omega_2_rad_s_div8",
+          "sin_theta_3",
+          "cos_theta_3",
+          "omega_3_rad_s_div8",
+          "sin_theta_4",
+          "cos_theta_4",
+          "omega_4_rad_s_div8",
+          "sin_theta_5",
+          "cos_theta_5",
+          "omega_5_rad_s_div8",
+          "sin_theta_6",
+          "cos_theta_6",
+          "omega_6_rad_s_div8",
+          "sin_theta_7",
+          "cos_theta_7",
+          "omega_7_rad_s_div8",
+          "sin_theta_8",
+          "cos_theta_8",
+          "omega_8_rad_s_div8",
+          "sin_theta_9",
+          "cos_theta_9",
+          "omega_9_rad_s_div8",
+          "sin_theta_10",
+          "cos_theta_10",
+          "omega_10_rad_s_div8",
+          "sin_theta_11",
+          "cos_theta_11",
+          "omega_11_rad_s_div8",
+          "sin_theta_12",
+          "cos_theta_12",
+          "omega_12_rad_s_div8"
+        ],
+        "physical_state_probe_r2": 0.7274172902107239,
+        "physical_prediction_probe_r2": 0.1813548505306244,
+        "physical_prediction_probe_mse": 1.118751247326175,
+        "physical_observation_persistence_mse": 1.0322356224060059,
+        "physical_forecast_pass": false
+      }
+    }
+  },
+  "provenance": {
+    "npole12": {
+      "training": {
+        "schema": "rage_mill.jepa.trajectories.v1",
+        "env_id": "npole12",
+        "body": "npole12",
+        "source_kind": "simulation",
+        "engine": "euler",
+        "control_hz": 50.0,
+        "seed": 2026101412,
+        "identified": false,
+        "sim2real": false,
+        "hardware_log_gate_passed": false,
+        "source_hashes": {
+          "src/rage_mill/npole.py": "7d806a48fadaeb5653eb2652dfbf072daa5104e7ce13be42ae120500ae8461a2",
+          "src/rage_mill/jepa_data.py": "2e3e8e3d0f532a05dd025e09bca7da2b73a533f20f43fe2cb5cd69e8a170bd30"
+        },
+        "q_semantics": "simulated_absolute_angle_rad",
+        "actuator_model": "normalized_cart_force_10N",
+        "physics_device": "cpu",
+        "physics_hz": 1000.0,
+        "delay_steps": 0,
+        "physics_substeps": 20,
+        "requested_physics_substeps": 20,
+        "legacy_internal_euler_substeps": 1,
+        "physics_dt_s": 0.001,
+        "initial_distribution": "alternating hanging and upright, angles \u00b10.12 rad, velocities \u00b10.04",
+        "episode_resets": "only between episodes",
+        "observation_keys": [
+          "cart_x_m",
+          "cart_velocity_m_s",
+          "sin_theta_1",
+          "cos_theta_1",
+          "omega_1_rad_s_div8",
+          "sin_theta_2",
+          "cos_theta_2",
+          "omega_2_rad_s_div8",
+          "sin_theta_3",
+          "cos_theta_3",
+          "omega_3_rad_s_div8",
+          "sin_theta_4",
+          "cos_theta_4",
+          "omega_4_rad_s_div8",
+          "sin_theta_5",
+          "cos_theta_5",
+          "omega_5_rad_s_div8",
+          "sin_theta_6",
+          "cos_theta_6",
+          "omega_6_rad_s_div8",
+          "sin_theta_7",
+          "cos_theta_7",
+          "omega_7_rad_s_div8",
+          "sin_theta_8",
+          "cos_theta_8",
+          "omega_8_rad_s_div8",
+          "sin_theta_9",
+          "cos_theta_9",
+          "omega_9_rad_s_div8",
+          "sin_theta_10",
+          "cos_theta_10",
+          "omega_10_rad_s_div8",
+          "sin_theta_11",
+          "cos_theta_11",
+          "omega_11_rad_s_div8",
+          "sin_theta_12",
+          "cos_theta_12",
+          "omega_12_rad_s_div8",
+          "last_cart_force_normalized"
+        ]
+      },
+      "evaluation": {
+        "schema": "rage_mill.jepa.trajectories.v1",
+        "env_id": "npole12",
+        "body": "npole12",
+        "source_kind": "simulation",
+        "engine": "mujoco",
+        "control_hz": 50.0,
+        "seed": 2026111412,
+        "identified": false,
+        "sim2real": false,
+        "hardware_log_gate_passed": false,
+        "source_hashes": {
+          "src/rage_mill/npole.py": "7d806a48fadaeb5653eb2652dfbf072daa5104e7ce13be42ae120500ae8461a2",
+          "src/rage_mill/jepa_data.py": "2e3e8e3d0f532a05dd025e09bca7da2b73a533f20f43fe2cb5cd69e8a170bd30",
+          "generated_mjcf": "d7cd7d9c36d6f9b087caf4d70a0c14fac35a80c956851e06de83fe1018780889"
+        },
+        "q_semantics": "simulated_absolute_angle_rad",
+        "actuator_model": "normalized_cart_force_10N",
+        "physics_device": "cpu",
+        "physics_hz": 1000.0,
+        "delay_steps": 0,
+        "physics_substeps": 20,
+        "requested_physics_substeps": 20,
+        "legacy_internal_euler_substeps": 1,
+        "physics_dt_s": 0.001,
+        "initial_distribution": "alternating hanging and upright, angles \u00b10.12 rad, velocities \u00b10.04",
+        "episode_resets": "only between episodes",
+        "observation_keys": [
+          "cart_x_m",
+          "cart_velocity_m_s",
+          "sin_theta_1",
+          "cos_theta_1",
+          "omega_1_rad_s_div8",
+          "sin_theta_2",
+          "cos_theta_2",
+          "omega_2_rad_s_div8",
+          "sin_theta_3",
+          "cos_theta_3",
+          "omega_3_rad_s_div8",
+          "sin_theta_4",
+          "cos_theta_4",
+          "omega_4_rad_s_div8",
+          "sin_theta_5",
+          "cos_theta_5",
+          "omega_5_rad_s_div8",
+          "sin_theta_6",
+          "cos_theta_6",
+          "omega_6_rad_s_div8",
+          "sin_theta_7",
+          "cos_theta_7",
+          "omega_7_rad_s_div8",
+          "sin_theta_8",
+          "cos_theta_8",
+          "omega_8_rad_s_div8",
+          "sin_theta_9",
+          "cos_theta_9",
+          "omega_9_rad_s_div8",
+          "sin_theta_10",
+          "cos_theta_10",
+          "omega_10_rad_s_div8",
+          "sin_theta_11",
+          "cos_theta_11",
+          "omega_11_rad_s_div8",
+          "sin_theta_12",
+          "cos_theta_12",
+          "omega_12_rad_s_div8",
+          "last_cart_force_normalized"
+        ],
+        "mujoco_version": "3.12.0"
+      },
+      "train_episodes": [
+        36,
+        34,
+        3,
+        30,
+        35,
+        4,
+        18,
+        13,
+        11,
+        32,
+        44,
+        6,
+        40,
+        10,
+        46,
+        20,
+        37,
+        47,
+        26,
+        42,
+        45,
+        31,
+        14,
+        27,
+        19,
+        8,
+        22,
+        2,
+        29,
+        21,
+        38,
+        33,
+        7,
+        0,
+        28,
+        23
+      ],
+      "validation_episodes": [
+        25,
+        9,
+        12,
+        5,
+        39,
+        17,
+        15,
+        41,
+        43,
+        24,
+        1,
+        16
+      ]
+    }
+  },
+  "all_predictive_pass": false,
+  "all_physical_forecast_pass": false
+}
