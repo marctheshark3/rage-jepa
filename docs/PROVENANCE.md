@@ -52,6 +52,11 @@ Riccati diagnostics and output hashes are packaged at
 construction from the existing reference, without retraining or reoptimization.
 The executed gains are fixed float64; reproducing the offline longdouble solve
 on another architecture need not produce identical gains.
+In particular, the original ten-pole offline solve can fail to converge with
+x86's 80-bit `longdouble`, compared with the originating ARM stack's 128-bit
+arithmetic. Runtime inference uses the saved float64 coefficients and does
+not rerun that solve or relax its convergence gate. CI checks the executed
+feedback and installed runtime on x86 separately from offline gain construction.
 
 The optional C CPU mechanics were also extracted from our authored private
 Rage Mill code and restricted here to the public 2–10 pole point-mass bodies.

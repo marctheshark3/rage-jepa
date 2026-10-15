@@ -743,8 +743,8 @@
     },
     {
       "path": "docs/PROVENANCE.md",
-      "sha256": "732108a9c498adbb0f44759870300aa625d681081e600c292f18b6f6597a064f",
-      "bytes": 4224
+      "sha256": "7f9aa2d7356718ea03952e1b885cc2a7e0e564b69e926af04d0b612cdf4ed714",
+      "bytes": 4609
     },
     {
       "path": "docs/ROADMAP.md",
@@ -2743,8 +2743,8 @@
     },
     {
       "path": "evidence/runtime-v0.2/tests.json",
-      "sha256": "202bd8bd50a0466b3a6e831c652d02571e88540172ba0b2a24caaa4605a1bd4b",
-      "bytes": 2175
+      "sha256": "429a5403210524dc65072301aee2dd4635bd8bc63931b236aeb44f78ef9f2525",
+      "bytes": 2341
     },
     {
       "path": "evidence/twelve-poles/final-audit.json",
@@ -2928,8 +2928,8 @@
     },
     {
       "path": "tests/test_runtime.py",
-      "sha256": "535b3468406e1d8f29f990bed60e0a239bc4445b3ff3d5e34c1ab3a4740957d3",
-      "bytes": 8081
+      "sha256": "52658bb86733474879023666b359e95fe6d39e3f2deda810b91836486b7f17d4",
+      "bytes": 8423
     },
     {
       "path": "uv.lock",

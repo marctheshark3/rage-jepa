@@ -144,17 +144,23 @@ def test_exported_encoder_and_feedback_match_original(tmp_path):
     pytest.importorskip("casadi")
     import torch
     from rage_mill.jepa_state_control import JEPAStatePolePolicy
+    from rage_mill.pole_control import LQRBalance
     from rage_mill.swing_trajectory import TVLQRTracker
     torch.set_num_threads(1)
     root = Path(__file__).resolve().parents[1]
     checkpoint = root / "artifacts/npole10/jepa/model.pt"
     classical = ClassicalPolicy()
     plan = classical.trajectory
-    # Execute the exact saved gains on every platform. Recomputing the offline
-    # longdouble recursion is platform dependent (80-bit x86 vs 128-bit ARM).
-    plan._gain_cache[(20., 1000.)] = classical.gains
-    original_teacher = TVLQRTracker(plan, delay=1, r=20., balance_r=1000.)
-    original_teacher.balance.k = classical.balance_k.copy()
+    # Exercise the unchanged historical .act methods with published gains.
+    # Avoid their constructors: the offline longdouble solve can fail on
+    # 80-bit x86 even though the exported float64 coefficients run correctly.
+    original_balance = LQRBalance.__new__(LQRBalance)
+    original_balance.n, original_balance.delay = 10, 1
+    original_balance.k = classical.balance_k.copy()
+    original_teacher = TVLQRTracker.__new__(TVLQRTracker)
+    original_teacher.trajectory, original_teacher.delay = plan, 1
+    original_teacher.gains = classical.gains.copy()
+    original_teacher.balance, original_teacher.tick = original_balance, 0
     np.testing.assert_array_equal(classical.gains, original_teacher.gains)
     np.testing.assert_array_equal(classical.balance_k, original_teacher.balance.k)
     original = JEPAStatePolePolicy(checkpoint, 10, teacher_factory=ClassicalPolicy,

@@ -15,7 +15,7 @@
       "skipped": 0,
       "failures": 0,
       "errors": 0,
-      "seconds": 8.709
+      "seconds": 5.955
     }
   },
   "runtime_source_matches_frozen_cohort": true,
@@ -39,5 +39,6 @@
     "pole_cpu.py": "b74f91d5f1a8363a183198d1a78db9a0f31d9fcbec2477f27cd4a46a38501009",
     "swing_trajectory.py": "4583d2569a03495a3bf7379d5e1f581026a8dd8f48f8daa844046d5c1e19978a"
   },
-  "optional_skips": "NumPy profile skips Torch, MuJoCo and Gymnasium dependent tests; full profile skips none."
+  "optional_skips": "NumPy profile skips Torch, MuJoCo and Gymnasium dependent tests; full profile skips none.",
+  "portability_note": "Historical feedback methods are checked with frozen executed gains; the offline Riccati solve is not rerun on lower-precision architectures."
 }
