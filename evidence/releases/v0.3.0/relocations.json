@@ -1,0 +1,9 @@
+{
+  "release": "v0.3.0",
+  "git_commit": "c689983675eab5f0368ef559ed12f50f4ef4be15",
+  "paths": {
+    "tests/test_jepa_train.py": "evidence/releases/v0.3.0/source/tests/test_jepa_train.py",
+    "scripts/verify_release.py": "evidence/releases/v0.3.0/source/scripts/verify_release.py",
+    "scripts/build_manifest.py": "evidence/releases/v0.3.0/source/scripts/build_manifest.py"
+  }
+}

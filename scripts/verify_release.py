@@ -17,11 +17,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--with-model", action="store_true", help="also load the original Torch checkpoint (jepa extra)")
     args = parser.parse_args()
+    maintenance_relocations = json.loads((ROOT / "evidence/releases/v0.3.0/relocations.json").read_text())["paths"]
+    require(set(maintenance_relocations) == {"tests/test_jepa_train.py", "scripts/verify_release.py", "scripts/build_manifest.py"}, "Unexpected validation relocations")
+    legacy_test = {"tests/test_jepa_train.py": maintenance_relocations["tests/test_jepa_train.py"]}
     manifest = json.loads((ROOT / "release-manifest.json").read_text())
     relocations = json.loads((ROOT / "evidence/releases/v0.1.0/relocations.json").read_text())["paths"]
     require(set(relocations) == {"README.md", "pyproject.toml", "uv.lock", ".github/workflows/ci.yml", "scripts/verify_release.py"}, "Unexpected historical relocations")
     for entry in manifest["files"]:
-        path = (ROOT / relocations.get(entry["path"], entry["path"])).resolve()
+        path = (ROOT / relocations.get(entry["path"], legacy_test.get(entry["path"], entry["path"]))).resolve()
         require(path.is_relative_to(ROOT) and path.is_file(), "Invalid manifest path")
         require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Hash mismatch: {entry['path']}")
     runtime_manifest = ROOT / "release-v0.2-manifest.json"
@@ -32,7 +35,7 @@ def main():
     current_count = 0
     if runtime_manifest.exists():
         for entry in json.loads(runtime_manifest.read_text())["files"]:
-            path = (ROOT / runtime_relocations.get(entry["path"], entry["path"])).resolve()
+            path = (ROOT / runtime_relocations.get(entry["path"], legacy_test.get(entry["path"], entry["path"]))).resolve()
             require(path.is_relative_to(ROOT) and path.is_file(), "Invalid runtime manifest path")
             require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Runtime hash mismatch: {entry['path']}")
             current_count += 1
@@ -40,10 +43,18 @@ def main():
     inference_manifest = ROOT / "release-v0.3-manifest.json"
     require(inference_manifest.is_file(), "Missing v0.3 release manifest")
     for entry in json.loads(inference_manifest.read_text())["files"]:
-        path = (ROOT / entry["path"]).resolve()
+        path = (ROOT / maintenance_relocations.get(entry["path"], entry["path"])).resolve()
         require(path.is_relative_to(ROOT) and path.is_file(), "Invalid inference manifest path")
         require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Inference hash mismatch: {entry['path']}")
         inference_count += 1
+    maintenance_count = 0
+    maintenance_manifest = ROOT / "validation-manifest.json"
+    require(maintenance_manifest.is_file(), "Missing current validation manifest")
+    for entry in json.loads(maintenance_manifest.read_text())["files"]:
+        path = (ROOT / entry["path"]).resolve()
+        require(path.is_relative_to(ROOT) and path.is_file(), "Invalid validation manifest path")
+        require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Validation hash mismatch: {entry['path']}")
+        maintenance_count += 1
     base = ROOT / "artifacts/npole10"
     data = load_trajectories(base / "jepa/data/npole10_train.npz")
     require(data.episodes == 48 and data.steps == 128, "Training dataset shape mismatch")
@@ -95,6 +106,7 @@ def main():
                         and np.max(np.abs(states[0, 11:])) <= .02, "Hanging reset mismatch")
     print(json.dumps({"historical_files_verified": len(manifest["files"]), "runtime_files_verified": current_count,
                       "inference_files_verified": inference_count, "full_world_model_parameters": full.parameter_count,
+                      "current_validation_files_verified": maintenance_count,
                       "historical_metadata_files_archived": len(relocations),
                       "torch_checkpoint_loaded": args.with_model, "trainable_parameters": count,
                       "final_trials_audited": 64, "final_endpoints_per_trial": 251,
