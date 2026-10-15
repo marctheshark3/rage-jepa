@@ -1,0 +1,97 @@
+{
+  "pass": true,
+  "full_world_model": true,
+  "learned_predictor_executed": true,
+  "training": false,
+  "torch_installed": false,
+  "simulator_installed": false,
+  "machine": "aarch64",
+  "python": "3.14.4",
+  "numpy": "2.5.4",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "dtype": "float32",
+  "parameter_count": 107904,
+  "parameter_bytes": 431616,
+  "normalization_bytes": 264,
+  "export_file_bytes": 406040,
+  "installed_payload_bytes_excluding_python_symlinks": 58005944,
+  "venv_apparent_bytes_following_python_symlinks": 127452632,
+  "memory": {
+    "python_process_before_numpy_bytes": 23441408,
+    "after_numpy_and_runtime_import_bytes": 37220352,
+    "after_model_load_bytes": 38531072,
+    "after_inference_bytes": 41078784,
+    "kernel_peak_process_rss_bytes": 41078784,
+    "rusage_peak_bytes": 40656896,
+    "peak_before_numpy": {
+      "kernel_vm_hwm_bytes": 23441408,
+      "rusage_maxrss_bytes": 23117824
+    }
+  },
+  "import_seconds": 0.02016810904024169,
+  "model_load_seconds": 0.0038774539716541767,
+  "cases": [
+    {
+      "batch": 1,
+      "horizon": 1,
+      "repetitions": 2000,
+      "kernel_peak_rss_bytes": 38735872,
+      "rusage_maxrss_bytes": 38428672,
+      "latency_ms": {
+        "median": 0.036609,
+        "p95": 0.038256,
+        "mean": 0.036811465999999994,
+        "max": 0.070849
+      }
+    },
+    {
+      "batch": 1,
+      "horizon": 8,
+      "repetitions": 1000,
+      "kernel_peak_rss_bytes": 40001536,
+      "rusage_maxrss_bytes": 39641088,
+      "latency_ms": {
+        "median": 0.131842,
+        "p95": 0.13518505,
+        "mean": 0.132334696,
+        "max": 0.164146
+      }
+    },
+    {
+      "batch": 1,
+      "horizon": 32,
+      "repetitions": 500,
+      "kernel_peak_rss_bytes": 40022016,
+      "rusage_maxrss_bytes": 39641088,
+      "latency_ms": {
+        "median": 0.4537575,
+        "p95": 0.46272665,
+        "mean": 0.45482849399999997,
+        "max": 0.472774
+      }
+    },
+    {
+      "batch": 32,
+      "horizon": 8,
+      "repetitions": 200,
+      "kernel_peak_rss_bytes": 40738816,
+      "rusage_maxrss_bytes": 40329216,
+      "latency_ms": {
+        "median": 0.678864,
+        "p95": 0.6942824,
+        "mean": 0.681118905,
+        "max": 0.763673
+      }
+    }
+  ],
+  "model_sha256": "bd93efc532adfe88e4359dfd74dc44baf6494201c86965bc76988a0ed961657c",
+  "weights_unchanged": true,
+  "installed_distributions": {
+    "numpy": "2.5.4",
+    "rage-jepa": "0.3.0"
+  },
+  "limits": "Shared-host CPU latency with warm caches; Linux VmRSS/VmHWM include Python/NumPy. getrusage high-water is also recorded and may retain pre-exec launcher history. Installed payload excludes shared Python executable symlinks and includes all runtime assets."
+}

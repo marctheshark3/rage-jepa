@@ -1,6 +1,6 @@
 [project]
 name = "rage-jepa"
-version = "0.2.0"
+version = "0.3.0"
 description = "A small state-vector JEPA and an auditable ten-pole hybrid controller"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -17,6 +17,7 @@ gym = ["gymnasium>=1.0,<2"]
 [project.scripts]
 rage-jepa = "rage_mill.jepa_train:main"
 rage-jepa-compare = "rage_mill.comparison:main"
+rage-jepa-world-model = "rage_mill.world_model:main"
 
 [project.urls]
 Repository = "https://github.com/marctheshark3/rage-jepa"

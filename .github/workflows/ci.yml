@@ -17,8 +17,13 @@ jobs:
       - run: uv run python scripts/audit_comparison.py evidence/runtime-v0.2/cohort
       - run: uv build --wheel
       - run: uv venv /tmp/base-check
-      - run: uv pip install --python /tmp/base-check/bin/python dist/rage_jepa-0.2.0-py3-none-any.whl
+      - run: uv pip install --python /tmp/base-check/bin/python dist/rage_jepa-0.3.0-py3-none-any.whl
       - run: /tmp/base-check/bin/python scripts/check_numpy_install.py
+      - run: /tmp/base-check/bin/python -I scripts/prove_world_model_inference.py --reference evidence/inference-v0.3
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+      - run: /tmp/base-check/bin/rage-jepa-world-model
   full-cpu:
     runs-on: ubuntu-latest
     env:
@@ -35,5 +40,5 @@ jobs:
       - run: uv run --all-extras pytest
       - run: uv build --wheel
       - run: uv venv /tmp/runtime-check
-      - run: uv pip install --python /tmp/runtime-check/bin/python 'dist/rage_jepa-0.2.0-py3-none-any.whl[simulation,gym]'
+      - run: uv pip install --python /tmp/runtime-check/bin/python 'dist/rage_jepa-0.3.0-py3-none-any.whl[simulation,gym]'
       - run: /tmp/runtime-check/bin/python scripts/check_install.py

@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "profiles": {
+    "all_extras": {
+      "passed": 101,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 6.016
+    },
+    "numpy_dev": {
+      "passed": 26,
+      "skipped": 12,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 3.267
+    }
+  },
+  "new_world_model_tests": 19,
+  "original_checkpoint_unchanged": true,
+  "legacy_runtime_source_unchanged": true
+}

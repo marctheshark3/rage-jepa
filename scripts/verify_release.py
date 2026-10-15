@@ -26,13 +26,24 @@ def main():
         require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Hash mismatch: {entry['path']}")
     runtime_manifest = ROOT / "release-v0.2-manifest.json"
     require(runtime_manifest.is_file(), "Missing v0.2 release manifest")
+    runtime_relocations = json.loads((ROOT / "evidence/releases/v0.2.0/relocations.json").read_text())["paths"]
+    require(set(runtime_relocations) == {"README.md", "pyproject.toml", "uv.lock", ".github/workflows/ci.yml",
+                                         "scripts/verify_release.py", "scripts/build_manifest.py"}, "Unexpected v0.2 relocations")
     current_count = 0
     if runtime_manifest.exists():
         for entry in json.loads(runtime_manifest.read_text())["files"]:
-            path = (ROOT / entry["path"]).resolve()
+            path = (ROOT / runtime_relocations.get(entry["path"], entry["path"])).resolve()
             require(path.is_relative_to(ROOT) and path.is_file(), "Invalid runtime manifest path")
             require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Runtime hash mismatch: {entry['path']}")
             current_count += 1
+    inference_count = 0
+    inference_manifest = ROOT / "release-v0.3-manifest.json"
+    require(inference_manifest.is_file(), "Missing v0.3 release manifest")
+    for entry in json.loads(inference_manifest.read_text())["files"]:
+        path = (ROOT / entry["path"]).resolve()
+        require(path.is_relative_to(ROOT) and path.is_file(), "Invalid inference manifest path")
+        require(hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"], f"Inference hash mismatch: {entry['path']}")
+        inference_count += 1
     base = ROOT / "artifacts/npole10"
     data = load_trajectories(base / "jepa/data/npole10_train.npz")
     require(data.episodes == 48 and data.steps == 128, "Training dataset shape mismatch")
@@ -54,6 +65,10 @@ def main():
     for name, receipt in runtime["outputs"].items():
         require(hashlib.sha256((ASSETS / name).read_bytes()).hexdigest() == receipt["sha256"], "Runtime asset mismatch")
     require(NumpyEncoder().encode_states(np.zeros((1, 22))).shape == (1, 64), "NumPy encoder failed")
+    from rage_mill.world_model import NumpyWorldModel
+    full = NumpyWorldModel()
+    require(full.parameter_count == 107904 and len(full.weights) == 21, "Full WM tensors missing")
+    require(full.rollout("npole10", np.zeros((1, 33)), np.zeros((1, 8, 1))).shape == (1, 8, 64), "Full WM inference failed")
     metrics = json.loads((base / "jepa/metrics.json").read_text())
     require(not metrics["all_predictive_pass"] and not metrics["all_physical_forecast_pass"], "Forecast failures were lost")
     for engine, rate in (("euler", 640000), ("mujoco", 1000)):
@@ -79,6 +94,7 @@ def main():
                 require(np.max(np.abs(initial_angles)) <= .04 and abs(states[0, 0]) <= .08
                         and np.max(np.abs(states[0, 11:])) <= .02, "Hanging reset mismatch")
     print(json.dumps({"historical_files_verified": len(manifest["files"]), "runtime_files_verified": current_count,
+                      "inference_files_verified": inference_count, "full_world_model_parameters": full.parameter_count,
                       "historical_metadata_files_archived": len(relocations),
                       "torch_checkpoint_loaded": args.with_model, "trainable_parameters": count,
                       "final_trials_audited": 64, "final_endpoints_per_trial": 251,

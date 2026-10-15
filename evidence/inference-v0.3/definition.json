@@ -1,0 +1,49 @@
+{
+  "source_checkpoint_sha256": "c4b56d3dbe26134516fd23863911861c70d6fc42e842a3502f0ac28e9901b084",
+  "seed": 4830000,
+  "scope": "Full frozen forward model: online/target encoders, action projection, environment embedding, learned residual dynamics",
+  "acceptance_tolerances": {
+    "float32": {
+      "atol": 1e-05,
+      "rtol": 1e-05
+    },
+    "float64": {
+      "atol": 1e-11,
+      "rtol": 1e-11
+    }
+  },
+  "horizons": [
+    1,
+    8,
+    32
+  ],
+  "main_batch": 128,
+  "training": false,
+  "variants": [
+    "recorded",
+    "zero",
+    "shuffled"
+  ],
+  "source_datasets": {
+    "heldout-euler": "98e799d2f22c8234cb59c2296f4133da79b479cc61e28413884da9f69d27b5d0",
+    "independent-mujoco": "2065ea408c32fa5d18e29e8acedf4418f8763d3c914fdaaf25cb1b0ecff32436"
+  },
+  "euler_validation_episode_indices": [
+    26,
+    3,
+    8,
+    33,
+    28,
+    23,
+    2,
+    15,
+    35,
+    44,
+    40,
+    14
+  ],
+  "reference_code_sha256": "8bcf114fc5300cff69a2de165b0db40caf031032ec9a12dce1f11d2a0241c250",
+  "runtime_code_sha256": "eb22ad71efb8b42cfaa12817d7db095215fb2e6fe96c1e2a8178bc219ddac734",
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4"
+}
