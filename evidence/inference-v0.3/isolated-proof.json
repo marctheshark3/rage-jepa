@@ -1,0 +1,219 @@
+{
+  "pass": true,
+  "full_world_model": true,
+  "learned_predictor_executed": true,
+  "training": false,
+  "forbidden_import_hook_active": true,
+  "torch_installed": false,
+  "torch_imported": false,
+  "simulator_installed": false,
+  "noneditable_wheel": true,
+  "parameter_count": 107904,
+  "trained_tensors_verified_exactly": 21,
+  "cases_checked": 20,
+  "output_values_compared": 1053440,
+  "max_absolute_errors": {
+    "float32": {
+      "online": 1.430511474609375e-06,
+      "target": 1.430511474609375e-06,
+      "predictions": 2.384185791015625e-06
+    },
+    "float64": {
+      "online": 1.7763568394002505e-15,
+      "target": 1.7763568394002505e-15,
+      "predictions": 4.6629367034256575e-15
+    }
+  },
+  "weights_unchanged": true,
+  "runtime_sha256": "eb22ad71efb8b42cfaa12817d7db095215fb2e6fe96c1e2a8178bc219ddac734",
+  "model_sha256": "bd93efc532adfe88e4359dfd74dc44baf6494201c86965bc76988a0ed961657c",
+  "reference_sha256": "e00f90bc5c25ce7320d720750e106d1795f195b64cd4e43781c09612a998c2ee",
+  "cases": [
+    {
+      "id": "case_000",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_001",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_002",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_003",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_004",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_005",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_006",
+      "dataset": "heldout-euler",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_007",
+      "dataset": "heldout-euler",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_008",
+      "dataset": "heldout-euler",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_009",
+      "dataset": "heldout-euler",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_010",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_011",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_012",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_013",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_014",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_015",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_016",
+      "dataset": "independent-mujoco",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_017",
+      "dataset": "independent-mujoco",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float64",
+      "pass": true
+    },
+    {
+      "id": "case_018",
+      "dataset": "independent-mujoco",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float32",
+      "pass": true
+    },
+    {
+      "id": "case_019",
+      "dataset": "independent-mujoco",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float64",
+      "pass": true
+    }
+  ],
+  "installed_distributions": {
+    "numpy": "2.5.4",
+    "rage-jepa": "0.3.0"
+  },
+  "original_predictive_pass": false,
+  "original_physical_forecast_pass": false
+}

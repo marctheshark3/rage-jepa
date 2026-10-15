@@ -1,0 +1,39 @@
+name: Verify environment and model release
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  numpy-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --extra dev
+      - run: uv run python scripts/verify_release.py
+      - run: uv run pytest
+      - run: uv run python -c "import importlib.util; assert importlib.util.find_spec('torch') is None"
+      - run: uv run python scripts/audit_comparison.py evidence/runtime-v0.2/cohort
+      - run: uv build --wheel
+      - run: uv venv /tmp/base-check
+      - run: uv pip install --python /tmp/base-check/bin/python dist/rage_jepa-0.2.0-py3-none-any.whl
+      - run: /tmp/base-check/bin/python scripts/check_numpy_install.py
+  full-cpu:
+    runs-on: ubuntu-latest
+    env:
+      CUDA_VISIBLE_DEVICES: ''
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --extra dev --extra jepa --extra simulation --extra gym
+      - run: uv run --all-extras python scripts/verify_release.py --with-model
+      - run: uv run --all-extras pytest
+      - run: uv build --wheel
+      - run: uv venv /tmp/runtime-check
+      - run: uv pip install --python /tmp/runtime-check/bin/python 'dist/rage_jepa-0.2.0-py3-none-any.whl[simulation,gym]'
+      - run: /tmp/runtime-check/bin/python scripts/check_install.py

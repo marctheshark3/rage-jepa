@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Freeze the v0.2 source/evidence inventory and the tested release wheel."""
+"""Freeze the v0.3 source/evidence inventory and the tested release wheel."""
 from pathlib import Path
 import hashlib
 import json
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = "release-v0.2-manifest.json"
+MANIFEST = "release-v0.3-manifest.json"
 
 
 def sha(path):
@@ -22,10 +22,12 @@ def main():
         if not path.is_file() or path.is_symlink() or not path.resolve().is_relative_to(ROOT):
             raise ValueError(f"invalid release path: {name}")
         files.append({"path": name, "sha256": sha(path), "bytes": path.stat().st_size})
-    wheel = ROOT / "dist/rage_jepa-0.2.0-py3-none-any.whl"
-    manifest = {"schema": "rage-jepa.public-runtime-release.v1", "version": "0.2.0",
-                "historical_release": "v0.1.0", "historical_manifest_sha256": sha(ROOT / "release-manifest.json"),
+    wheel = ROOT / "dist/rage_jepa-0.3.0-py3-none-any.whl"
+    manifest = {"schema": "rage-jepa.public-inference-release.v1", "version": "0.3.0",
+                "historical_manifests": {name: sha(ROOT / path) for name, path in
+                                         (("v0.1.0", "release-manifest.json"), ("v0.2.0", "release-v0.2-manifest.json"))},
                 "cohort_definition_sha256": sha(ROOT / "evidence/runtime-v0.2/cohort/definition.json"),
+                "full_inference_definition_sha256": sha(ROOT / "evidence/inference-v0.3/definition.json"),
                 "license": "MIT: code, model weights, authored simulation data and documentation",
                 "tested_wheel": {"name": wheel.name, "sha256": sha(wheel), "bytes": wheel.stat().st_size},
                 "files": files}

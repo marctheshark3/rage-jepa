@@ -1,0 +1,171 @@
+{
+  "definition_sha256": "2a75ccca85be2fdf92cf5788556a1ca3b6e94058e7f60bef42c7dd7bf18ea007",
+  "reference_sha256": "e00f90bc5c25ce7320d720750e106d1795f195b64cd4e43781c09612a998c2ee",
+  "tensor_count": 21,
+  "parameter_count": 107904,
+  "cases": [
+    {
+      "id": "case_000",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_001",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_002",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_003",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_004",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_005",
+      "dataset": "heldout-euler",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_006",
+      "dataset": "heldout-euler",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_007",
+      "dataset": "heldout-euler",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_008",
+      "dataset": "heldout-euler",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_009",
+      "dataset": "heldout-euler",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_010",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_011",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "recorded",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_012",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_013",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "zero",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_014",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_015",
+      "dataset": "independent-mujoco",
+      "batch": 128,
+      "horizon": 8,
+      "variant": "shuffled",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_016",
+      "dataset": "independent-mujoco",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_017",
+      "dataset": "independent-mujoco",
+      "batch": 8,
+      "horizon": 32,
+      "variant": "recorded",
+      "dtype": "float64"
+    },
+    {
+      "id": "case_018",
+      "dataset": "independent-mujoco",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float32"
+    },
+    {
+      "id": "case_019",
+      "dataset": "independent-mujoco",
+      "batch": 1,
+      "horizon": 1,
+      "variant": "recorded",
+      "dtype": "float64"
+    }
+  ],
+  "original_predictive_pass": false,
+  "original_physical_forecast_pass": false,
+  "claim": "Numerical equivalence and inference execution; forecast quality remains the original model's."
+}

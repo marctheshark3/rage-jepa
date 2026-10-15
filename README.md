@@ -5,6 +5,11 @@ A ten-link cart-pendulum environment, a ready classical baseline, and a small
 and complete evaluation recordings. Code, weights, authored simulation data
 and documentation are MIT licensed.
 
+**Full world-model inference now runs with NumPy only:** all 21 trained
+tensors, both encoders, the action adapter, environment embedding and learned
+dynamics predictor are included. An isolated install matches over a million
+Torch reference outputs. See the [inference proof and measurements](docs/INFERENCE.md).
+
 **This project was extracted from our private Rage Mill research repository
 on October 14, 2026.** Its first public commit is a curated release of an
 existing experiment, rather than the start of the research. The trained model
@@ -26,7 +31,7 @@ classical feedback alone is about **18× faster** and passes the same task.
 ## Run the environment without Torch
 
 For just the runtime, install the small wheel from
-[v0.2.0](https://github.com/marctheshark3/rage-jepa/releases/tag/v0.2.0);
+[v0.3.0](https://github.com/marctheshark3/rage-jepa/releases/tag/v0.3.0);
 it excludes the full recording archives. A source checkout also includes the
 scientific evidence:
 
@@ -61,6 +66,34 @@ Physical state is `[x, absolute_angles[10], x_velocity, absolute_omegas[10]]`
 sin/cos and angular speed divided by eight, then last-applied and pending
 commands (34 values). The JEPA encoder uses the first 33 values; the feedback
 controller also receives the pending force for delay compensation.
+
+## Run the complete world model for inference
+
+```bash
+python -m pip install "https://github.com/marctheshark3/rage-jepa/releases/download/v0.3.0/rage_jepa-0.3.0-py3-none-any.whl"
+rage-jepa-world-model
+```
+
+This executes the online encoder, learned action projection, environment
+embedding and autoregressive residual predictor on a packaged recorded
+example, returning eight future 64-value latents. It loads all 107,904
+parameters, including the target encoder, without Torch, CUDA or a simulator.
+There is no retraining or quantization. The full-model NPZ export is 406 KB;
+the complete runtime wheel is about 0.9 MB.
+
+```python
+from rage_mill.world_model import NumpyWorldModel
+model = NumpyWorldModel()        # Original float32; float64 also supported.
+# observations: [batch,33] raw state-vector observations
+# actions: [batch,horizon,1] normalized cart-force commands
+predicted_latents = model.rollout("npole10", observations, actions)
+```
+
+The [proof](docs/INFERENCE.md) compares both encoders and full learned
+predictions against frozen Torch outputs, including 1/8/32-step forecasts,
+recorded/shuffled/zero actions, and float32/float64. Numerical equivalence
+proves inference execution; the original predictor's failed accuracy gates
+remain unchanged. The qualified control result below uses classical feedback.
 
 ## Run the ready classical or JEPA baseline
 
@@ -174,6 +207,9 @@ available at [v0.1.0](https://github.com/marctheshark3/rage-jepa/tree/v0.1.0).
 Its weights, datasets, reference, source and all 64 recordings retain their
 original public bytes. Five evolving release/documentation files are archived
 with their original hashes. `release-manifest.json` still describes that
-historical snapshot; `release-v0.2-manifest.json` describes this release.
+historical snapshot; `release-v0.2-manifest.json` describes the baseline release.
+Its six evolving metadata/tool files are archived under `evidence/releases/v0.2.0/`.
+`release-v0.3-manifest.json` checks the current full-inference release. All
+original scientific source, weights and recordings keep their public bytes.
 No robot or private laboratory assets ship. Prediction advantage, image-based
 control, hardware transfer and world-record priority remain unestablished.

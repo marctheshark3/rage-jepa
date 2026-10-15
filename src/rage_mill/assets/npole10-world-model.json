@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "model_config": {
+    "latent_dim": 64,
+    "hidden_dim": 128,
+    "ema_decay": 0.99,
+    "variance_weight": 1.0,
+    "covariance_weight": 0.01
+  },
+  "environments": [
+    {
+      "id": "npole10",
+      "observation_dim": 33,
+      "action_dim": 1
+    }
+  ],
+  "source_checkpoint": "artifacts/npole10/jepa/model.pt",
+  "source_checkpoint_sha256": "c4b56d3dbe26134516fd23863911861c70d6fc42e842a3502f0ac28e9901b084",
+  "parameter_count": 107904,
+  "trainable_parameters": 78784,
+  "frozen_target_parameters": 29120,
+  "training_or_quantization": false,
+  "saved_dtype": "float32",
+  "tensor_count": 21,
+  "parameter_bytes_float32": 431616,
+  "source_evaluation_sha256": "2065ea408c32fa5d18e29e8acedf4418f8763d3c914fdaaf25cb1b0ecff32436",
+  "example_episode": 0,
+  "example_tick": 0,
+  "outputs": {
+    "npole10-world-model.npz": {
+      "sha256": "bd93efc532adfe88e4359dfd74dc44baf6494201c86965bc76988a0ed961657c",
+      "bytes": 406040
+    },
+    "npole10-world-model-example.npz": {
+      "sha256": "d7047d3822d225f2576342c0e272f3206489dd139b8c577a0d8c09cc68a4365c",
+      "bytes": 583
+    }
+  },
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4"
+}
