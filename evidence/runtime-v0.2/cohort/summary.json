@@ -1,0 +1,200 @@
+{
+  "definition_sha256": "f301ffe52a4ddfe6c6c0713e7e898b5f9074cc2c6b9ec24c4a38b41912a3981a",
+  "wall_seconds": 313.6126353770378,
+  "trials": 192,
+  "groups": [
+    {
+      "engine": "euler",
+      "condition": "classical",
+      "successes": 32,
+      "trials": 32,
+      "passes_80_percent_gate": true,
+      "failed_seeds": [],
+      "inference_ms": {
+        "median": 0.131378,
+        "p95": 0.14433975,
+        "mean": 0.12116774849999999,
+        "max": 2.408931
+      },
+      "physics_tick_ms": {
+        "median": 10.282501,
+        "p95": 10.9909421,
+        "mean": 10.2097178946875,
+        "max": 62.619729
+      },
+      "episode_seconds": {
+        "median": 10.283173794538015,
+        "p95": 10.716836901777423,
+        "mean": 10.331231992031462,
+        "max": 10.922342141042463
+      },
+      "setup_seconds": {
+        "median": 0.0015219214837998152,
+        "p95": 0.0016262763849226758,
+        "mean": 0.0016310095015796833,
+        "max": 0.0049575960147194564
+      }
+    },
+    {
+      "engine": "euler",
+      "condition": "original-jepa",
+      "successes": 32,
+      "trials": 32,
+      "passes_80_percent_gate": true,
+      "failed_seeds": [],
+      "inference_ms": {
+        "median": 2.344923,
+        "p95": 2.6409773,
+        "mean": 2.3665665469375,
+        "max": 12.91511
+      },
+      "physics_tick_ms": {
+        "median": 10.270303,
+        "p95": 10.987018249999998,
+        "mean": 10.181644029875,
+        "max": 44.067466
+      },
+      "episode_seconds": {
+        "median": 12.51869618598721,
+        "p95": 12.814254340500337,
+        "mean": 12.549400953532313,
+        "max": 12.979868790018372
+      },
+      "setup_seconds": {
+        "median": 0.00649933100794442,
+        "p95": 0.2546213825931769,
+        "mean": 0.04319360221415991,
+        "max": 0.6299645520048216
+      }
+    },
+    {
+      "engine": "euler",
+      "condition": "numpy-jepa",
+      "successes": 32,
+      "trials": 32,
+      "passes_80_percent_gate": true,
+      "failed_seeds": [],
+      "inference_ms": {
+        "median": 0.568137,
+        "p95": 0.656538,
+        "mean": 0.5625365648749999,
+        "max": 28.155154
+      },
+      "physics_tick_ms": {
+        "median": 10.289010000000001,
+        "p95": 11.0027379,
+        "mean": 10.225962358312499,
+        "max": 88.674709
+      },
+      "episode_seconds": {
+        "median": 10.741693785006646,
+        "p95": 11.19679878881143,
+        "mean": 10.789290355058256,
+        "max": 11.351551069994457
+      },
+      "setup_seconds": {
+        "median": 0.0022784869943279773,
+        "p95": 0.0025797477283049375,
+        "mean": 0.002567455152529874,
+        "max": 0.011009820969775319
+      }
+    },
+    {
+      "engine": "mujoco",
+      "condition": "classical",
+      "successes": 32,
+      "trials": 32,
+      "passes_80_percent_gate": true,
+      "failed_seeds": [],
+      "inference_ms": {
+        "median": 0.121058,
+        "p95": 0.132434,
+        "mean": 0.11062922096875001,
+        "max": 0.334597
+      },
+      "physics_tick_ms": {
+        "median": 0.397495,
+        "p95": 0.410167,
+        "mean": 0.39826897646875,
+        "max": 4.742023
+      },
+      "episode_seconds": {
+        "median": 0.5081202340079471,
+        "p95": 0.5193320693448186,
+        "mean": 0.5092034566314396,
+        "max": 0.5301755570108071
+      },
+      "setup_seconds": {
+        "median": 0.0030214324651751667,
+        "p95": 0.0036124126520007847,
+        "mean": 0.003087531213168404,
+        "max": 0.0037826329935342073
+      }
+    },
+    {
+      "engine": "mujoco",
+      "condition": "original-jepa",
+      "successes": 32,
+      "trials": 32,
+      "passes_80_percent_gate": true,
+      "failed_seeds": [],
+      "inference_ms": {
+        "median": 2.2567174999999997,
+        "p95": 2.5233053999999995,
+        "mean": 2.29510961396875,
+        "max": 68.098707
+      },
+      "physics_tick_ms": {
+        "median": 0.426326,
+        "p95": 0.48464805,
+        "mean": 0.43588692625,
+        "max": 26.80075
+      },
+      "episode_seconds": {
+        "median": 2.67981600650819,
+        "p95": 2.9714304142340553,
+        "mean": 2.7320904902462644,
+        "max": 3.733275241975207
+      },
+      "setup_seconds": {
+        "median": 0.008197732007829472,
+        "p95": 0.31755663300864356,
+        "mean": 0.04893566031023511,
+        "max": 0.6381885929731652
+      }
+    },
+    {
+      "engine": "mujoco",
+      "condition": "numpy-jepa",
+      "successes": 32,
+      "trials": 32,
+      "passes_80_percent_gate": true,
+      "failed_seeds": [],
+      "inference_ms": {
+        "median": 0.4971285,
+        "p95": 0.6159644,
+        "mean": 0.501812441375,
+        "max": 45.453681
+      },
+      "physics_tick_ms": {
+        "median": 0.403431,
+        "p95": 0.41632874999999997,
+        "mean": 0.4062251648125,
+        "max": 10.210457
+      },
+      "episode_seconds": {
+        "median": 0.9055376579926815,
+        "p95": 0.9371516712068114,
+        "mean": 0.9086178792767896,
+        "max": 1.0777939399704337
+      },
+      "setup_seconds": {
+        "median": 0.0038672790105920285,
+        "p95": 0.020148971868911736,
+        "mean": 0.006695961841614917,
+        "max": 0.05761945800622925
+      }
+    }
+  ],
+  "timing_limit": "Shared-host concurrent cohort timings; use benchmark_runtime.py for serial latency comparisons."
+}

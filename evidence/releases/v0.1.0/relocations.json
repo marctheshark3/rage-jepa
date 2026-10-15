@@ -1,0 +1,11 @@
+{
+  "release": "v0.1.0",
+  "git_commit": "3cfb3ecc84628c2134b93c17b4e6625b02536ee8",
+  "paths": {
+    "README.md": "evidence/releases/v0.1.0/source/README.md",
+    "pyproject.toml": "evidence/releases/v0.1.0/source/pyproject.toml",
+    "uv.lock": "evidence/releases/v0.1.0/source/uv.lock",
+    ".github/workflows/ci.yml": "evidence/releases/v0.1.0/source/.github/workflows/ci.yml",
+    "scripts/verify_release.py": "evidence/releases/v0.1.0/source/scripts/verify_release.py"
+  }
+}

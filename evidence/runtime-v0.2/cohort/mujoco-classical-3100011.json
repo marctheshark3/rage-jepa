@@ -1,0 +1,37 @@
+{
+  "engine": "mujoco",
+  "condition": "classical",
+  "seed": 3100011,
+  "condition_order": 0,
+  "gates": {
+    "complete": true,
+    "finite": true,
+    "rail": true,
+    "force": true,
+    "one_tick_queue": true,
+    "final_251_endpoints": true,
+    "pass": true
+  },
+  "error": null,
+  "setup_seconds": 0.0031478930031880736,
+  "warmup_seconds": 0.00022531597642228007,
+  "episode_seconds": 0.5050340800080448,
+  "completed_ticks": 1000,
+  "initial_state_sha256": "a58272064fff44322d00d3f26b98d5879a094dd9014ddc377517e34b699e294d",
+  "archive": "mujoco-classical-3100011.npz",
+  "archive_sha256": "497468e805ce63c0c2f7eeab2af6ce0c4e961c893fde2b1fea31793aeed53162",
+  "policy": {
+    "policy": "frozen_classical_tvlqr_then_balance",
+    "n": 10,
+    "delay": 1,
+    "tracking_r": 20.0,
+    "balance_r": 1000.0,
+    "learned": false,
+    "gain_file": "npole10-classical.npz",
+    "runtime_torch": false
+  },
+  "backend": {
+    "backend": "mujoco",
+    "xml_sha256": "9a247e0a83ce9e1e5d77344e2db2b4fef7aeac99802f769b8c2fc95b3b33f247"
+  }
+}

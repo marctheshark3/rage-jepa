@@ -1,0 +1,51 @@
+{
+  "engine": "mujoco",
+  "condition": "numpy-jepa",
+  "seed": 3100001,
+  "condition_order": 0,
+  "gates": {
+    "complete": true,
+    "finite": true,
+    "rail": true,
+    "force": true,
+    "one_tick_queue": true,
+    "final_251_endpoints": true,
+    "pass": true,
+    "strict_inverse": true,
+    "recovered_state": true
+  },
+  "error": null,
+  "setup_seconds": 0.05761945800622925,
+  "warmup_seconds": 0.9122480689547956,
+  "episode_seconds": 0.888190213998314,
+  "completed_ticks": 1000,
+  "initial_state_sha256": "ed4ca026439b210a30dce040d7a1a830ab690e4f32629cafe25508a3b0285932",
+  "archive": "mujoco-numpy-jepa-3100001.npz",
+  "archive_sha256": "be3d22c2627cbc1830954e3c57e432d0d9dc7b8710151161f30888fd6139c28b",
+  "policy": {
+    "policy": "numpy_frozen_jepa_inverse_classical",
+    "n": 10,
+    "delay": 1,
+    "runtime_torch": false,
+    "raw_state_feedback_bypass": false,
+    "inverse_iterations_max_per_phase": 20,
+    "inverse_phases_max": 2,
+    "early_exit_residual": 1e-14,
+    "final_residual_gate": 1e-12,
+    "learned_predictor_selects_actions": false,
+    "feedback": {
+      "policy": "frozen_classical_tvlqr_then_balance",
+      "n": 10,
+      "delay": 1,
+      "tracking_r": 20.0,
+      "balance_r": 1000.0,
+      "learned": false,
+      "gain_file": "npole10-classical.npz",
+      "runtime_torch": false
+    }
+  },
+  "backend": {
+    "backend": "mujoco",
+    "xml_sha256": "9a247e0a83ce9e1e5d77344e2db2b4fef7aeac99802f769b8c2fc95b3b33f247"
+  }
+}

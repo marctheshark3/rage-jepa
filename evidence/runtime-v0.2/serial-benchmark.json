@@ -1,0 +1,97 @@
+{
+  "pass": true,
+  "physics_device": "cpu",
+  "inference_device": "cpu",
+  "machine": "aarch64",
+  "python": "3.14.4",
+  "numpy": "2.5.4",
+  "torch": "2.14.1+cu130",
+  "torch_threads": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "load_average_start": [
+    15.68017578125,
+    17.701171875,
+    16.529296875
+  ],
+  "load_average_end": [
+    16.6552734375,
+    17.76171875,
+    16.57275390625
+  ],
+  "input_replay_sha256": "41dcc5441199d360330ba7edaa9615db9fb481b47daf1d1ca41b8ed1a26bbd5d",
+  "input_episode_seed": 1000000,
+  "repetitions": 3,
+  "ticks_per_repetition": 1000,
+  "controller_ms": {
+    "classical": {
+      "median": 0.11525750000000001,
+      "p95": 0.125265,
+      "mean": 0.10452381100000001,
+      "max": 0.165842
+    },
+    "original-jepa": {
+      "median": 2.0940925,
+      "p95": 2.20328765,
+      "mean": 2.1001771386666666,
+      "max": 2.76583
+    },
+    "numpy-jepa": {
+      "median": 0.4635745,
+      "p95": 0.5438205999999999,
+      "mean": 0.45629416933333333,
+      "max": 0.806667
+    }
+  },
+  "physics_tick_ms": {
+    "numpy-euler": {
+      "median": 344.759548,
+      "p95": 347.67363124999997,
+      "mean": 344.9775084444444,
+      "max": 356.262579
+    },
+    "c-euler": {
+      "median": 9.802077,
+      "p95": 10.5725875,
+      "mean": 9.82404466666667,
+      "max": 10.749362
+    },
+    "mujoco": {
+      "median": 0.3977815,
+      "p95": 0.44071000000000005,
+      "mean": 0.4043147777777778,
+      "max": 0.484774
+    }
+  },
+  "setup_seconds_warm_imports": {
+    "classical": 0.0014233789988793433,
+    "original-jepa": 0.011182649992406368,
+    "numpy-jepa": 0.002391952963080257
+  },
+  "max_compiled_vs_numpy_tick_error": 2.6645352591003757e-15,
+  "max_numpy_vs_original_command_error": 3.921444524657147e-08,
+  "source_sha256": {
+    "__init__.py": "4276b852eca91a24a4b82b001c7117d5c6134d2b6665e47164fe61f301dbcb2c",
+    "assets/npole10-classical.npz": "98cebc87f2ed39d9cf86e3e4d115384a2fb6fb6c657eb809073cc2108f30de83",
+    "assets/npole10-runtime.json": "8674743b1efe801ece9488d8a689e59ae7bb1c9e4ca78d3847d32d4614c81ab4",
+    "assets/npole10-target-encoder.npz": "8b8258cdd9ed4da32c09d5edbd81331d136ceac89dd759cc779b902b3c13d7c5",
+    "assets/pole_cpu.c": "da7a99c697f21590a4c34f29b4548fdddb5a55428241a51844e266a24364f8bb",
+    "baseline.py": "1c1d1d999eede627d9dc10f9953966a66d397ffe12282275106ae94dd083edb4",
+    "comparison.py": "5508430422513256fa881fc6d26c215840c3a79a32e465c598a7637a059ad831",
+    "env.py": "e3e69b8f6e8726128d63049905c31cf4aca0e83657dc41955de6c37bdaa08797",
+    "gym_env.py": "5758ebe2fb781e4d540540a42dbc11b06edac3bc7eda023e77874aef02f3e42e",
+    "jepa.py": "8bcf114fc5300cff69a2de165b0db40caf031032ec9a12dce1f11d2a0241c250",
+    "jepa_data.py": "823f825321eb9ef2536a7476df9647f03f77592deab4ed6f9d203bddc608bbde",
+    "jepa_state_control.py": "4be212b137865f0ed2ccc8ef268b15f1abb0c79b9071ab94c36fba0d58e57128",
+    "jepa_train.py": "3c0c1a1bfd9abb9b15d5071a44e3f1f781ce7456a06414e3f9b52bb604f802b5",
+    "npole.py": "7d806a48fadaeb5653eb2652dfbf072daa5104e7ce13be42ae120500ae8461a2",
+    "numpy_policy.py": "e6e92f052bed672b46eca51513fe6665cef115273ab5b1c5059519e2dc579759",
+    "pole_control.py": "c85ac107044f566561c07bfa7743c3790b54bf24f466b97e38e8b0ccf5d6f93d",
+    "pole_cpu.py": "b74f91d5f1a8363a183198d1a78db9a0f31d9fcbec2477f27cd4a46a38501009",
+    "swing_trajectory.py": "4583d2569a03495a3bf7379d5e1f581026a8dd8f48f8daa844046d5c1e19978a"
+  },
+  "wall_seconds": 21.74113252799725,
+  "limits": "Serial replay latency on a shared Spark ARM CPU; warm imports, caches and predictor. No GPU throughput or hardware real-time guarantee."
+}

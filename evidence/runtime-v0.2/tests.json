@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "profiles": {
+    "numpy_dev": {
+      "tests": 19,
+      "passed": 13,
+      "skipped": 6,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 3.186
+    },
+    "all_extras": {
+      "tests": 82,
+      "passed": 82,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 5.955
+    }
+  },
+  "runtime_source_matches_frozen_cohort": true,
+  "runtime_source_sha256": {
+    "__init__.py": "4276b852eca91a24a4b82b001c7117d5c6134d2b6665e47164fe61f301dbcb2c",
+    "assets/npole10-classical.npz": "98cebc87f2ed39d9cf86e3e4d115384a2fb6fb6c657eb809073cc2108f30de83",
+    "assets/npole10-runtime.json": "8674743b1efe801ece9488d8a689e59ae7bb1c9e4ca78d3847d32d4614c81ab4",
+    "assets/npole10-target-encoder.npz": "8b8258cdd9ed4da32c09d5edbd81331d136ceac89dd759cc779b902b3c13d7c5",
+    "assets/pole_cpu.c": "da7a99c697f21590a4c34f29b4548fdddb5a55428241a51844e266a24364f8bb",
+    "baseline.py": "1c1d1d999eede627d9dc10f9953966a66d397ffe12282275106ae94dd083edb4",
+    "comparison.py": "5508430422513256fa881fc6d26c215840c3a79a32e465c598a7637a059ad831",
+    "env.py": "e3e69b8f6e8726128d63049905c31cf4aca0e83657dc41955de6c37bdaa08797",
+    "gym_env.py": "5758ebe2fb781e4d540540a42dbc11b06edac3bc7eda023e77874aef02f3e42e",
+    "jepa.py": "8bcf114fc5300cff69a2de165b0db40caf031032ec9a12dce1f11d2a0241c250",
+    "jepa_data.py": "823f825321eb9ef2536a7476df9647f03f77592deab4ed6f9d203bddc608bbde",
+    "jepa_state_control.py": "4be212b137865f0ed2ccc8ef268b15f1abb0c79b9071ab94c36fba0d58e57128",
+    "jepa_train.py": "3c0c1a1bfd9abb9b15d5071a44e3f1f781ce7456a06414e3f9b52bb604f802b5",
+    "npole.py": "7d806a48fadaeb5653eb2652dfbf072daa5104e7ce13be42ae120500ae8461a2",
+    "numpy_policy.py": "e6e92f052bed672b46eca51513fe6665cef115273ab5b1c5059519e2dc579759",
+    "pole_control.py": "c85ac107044f566561c07bfa7743c3790b54bf24f466b97e38e8b0ccf5d6f93d",
+    "pole_cpu.py": "b74f91d5f1a8363a183198d1a78db9a0f31d9fcbec2477f27cd4a46a38501009",
+    "swing_trajectory.py": "4583d2569a03495a3bf7379d5e1f581026a8dd8f48f8daa844046d5c1e19978a"
+  },
+  "optional_skips": "NumPy profile skips Torch, MuJoCo and Gymnasium dependent tests; full profile skips none.",
+  "portability_note": "Historical feedback methods are checked with frozen executed gains; the offline Riccati solve is not rerun on lower-precision architectures."
+}

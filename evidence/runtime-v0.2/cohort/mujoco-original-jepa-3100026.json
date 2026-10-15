@@ -1,0 +1,59 @@
+{
+  "engine": "mujoco",
+  "condition": "original-jepa",
+  "seed": 3100026,
+  "condition_order": 1,
+  "gates": {
+    "complete": true,
+    "finite": true,
+    "rail": true,
+    "force": true,
+    "one_tick_queue": true,
+    "final_251_endpoints": true,
+    "pass": true,
+    "strict_inverse": true,
+    "recovered_state": true
+  },
+  "error": null,
+  "setup_seconds": 0.008529360988177359,
+  "warmup_seconds": 0.0028880760073661804,
+  "episode_seconds": 2.716266862989869,
+  "completed_ticks": 1000,
+  "initial_state_sha256": "8c350108cb514b32690715726b475130ca7c52022fc1647bc2162cb18ee5fa88",
+  "archive": "mujoco-original-jepa-3100026.npz",
+  "archive_sha256": "c9fc181cb341b86c2129e64e7a6ad69e08b8b20b127d4bf5d14765d1164d7e59",
+  "policy": {
+    "policy": "jepa_encoder_state_estimator_with_analytic_feedback",
+    "n": 10,
+    "delay": 1,
+    "JEPA_used_for_action": true,
+    "jepa_used_for_action": true,
+    "raw_state_feedback_bypass": false,
+    "controller_family": "hybrid",
+    "encoder": "frozen_target_float64",
+    "base_checkpoint_sha256": "c4b56d3dbe26134516fd23863911861c70d6fc42e842a3502f0ac28e9901b084",
+    "inverse": {
+      "method": "local_encoder_jacobian_newton",
+      "iterations": 20,
+      "jacobian_epsilon": 1e-05,
+      "latent_residual_tolerance": 1e-12,
+      "jacobian_update": "current_reference_and_actual_known_last_command_each_tick",
+      "initialization": "fixed_nominal_reference"
+    },
+    "future_observation_input": false,
+    "feedback": {
+      "policy": "frozen_classical_tvlqr_then_balance",
+      "n": 10,
+      "delay": 1,
+      "tracking_r": 20.0,
+      "balance_r": 1000.0,
+      "learned": false,
+      "gain_file": "npole10-classical.npz",
+      "runtime_torch": false
+    }
+  },
+  "backend": {
+    "backend": "mujoco",
+    "xml_sha256": "9a247e0a83ce9e1e5d77344e2db2b4fef7aeac99802f769b8c2fc95b3b33f247"
+  }
+}

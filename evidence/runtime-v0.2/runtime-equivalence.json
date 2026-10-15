@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "original_commands_checked": 64000,
+  "encoder_and_inverse_states_checked": 192,
+  "full_rate_tick_checks": 32,
+  "random_acceleration_checks": 128,
+  "physics_rtol": 2e-11,
+  "physics_atol": 2e-11,
+  "bitwise_physics_equivalence_claim": false,
+  "maxima": {
+    "exported_command_error": 0.0,
+    "encoder_error": 1.7763568394002505e-15,
+    "recovered_state_error": 5.762057497804562e-14,
+    "acceleration_error": 2.113864638886298e-13,
+    "full_rate_tick_error": 3.552713678800501e-15
+  },
+  "seconds": 19.198181859974284,
+  "runtime_assets": {
+    "npole10-target-encoder.npz": "8b8258cdd9ed4da32c09d5edbd81331d136ceac89dd759cc779b902b3c13d7c5",
+    "npole10-classical.npz": "98cebc87f2ed39d9cf86e3e4d115384a2fb6fb6c657eb809073cc2108f30de83"
+  }
+}

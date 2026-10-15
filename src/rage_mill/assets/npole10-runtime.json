@@ -1,0 +1,54 @@
+{
+  "method": "export_existing_target_tensors_and_executed_classical_gains",
+  "training_or_optimization": false,
+  "checkpoint_sha256": "c4b56d3dbe26134516fd23863911861c70d6fc42e842a3502f0ac28e9901b084",
+  "reference_sha256": "56243f2cd7ade49ac014f1ca56bfb5286584b3dee9063df86f3dac2d160a9e78",
+  "tensor_dtype_saved": "float32",
+  "runtime_dtype": "float64",
+  "quantization": false,
+  "torch_version": "2.14.1+cu130",
+  "numpy_version": "2.5.4",
+  "casadi_version": "3.8.1",
+  "platform": "aarch64",
+  "export_seconds": 7.050840852956753,
+  "tracking_r": 20.0,
+  "balance_r": 1000.0,
+  "delay": 1,
+  "riccati": {
+    "terminal": {
+      "arithmetic_dtype": "float128",
+      "arithmetic_epsilon": 1.925929944387236e-34,
+      "executed_gain_dtype": "float64",
+      "converged": true,
+      "iterations": 1416,
+      "relative_cost_change": 9.947268440815475e-16,
+      "relative_dare_residual": 9.681840976516586e-16,
+      "closed_loop_spectral_radius_float64": 0.9877183165144087
+    },
+    "backward_arithmetic_dtype": "float128",
+    "executed_gain_dtype": "float64",
+    "backward_ticks": 900,
+    "finite_backward_costs_and_gains": true,
+    "tracking_stability_claim": "requires actual closed-loop development and final trials"
+  },
+  "balance_riccati": {
+    "arithmetic_dtype": "float128",
+    "arithmetic_epsilon": 1.925929944387236e-34,
+    "executed_gain_dtype": "float64",
+    "converged": true,
+    "iterations": 1417,
+    "relative_cost_change": 9.942414211449783e-16,
+    "relative_dare_residual": 9.67711449205182e-16,
+    "closed_loop_spectral_radius_float64": 0.9877183178417196
+  },
+  "outputs": {
+    "npole10-target-encoder.npz": {
+      "sha256": "8b8258cdd9ed4da32c09d5edbd81331d136ceac89dd759cc779b902b3c13d7c5",
+      "bytes": 109785
+    },
+    "npole10-classical.npz": {
+      "sha256": "98cebc87f2ed39d9cf86e3e4d115384a2fb6fb6c657eb809073cc2108f30de83",
+      "bytes": 311830
+    }
+  }
+}
