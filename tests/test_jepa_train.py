@@ -236,6 +236,10 @@ def test_tiny_shared_training_writes_reproducible_artifacts_without_live_physics
     assert metrics["all_predictive_pass"] is report["all_predictive_pass"]
     restored, saved_normalizations, contents = load_checkpoint(tmp_path / "model.pt")
     _assert_safe_checkpoint_value(contents)
+    original_state, restored_state = model.state_dict(), restored.state_dict()
+    assert original_state.keys() == restored_state.keys()
+    for name in original_state:
+        assert torch.equal(original_state[name], restored_state[name]), name
     saved_training = {}
     for path in (tmp_path / "data").glob("*_train.npz"):
         recording = load_trajectories(path)
@@ -245,6 +249,7 @@ def test_tiny_shared_training_writes_reproducible_artifacts_without_live_physics
         train_part, _ = split_episodes(datasets[env_id], config.seed + index)
         assert np.allclose(normalizations[env_id].mean, Normalization.fit(train_part).mean)
         assert np.array_equal(saved_normalizations[env_id].mean, normalizations[env_id].mean)
+        assert np.array_equal(saved_normalizations[env_id].std, normalizations[env_id].std)
         provenance = metrics["provenance"][env_id]
         assert not set(provenance["train_episodes"]) & set(provenance["validation_episodes"])
         for label in ("training", "evaluation"):
@@ -254,7 +259,13 @@ def test_tiny_shared_training_writes_reproducible_artifacts_without_live_physics
         assert np.array_equal(source.observations, datasets[env_id].observations)
         obs = torch.as_tensor(normalizations[env_id].apply(datasets[env_id].observations[:2, 0]))
         acts = torch.as_tensor(datasets[env_id].actions[:2, :2])
-        assert torch.equal(model.rollout(env_id, obs, acts), restored.rollout(env_id, obs, acts))
+        # Compare like-for-like inference. Grad-enabled and frozen CPU paths
+        # can choose kernels with different float32 rounding on some hosts.
+        # Saved coefficients above remain subject to exact tensor equality.
+        with torch.inference_mode():
+            expected = model.rollout(env_id, obs, acts)
+            actual = restored.rollout(env_id, obs, acts)
+        torch.testing.assert_close(actual, expected, rtol=1e-6, atol=1e-7)
 
 
 @pytest.mark.parametrize("field, replacement", [
