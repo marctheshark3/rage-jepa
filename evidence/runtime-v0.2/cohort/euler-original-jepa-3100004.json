@@ -1,0 +1,81 @@
+{
+  "engine": "euler",
+  "condition": "original-jepa",
+  "seed": 3100004,
+  "condition_order": 2,
+  "gates": {
+    "complete": true,
+    "finite": true,
+    "rail": true,
+    "force": true,
+    "one_tick_queue": true,
+    "final_251_endpoints": true,
+    "pass": true,
+    "strict_inverse": true,
+    "recovered_state": true
+  },
+  "error": null,
+  "setup_seconds": 0.006205517973285168,
+  "warmup_seconds": 0.0026356789749115705,
+  "episode_seconds": 12.573577305010986,
+  "completed_ticks": 1000,
+  "initial_state_sha256": "3e0f984a8620b704aa4746cbab7b8c8104fb8a778addf5c395093353f4452317",
+  "archive": "euler-original-jepa-3100004.npz",
+  "archive_sha256": "49fa5b497489ac0fa81082d22b277a90d56d27a345a445d33f49104b4cc07ddc",
+  "policy": {
+    "policy": "jepa_encoder_state_estimator_with_analytic_feedback",
+    "n": 10,
+    "delay": 1,
+    "JEPA_used_for_action": true,
+    "jepa_used_for_action": true,
+    "raw_state_feedback_bypass": false,
+    "controller_family": "hybrid",
+    "encoder": "frozen_target_float64",
+    "base_checkpoint_sha256": "c4b56d3dbe26134516fd23863911861c70d6fc42e842a3502f0ac28e9901b084",
+    "inverse": {
+      "method": "local_encoder_jacobian_newton",
+      "iterations": 20,
+      "jacobian_epsilon": 1e-05,
+      "latent_residual_tolerance": 1e-12,
+      "jacobian_update": "current_reference_and_actual_known_last_command_each_tick",
+      "initialization": "fixed_nominal_reference"
+    },
+    "future_observation_input": false,
+    "feedback": {
+      "policy": "frozen_classical_tvlqr_then_balance",
+      "n": 10,
+      "delay": 1,
+      "tracking_r": 20.0,
+      "balance_r": 1000.0,
+      "learned": false,
+      "gain_file": "npole10-classical.npz",
+      "runtime_torch": false
+    }
+  },
+  "backend": {
+    "backend": "compiled_cpu",
+    "arithmetic_dtype": "float64",
+    "method": "analytic_point_mass_partial_pivot_lu_velocity_first_euler",
+    "source_sha256": "da7a99c697f21590a4c34f29b4548fdddb5a55428241a51844e266a24364f8bb",
+    "compiler_path": "/usr/bin/aarch64-linux-gnu-gcc-13",
+    "compiler_sha256": "a20520ee21543f243d40636a9181a142c45ecd989de31ab86b99a8ea5ada870d",
+    "compiler_version": "aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "compiler_flags": [
+      "-std=c11",
+      "-O3",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-fPIC",
+      "-shared"
+    ],
+    "linker_flags": [
+      "-lm"
+    ],
+    "machine": "aarch64",
+    "shared_library_path": "<user-cache>/rage-jepa/pole-cpu/a368c8073f55b09523724f959bcd6936f1c48d4f14bd0455e949842f779d49ff/pole_cpu.so",
+    "shared_library_sha256": "7ccab1ba0694b53716207b50c7ab4f3923d98c3f30153621707357dffc4ba9a2",
+    "silent_fallback": false,
+    "analytic_cpu_backend": "c",
+    "pole_count": 10
+  }
+}

@@ -1,109 +1,179 @@
 # Rage JEPA
 
-A **78,784-parameter state-vector JEPA**, trained from random weights, with its
-ten-link pendulum checkpoint, simulation datasets, frozen hybrid controller
-and all **64 final closed-loop recordings**. Code, weights, authored data and
-documentation are MIT licensed.
+A ten-link cart-pendulum environment, a ready classical baseline, and a small
+**78,784-parameter state-vector JEPA** with its trained checkpoint, datasets
+and complete evaluation recordings. Code, weights, authored simulation data
+and documentation are MIT licensed.
 
-One cart swings ten passive serial pendulums from hanging to upright. The
-frozen controller passes **32/32 fresh initializations on CPU Euler and 32/32
-on independent MuJoCo** under the stated protocol.
+**This project was extracted from our private Rage Mill research repository
+on October 14, 2026.** Its first public commit is a curated release of an
+existing experiment, rather than the start of the research. The trained model
+and results are included. Public Git history does not contain the earlier
+private development history. See [provenance](docs/PROVENANCE.md).
 
-The successful path is:
+Classical trajectory tracking and balance feedback select the forces. The
+successful JEPA path encodes an already observed physical state, reconstructs
+it through a local inverse, and supplies that state to classical feedback.
+The learned dynamics predictor fails its forecast gates and does not plan
+these actions. The environment and classical baseline work without JEPA or
+Torch. See [the matched comparison and performance measurements](docs/BASELINES.md).
 
-```text
-physical observations → frozen JEPA target encoder → local inverse
-→ recovered state → classical trajectory tracking / balance → queued cart force
-```
+**New matched result:** all three controllers pass **32/32 Euler and 32/32
+MuJoCo** on fresh shared starts (192 trials). The optimized JEPA controller is
+about **4.5× faster** than the original in serial CPU replay measurements;
+classical feedback alone is about **18× faster** and passes the same task.
 
-**Classical feedback selects the forces.** The learned dynamics predictor
-fails its prediction gates on this ten-pole cohort and does not plan these
-actions. The observations already contain positions, angles and velocities.
-This result establishes neither a JEPA advantage over classical control nor
-control from images. Hardware transfer and real-time execution are unverified.
+## Run the environment without Torch
 
-## Start with the saved evidence
+For just the runtime, install the small wheel from
+[v0.2.0](https://github.com/marctheshark3/rage-jepa/releases/tag/v0.2.0);
+it excludes the full recording archives. A source checkout also includes the
+scientific evidence:
 
 ```bash
 git clone https://github.com/marctheshark3/rage-jepa.git
 cd rage-jepa
-uv sync --extra dev
-CUDA_VISIBLE_DEVICES='' uv run python scripts/verify_release.py
-CUDA_VISIBLE_DEVICES='' uv run pytest
+uv sync                         # NumPy only
+uv run python - <<'PY'
+from rage_mill.env import CartPendulumEnv
+env = CartPendulumEnv(n=2, substeps=20)
+state = env.reset_seed(123)
+state = env.step(0.2)            # normalized cart force; queued for next tick
+print(state, env.observation())
+PY
 ```
 
-The verifier checks every released file against the manifest, loads the
-checkpoint with `weights_only=True`, checks the model dimensions and tests
-the task gates and actual one-tick actuator queue in every final recording.
-It audits saved evidence; it does not rerun physics.
-
-Weights are at `artifacts/npole10/jepa/model.pt` (about 443 KB). Load them:
+For ten poles, the qualified rates are 12,800 Euler substeps per control tick
+or 20 native MuJoCo substeps. Select `backend="c"` explicitly to accelerate
+the Euler loop; this requires a C compiler on Linux, preserves the equations
+and integration rate, and never silently falls back. NumPy remains the
+reference backend. These are different floating-point implementations;
+bitwise-identical physics is not claimed.
 
 ```python
+env = CartPendulumEnv(n=10, engine="euler", backend="c")
+env.reset_seed(123)
+env.step(0.2)
+```
+
+Physical state is `[x, absolute_angles[10], x_velocity, absolute_omegas[10]]`
+(22 values). `observation()` returns cart position/velocity, each link's
+sin/cos and angular speed divided by eight, then last-applied and pending
+commands (34 values). The JEPA encoder uses the first 33 values; the feedback
+controller also receives the pending force for delay compensation.
+
+## Run the ready classical or JEPA baseline
+
+```bash
+uv sync --extra simulation --extra gym
+uv run --extra simulation --extra gym python - <<'PY'
+from rage_mill.env import CartPendulumEnv
+from rage_mill.baseline import ClassicalPolicy
+env = CartPendulumEnv(engine="mujoco")
+env.reset_seed(123)
+policy = ClassicalPolicy()
+for _ in range(1000):
+    command = policy.act(env.state, env.last_applied, env.pending)
+    env.step(command)
+print(env.state)
+PY
+```
+
+Replace `ClassicalPolicy` with
+`from rage_mill.numpy_policy import NumpyJEPAPolicy` and use
+`policy = NumpyJEPAPolicy()` for the optimized frozen encoder/inverse path.
+Neither needs Torch. Both use the same exported classical gains and the
+original CasADi four-substep RK4 predictor for the known pending force.
+There is no online training, trajectory optimization or Riccati solve.
+
+For Gymnasium:
+
+```python
+from rage_mill.gym_env import CartPendulumGym
+env = CartPendulumGym(engine="mujoco")
+observation, info = env.reset(seed=123)
+observation, reward, terminated, truncated, info = env.step(env.action_space.sample())
+```
+
+Its dense reward is documented in the adapter. It is a convenience for new
+agents, separate from the binary task-success gates; no RL policy is included.
+
+## Check the evidence and reproduce the comparison
+
+```bash
+uv sync --extra dev
+uv run --extra dev python scripts/verify_release.py
+uv run --extra dev python scripts/audit_comparison.py evidence/runtime-v0.2/cohort
+uv run --extra dev pytest
+
+# Full original model + simulator checks (Torch is optional):
+uv sync --all-extras
+CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+uv run --all-extras python scripts/verify_release.py --with-model
+CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+uv run --all-extras pytest
+
+# New matched closed-loop trials; choose a new output directory.
+CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+uv run --all-extras rage-jepa-compare --count 32 --seed-start 3200000 \
+  --workers 4 --out runs/my-comparison
+uv run python scripts/audit_comparison.py runs/my-comparison
+```
+
+All three conditions use the same seeds, hanging resets, reference, feedback
+gains, force limits, real one-tick queue and 50 Hz controller. Euler retains
+640,000 integration steps per simulated second; independent native MuJoCo
+uses 1,000. All physics and inference run on CPU. Setup, controller, physics
+and episode timings are recorded separately. The saved v0.2 cohort uses
+previously unused seeds 3,100,000–3,100,031. Reusing those seeds is replication,
+rather than a new held-out evaluation.
+
+Each 20-second episode must keep the cart strictly inside ±2.4 m and all ten
+links within 0.22 radians of upright and below 1 rad/s throughout the final
+five seconds, checking all 251 bounding state endpoints. Commands are limited
+to ±10 N and have a queued 20 ms delay initialized to zero. Complete replays,
+failures and independent audits are retained. The cohort gate remains 80%.
+Simulation timing does not establish a hardware real-time guarantee.
+
+## Load or retrain the original model
+
+The full trained checkpoint is
+[`artifacts/npole10/jepa/model.pt`](artifacts/npole10/jepa/model.pt) (442,606 bytes).
+The inference-only target encoder is packaged separately (109,785 bytes).
+
+```bash
+uv sync --extra jepa
+uv run --extra jepa python - <<'PY'
 from rage_mill.jepa_train import load_checkpoint
 model, normalizations, metadata = load_checkpoint("artifacts/npole10/jepa/model.pt")
-# Normalize observations using normalizations["npole10"] before encoding.
-# model.encode("npole10", observations, target=True) gives 64 latent values.
+# Normalize using normalizations["npole10"] before encoding.
+# model.encode("npole10", observations, target=True) returns 64 latent values.
+PY
+CUDA_VISIBLE_DEVICES='' uv run --extra jepa python scripts/train_model.py \
+  --device cpu --out runs/retrained
 ```
 
-## Retrain the model
+The released data contains 48 Euler and 12 independent MuJoCo episodes.
+Training uses the original episode split, 200 epochs, four updates per epoch,
+batch size 128 and eight-step windows. The original neural training ran on
+DGX Spark's NVIDIA GB10; physics and control ran on CPU. Spark did not make
+the network larger. New training produces a new experiment and does not
+inherit the original checkpoint's control result.
 
-```bash
-CUDA_VISIBLE_DEVICES='' uv run python scripts/train_model.py --device cpu --out runs/retrained
-# On a compatible CUDA machine, use --device cuda.
-```
+## Research and release history
 
-This uses the released 48 Euler episodes and 12 independent MuJoCo episodes,
-the original episode split seed, 200 epochs, four updates per epoch, batch
-size 128 and eight-step (160 ms) prediction windows. Training-only statistics
-normalize the observations. New training is a new experiment: it does not
-replace the qualified checkpoint or inherit its control result. The original
-neural training ran on NVIDIA GB10 (DGX Spark, sm_121); physics was CPU.
-
-## Reproduce the hybrid controller
-
-```bash
-uv sync --extra dev --extra simulation
-CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
-uv run python scripts/parallel_extended_validation.py \
-  --n 10 --checkpoint artifacts/npole10/jepa/model.pt \
-  --plan artifacts/npole10/verified/npole10-rk44-18s-feasible.npz \
-  --physics-substeps 12800 --mujoco-physics-substeps 20 --mujoco-native-damping \
-  --tracking-r 20 --balance-r 1000 --inverse-iterations 20 --inverse-tolerance 1e-12 \
-  --workers 32 --final --out runs/reproduction/pole10
-```
-
-This is expensive CPU work. Euler uses **640,000 integration steps per
-simulated second**, MuJoCo 1,000; commands stay **50 Hz**, with a queued **20 ms
-delay** and **±10 N** limit. These are integration rates, not a real-time speed
-claim. Offline Riccati recursion uses `numpy.longdouble`; its precision varies
-by platform. Released source and numeric payloads trace the qualified run,
-but a different machine/library stack need not reproduce identical trajectories.
-This command is a replication with published seeds, not a new held-out cohort.
-
-Each 20-second episode must stay inside the ±2.4 m rail and keep all ten links
-within 0.22 radians of upright and below 1 rad/s throughout the final five
-seconds. All 251 bounding state endpoints are checked. Resets start near
-hanging, and final seeds 1,000,000–1,000,031 were untouched until the original
-configuration was frozen. The minimum observed final hold is 8.32 simulated
-seconds (417 scored ticks / 8.34 seconds).
-
-## Read the experiment
-
-- [Model card](MODEL_CARD.md): architecture, provenance, results and limits.
+- [Baseline comparison, speed and next experiments](docs/BASELINES.md).
+- [Private origin, exports and immutable history](docs/PROVENANCE.md).
+- [Original model card](MODEL_CARD.md): architecture, original results and limits.
 - [Climbing toward a comparable record](docs/ROADMAP.md): twelve is qualified;
-  thirteen remains in planning, with clear gates for subsequent counts.
-- [Rage Industries article](https://neuralyogi.com/essays/a-small-model-and-ten-pendulums/).
-- `artifacts/npole10/`: weights, datasets, 200-epoch history, reference,
-  full final recordings, independent audits and retained development receipts.
-- `evidence/twelve-poles/`: later-cohort summary evidence, separate from this
-  ten-pole model/control release.
+  thirteen remains in planning. Global record priority is unverified.
+- [NeuralYogi article](https://neuralyogi.com/essays/a-small-model-and-ten-pendulums/).
 
-`release-manifest.json` distinguishes original archive hashes from public file
-hashes. Public metadata uses portable aliases in place of machine paths.
-Every model tensor, normalization and numeric array is preserved; checkpoint
-and archive container bytes change when metadata is rewritten. Historical
-hashes in receipts identify the original files. Follow the manifest to find
-the corresponding public files rather than comparing historical hashes to
-rewritten containers. Captured model/controller source is used; data adapters
-are restricted to poles. No private laboratory history or robot assets ship.
+The original v0.1 release passed 32/32 Euler and 32/32 MuJoCo trials and remains
+available at [v0.1.0](https://github.com/marctheshark3/rage-jepa/tree/v0.1.0).
+Its weights, datasets, reference, source and all 64 recordings retain their
+original public bytes. Five evolving release/documentation files are archived
+with their original hashes. `release-manifest.json` still describes that
+historical snapshot; `release-v0.2-manifest.json` describes this release.
+No robot or private laboratory assets ship. Prediction advantage, image-based
+control, hardware transfer and world-record priority remain unestablished.

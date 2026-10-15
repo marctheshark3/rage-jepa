@@ -1,0 +1,56 @@
+{
+  "pass": true,
+  "installation": "fresh noneditable wheel plus simulation/gym extras",
+  "torch_installed": false,
+  "torch_imported": false,
+  "gym_checker": "pass",
+  "closed_loop_trials": [
+    {
+      "policy": "ClassicalPolicy",
+      "seed": 2420000,
+      "engine": "mujoco",
+      "gates": {
+        "complete": true,
+        "finite": true,
+        "rail": true,
+        "force": true,
+        "one_tick_queue": true,
+        "final_251_endpoints": true,
+        "pass": true
+      },
+      "episode_seconds": 1.4036612599738874
+    },
+    {
+      "policy": "NumpyJEPAPolicy",
+      "seed": 2420000,
+      "engine": "mujoco",
+      "gates": {
+        "complete": true,
+        "finite": true,
+        "rail": true,
+        "force": true,
+        "one_tick_queue": true,
+        "final_251_endpoints": true,
+        "pass": true
+      },
+      "episode_seconds": 0.8875205359654501
+    }
+  ],
+  "venv_apparent_bytes": 354400780,
+  "distributions": {
+    "numpy": "2.5.4",
+    "cloudpickle": "3.1.2",
+    "gymnasium": "1.4.0",
+    "absl-py": "2.5.1",
+    "rage-jepa": "0.2.0",
+    "mujoco": "3.12.0",
+    "fsspec": "2026.9.0",
+    "zipp": "4.1.1",
+    "casadi": "3.8.1",
+    "etils": "1.14.0",
+    "PyOpenGL": "3.1.10",
+    "glfw": "2.10.2",
+    "Farama-Notifications": "0.0.6",
+    "typing_extensions": "4.16.0"
+  }
+}

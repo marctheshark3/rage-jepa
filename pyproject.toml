@@ -1,19 +1,22 @@
 [project]
 name = "rage-jepa"
-version = "0.1.0"
+version = "0.2.0"
 description = "A small state-vector JEPA and an auditable ten-pole hybrid controller"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "Marc / Rage Industries" }]
-dependencies = ["numpy>=1.26", "torch>=2.5,<3"]
+dependencies = ["numpy>=1.26"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+jepa = ["torch>=2.5,<3"]
 simulation = ["mujoco==3.12.0", "casadi==3.8.1"]
+gym = ["gymnasium>=1.0,<2"]
 
 [project.scripts]
 rage-jepa = "rage_mill.jepa_train:main"
+rage-jepa-compare = "rage_mill.comparison:main"
 
 [project.urls]
 Repository = "https://github.com/marctheshark3/rage-jepa"

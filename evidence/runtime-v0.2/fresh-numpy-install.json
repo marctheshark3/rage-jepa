@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "installation": "fresh noneditable base wheel",
+  "dependencies": [
+    "numpy",
+    "rage-jepa"
+  ],
+  "torch_installed": false,
+  "torch_imported": false,
+  "mujoco_installed": false,
+  "casadi_installed": false,
+  "gym_installed": false,
+  "numpy_environment_step": true,
+  "packaged_encoder_load": true,
+  "wheel_sha256": "745efaf1e7b22c93bd5aee9cace12af7cfb2d4036e4d17e4385350e4b2192bde",
+  "wheel_bytes": 485742
+}

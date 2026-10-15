@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "trials_independently_audited": 192,
+  "groups": [
+    {
+      "engine": "euler",
+      "condition": "classical",
+      "passed": 32,
+      "trials": 32
+    },
+    {
+      "engine": "euler",
+      "condition": "original-jepa",
+      "passed": 32,
+      "trials": 32
+    },
+    {
+      "engine": "euler",
+      "condition": "numpy-jepa",
+      "passed": 32,
+      "trials": 32
+    },
+    {
+      "engine": "mujoco",
+      "condition": "classical",
+      "passed": 32,
+      "trials": 32
+    },
+    {
+      "engine": "mujoco",
+      "condition": "original-jepa",
+      "passed": 32,
+      "trials": 32
+    },
+    {
+      "engine": "mujoco",
+      "condition": "numpy-jepa",
+      "passed": 32,
+      "trials": 32
+    }
+  ],
+  "all_251_final_endpoints_checked": true,
+  "recorded_physics_rerun": false,
+  "definition_sha256": "f301ffe52a4ddfe6c6c0713e7e898b5f9074cc2c6b9ec24c4a38b41912a3981a",
+  "episodes_sha256": "d2afe87c7fe1f192b386cdda3b6572203375385afaf30f35572a90d2f31dfafe"
+}

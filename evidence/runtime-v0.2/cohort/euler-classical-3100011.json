@@ -1,0 +1,59 @@
+{
+  "engine": "euler",
+  "condition": "classical",
+  "seed": 3100011,
+  "condition_order": 0,
+  "gates": {
+    "complete": true,
+    "finite": true,
+    "rail": true,
+    "force": true,
+    "one_tick_queue": true,
+    "final_251_endpoints": true,
+    "pass": true
+  },
+  "error": null,
+  "setup_seconds": 0.0015297060017473996,
+  "warmup_seconds": 0.00022494804579764605,
+  "episode_seconds": 10.334742404986173,
+  "completed_ticks": 1000,
+  "initial_state_sha256": "a58272064fff44322d00d3f26b98d5879a094dd9014ddc377517e34b699e294d",
+  "archive": "euler-classical-3100011.npz",
+  "archive_sha256": "ae9e1a9f6a58dd95086a6e04c169ffe7a7286b5c4e7e20e5fcc615a7245f4fd1",
+  "policy": {
+    "policy": "frozen_classical_tvlqr_then_balance",
+    "n": 10,
+    "delay": 1,
+    "tracking_r": 20.0,
+    "balance_r": 1000.0,
+    "learned": false,
+    "gain_file": "npole10-classical.npz",
+    "runtime_torch": false
+  },
+  "backend": {
+    "backend": "compiled_cpu",
+    "arithmetic_dtype": "float64",
+    "method": "analytic_point_mass_partial_pivot_lu_velocity_first_euler",
+    "source_sha256": "da7a99c697f21590a4c34f29b4548fdddb5a55428241a51844e266a24364f8bb",
+    "compiler_path": "/usr/bin/aarch64-linux-gnu-gcc-13",
+    "compiler_sha256": "a20520ee21543f243d40636a9181a142c45ecd989de31ab86b99a8ea5ada870d",
+    "compiler_version": "aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "compiler_flags": [
+      "-std=c11",
+      "-O3",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-fPIC",
+      "-shared"
+    ],
+    "linker_flags": [
+      "-lm"
+    ],
+    "machine": "aarch64",
+    "shared_library_path": "<user-cache>/rage-jepa/pole-cpu/a368c8073f55b09523724f959bcd6936f1c48d4f14bd0455e949842f779d49ff/pole_cpu.so",
+    "shared_library_sha256": "7ccab1ba0694b53716207b50c7ab4f3923d98c3f30153621707357dffc4ba9a2",
+    "silent_fallback": false,
+    "analytic_cpu_backend": "c",
+    "pole_count": 10
+  }
+}
